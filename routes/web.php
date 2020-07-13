@@ -61,3 +61,31 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
+Route::group(['middleware' => ['auth','admin', 'verified'], 'prefix' => 'admin'], function(){
+
+    Route::get('/', 'AdminPageController@home')->name('admin');
+	Route::get('/accounts', 'AdminPageController@accounts')->name('admin.accounts');
+	Route::get('/resources', 'AdminPageController@resources')->name('admin.resources');
+	Route::get('/notifications', 'AdminPageController@notifications')->name('admin.notifications');
+	Route::get('/wallet', 'AdminPageController@wallet')->name('admin.wallet');
+});
+
+Route::group(['middleware' => ['auth','tutor', 'verified'], 'prefix' => 'tutor'], function(){
+
+    Route::get('/', 'TutorPageController@home')->name('tutor');
+	Route::get('/profile', 'TutorPageController@profile')->name('tutor.profile');
+	Route::get('/resources', 'TutorPageController@resources')->name('tutor.resources');
+	Route::get('/notifications', 'TutorPageController@notifications')->name('tutor.notifications');
+	Route::get('/wallet', 'TutorPageController@wallet')->name('tutor.wallet');
+});
+
+Route::group(['middleware' => ['auth','student', 'verified'], 'prefix' => 'student'], function(){
+
+    Route::get('/', 'StudentPageController@home')->name('student');
+	Route::get('/profile', 'StudentPageController@profile')->name('student.profile');
+	Route::get('/resources', 'StudentPageController@resources')->name('student.resources');
+	Route::get('/notifications', 'StudentPageController@notifications')->name('student.notifications');
+	Route::get('/wallet', 'StudentPageController@wallet')->name('student.wallet');
+});
+
+
