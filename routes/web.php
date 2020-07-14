@@ -17,10 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/choose', 'ChooseRoleController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 

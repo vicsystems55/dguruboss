@@ -14,6 +14,7 @@ class StudentPageController extends Controller
     public function index()
     {
         //
+        return view('student.home');
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminPageController extends Controller
+class ChooseRoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,21 @@ class AdminPageController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.home');
+        if (Auth::user()->role =='admin') {
+            return redirect('/admin');
+        }
+
+        elseif (Auth::user()->role =='student') {
+            return redirect('/student');
+        }
+
+        elseif (Auth::user()->role =='tutor') {
+            return redirect('/tutor');
+        }
+
+        else{
+            abort(403);
+        }
     }
 
     /**

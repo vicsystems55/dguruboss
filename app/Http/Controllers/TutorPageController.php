@@ -14,6 +14,7 @@ class TutorPageController extends Controller
     public function index()
     {
         //
+        return view('tutor.home');
     }
 
     /**
