@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/sample', function () {
+    return view('admin.home');
+});
+
 Route::get('/choose', 'ChooseRoleController@index');
 
 Auth::routes();

@@ -22,7 +22,14 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-            @include('layouts.page_templates.auth')
+            <div class="wrapper ">
+            @include('layouts.navbars.tutorsidebar')
+            <div class="main-panel">
+                @include('layouts.navbars.navs.auth')
+                @yield('content')
+                @include('layouts.footers.auth')
+            </div>
+            </div>
         @endauth
         @guest()
             @include('layouts.page_templates.guest')

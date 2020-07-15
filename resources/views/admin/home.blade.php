@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'dashboard', 'titlePage' => __('Dashboard')])
+@extends('layouts.admin', ['activePage' => 'dashboard', 'titlePage' => __('Dashboard')])
 
 @section('content')
   <div class="content">
@@ -8,7 +8,7 @@
           <div class="card card-stats">
             <div class="card-header card-header-warning card-header-icon">
               <div class="card-icon">
-                <i class="material-icons">content_copy</i>
+                <i class="material-icons"></i>
               </div>
               <p class="card-category">Used Space</p>
               <h3 class="card-title">49/50
@@ -17,7 +17,7 @@
             </div>
             <div class="card-footer">
               <div class="stats">
-                <i class="material-icons text-danger">warning</i>
+                <i class="material-icons text-danger"></i>
                 <a href="#pablo">Get More Space...</a>
               </div>
             </div>
