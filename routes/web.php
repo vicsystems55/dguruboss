@@ -91,6 +91,7 @@ Route::group(['middleware' => ['auth','student', 'verified'], 'prefix' => 'stude
 	Route::get('/profile', 'StudentPageController@profile')->name('student.profile');
 	Route::get('/projects', 'StudentPageController@projects')->name('student.projects');
 	Route::get('/reports', 'StudentPageController@reports')->name('student.reports');
+	Route::get('/singleclass', 'StudentPageController@singleclass')->name('student.singleclass');
 	Route::get('/resources', 'StudentPageController@resources')->name('student.resources');
 	Route::get('/notifications', 'StudentPageController@notifications')->name('student.notifications');
 	Route::get('/wallet', 'StudentPageController@wallet')->name('student.wallet');

@@ -59,6 +59,12 @@ class StudentPageController extends Controller
         return view('student.notifications');
     }
 
+    public function singleclass()
+    {
+        //
+        return view('student.singleclass');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

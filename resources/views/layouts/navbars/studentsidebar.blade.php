@@ -63,7 +63,7 @@
       
       <li class="nav-item  {{ (request()->is('student/wallet')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('student.wallet') }}">
-          <i class="material-icons">wallet</i>
+          <i class="material-icons">account_balance_wallet</i>
             <p>{{ __('Wallet') }}</p>
         </a>
       </li>
