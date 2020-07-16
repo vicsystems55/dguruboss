@@ -7,6 +7,11 @@
       <div class="p-5"></div>
      
           <h1 class="text-white text-center display-2">{{ __('Welcome to GuruBoss') }}</h1>
+          @auth
+            <div class="container col-md-4">
+              <a href="{{ route('login')}}" class="btn btn-primary btn-lg btn-block float-center">Login</a>
+            </div>
+          @endauth
       </div>
   </div>
 </div>

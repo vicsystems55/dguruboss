@@ -11,7 +11,7 @@ class AdminPageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function home()
     {
         //
         return view('admin.home');
