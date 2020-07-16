@@ -29,6 +29,36 @@ class StudentPageController extends Controller
         return view('student.profile');
     }
 
+    public function myclasses()
+    {
+        //
+        return view('student.myclasses');
+    }
+
+    public function projects()
+    {
+        //
+        return view('student.projects');
+    }
+
+    public function reports()
+    {
+        //
+        return view('student.reports');
+    }
+
+    public function wallet()
+    {
+        //
+        return view('student.wallet');
+    }
+
+    public function notifications()
+    {
+        //
+        return view('student.notifications');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
