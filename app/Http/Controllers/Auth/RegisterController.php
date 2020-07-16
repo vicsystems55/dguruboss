@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+use Carbon\Carbon;
+
 class RegisterController extends Controller
 {
     /*
@@ -64,9 +66,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $regCode = "GB/".Carbon::now()->format('M')."/".Carbon::now()->year."/" .rand(111,999);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'role' => $data['role_type'],
+            'reg_code' => $regCode,
             'password' => Hash::make($data['password']),
         ]);
     }
