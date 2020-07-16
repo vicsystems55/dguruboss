@@ -23,6 +23,12 @@ class StudentPageController extends Controller
         return view('student.browseclasses');
     }
 
+    public function profile()
+    {
+        //
+        return view('student.profile');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

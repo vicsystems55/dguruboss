@@ -23,12 +23,10 @@ Route::get('/sample', function () {
 
 Route::get('/choose', 'ChooseRoleController@index');
 
+Route::get('/home', 'ChooseRoleController@index')->name('home');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('table-list', function () {
@@ -89,6 +87,10 @@ Route::group(['middleware' => ['auth','student', 'verified'], 'prefix' => 'stude
 
     Route::get('/', 'StudentPageController@home')->name('student');
 	Route::get('/profile', 'StudentPageController@profile')->name('student.profile');
+	Route::get('/myclasses', 'StudentPageController@myclasses')->name('student.myclasses');
+	Route::get('/profile', 'StudentPageController@profile')->name('student.profile');
+	Route::get('/projects', 'StudentPageController@projects')->name('student.projects');
+	Route::get('/reports', 'StudentPageController@reports')->name('student.reports');
 	Route::get('/resources', 'StudentPageController@resources')->name('student.resources');
 	Route::get('/notifications', 'StudentPageController@notifications')->name('student.notifications');
 	Route::get('/wallet', 'StudentPageController@wallet')->name('student.wallet');

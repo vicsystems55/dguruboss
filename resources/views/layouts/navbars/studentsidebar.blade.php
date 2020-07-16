@@ -11,8 +11,8 @@
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
-      <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('home') }}">
+      <li class="nav-item {{ (request()->is('student')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('student') }}">
           <i class="material-icons">dashboard</i>
             <p>{{ __('Dashboard') }}</p>
         </a>
@@ -26,14 +26,14 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('profile.edit') }}">
+            <li class="nav-item {{ (request()->is('student/myclasses')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('student.myclasses') }}">
               <i class="material-icons">bubble_chart</i>
                 <span class="sidebar-normal">{{ __('My Classes') }} </span>
               </a>
             </li>
-            <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('user.index') }}">
+            <li class="nav-item {{ (request()->is('student/projects')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('student.projects') }}">
               <i class="material-icons">bubble_chart</i>
                 <span class="sidebar-normal"> {{ __('Projects') }} </span>
               </a>
@@ -41,34 +41,34 @@
           </ul>
         </div>
       </li>
-      <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('table') }}">
+      <li class="nav-item {{ (request()->is('student/profile')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('student.profile') }}">
           <i class="material-icons">person</i>
             <p>{{ __('Profile') }}</p>
         </a>
       </li>
 
-      <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('table') }}">
+      <li class="nav-item {{ (request()->is('student/reports')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('student.reports') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Reports') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">
+      <li class="nav-item {{ (request()->is('student/resources')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('student.resources') }}">
           <i class="material-icons">library_books</i>
             <p>{{ __('GuruBoss Library') }}</p>
         </a>
       </li>
       
-      <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('map') }}">
+      <li class="nav-item  {{ (request()->is('student/wallet')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('student.wallet') }}">
           <i class="material-icons">wallet</i>
             <p>{{ __('Wallet') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('notifications') }}">
+      <li class="nav-item {{ (request()->is('student/notifications')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('student.notifications') }}">
           <i class="material-icons">notifications</i>
           <p>{{ __('Notifications') }}</p>
         </a>
