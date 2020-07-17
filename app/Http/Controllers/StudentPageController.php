@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Resources\UserResource;
+
+use App\User;
+
 class StudentPageController extends Controller
 {
     /**
@@ -70,9 +74,11 @@ class StudentPageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function users()
     {
-        //
+        $users = User::get(); 
+
+        return UserResource::collection($users);
     }
 
     /**

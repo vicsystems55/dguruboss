@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/vue', 'student.sample');
+
+Route::get('/getusers', 'StudentPageController@users');
+
 Route::get('/sample', function () {
     return view('admin.home');
 });

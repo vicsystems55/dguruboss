@@ -10,6 +10,8 @@
           <h1 class="text-white text-center display-2">{{ __('Welcome to GuruBoss') }}</h1>
 
           
+
+          
           
           @auth
             <div class="container col-md-4">
@@ -21,20 +23,3 @@
 </div>
 @endsection
 
-<div class="modal fade bd-example-modal-lg" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="container">
-
-        <h6>Art and Creativity</h6>
-
-        <h6>Fashion</h6>
-
-        <h6>Technology</h6>
-
-        <h6>Relationship</h6>
-
-      </div>
-    </div>
-  </div>
-</div>
