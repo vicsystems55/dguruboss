@@ -25,6 +25,8 @@ Route::get('/choose', 'ChooseRoleController@index');
 
 Route::get('/home', 'ChooseRoleController@index')->name('home');
 
+Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+
 Auth::routes();
 
 
