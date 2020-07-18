@@ -1924,9 +1924,45 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      'posts': [],
+      'loading': false
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.getPosts();
+  },
+  methods: {
+    getPosts: function getPosts() {
+      var _this = this;
+
+      this.loading = true;
+      axios.get("getusers").then(function (response) {
+        // handle success
+        _this.posts = response.data.data;
+        _this.loading = false;
+      })["catch"](function (error) {
+        _this.loading = false;
+      });
+    }
   }
 });
 
@@ -37557,26 +37593,41 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _vm.loading
+        ? _c("div", { staticClass: "col-md-8" }, [_vm._m(0)])
+        : _c("div", { staticClass: "col-md-8" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header" }, [
+                _vm._v("Another j Component")
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "card-body" },
+                _vm._l(_vm.posts, function(post, index) {
+                  return _c("div", { key: index }, [
+                    _c("h3", [_vm._v(_vm._s(post.name))]),
+                    _vm._v("jkj\n                        "),
+                    _c("h5", [_vm._v(_vm._s(post.email))])
+                  ])
+                }),
+                0
+              )
+            ])
+          ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Another Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v("\n                    I'm first\n                ")
-            ])
-          ])
-        ])
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("h6", [_vm._v("Loading..b.")])
       ])
     ])
   }
@@ -37618,7 +37669,7 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v("\n                    I'm first\n                ")
+              _vm._v("\n                    I'm firstjkl\n                ")
             ])
           ])
         ])
