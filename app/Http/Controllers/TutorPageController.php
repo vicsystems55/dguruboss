@@ -17,6 +17,56 @@ class TutorPageController extends Controller
         return view('tutor.home');
     }
 
+    public function allclasses()
+    {
+        //
+        return view('tutor.allclasses');
+    }
+
+    public function addclasses()
+    {
+        //
+        return view('tutor.addclasses');
+    }
+
+    
+
+    public function addclass(Request $request)
+    {
+        //
+        
+    }
+
+    public function profile()
+    {
+        //
+        return view('tutor.profile');
+    }
+
+    public function reports()
+    {
+        //
+        return view('tutor.reports');
+    }
+
+    public function gurulibrary()
+    {
+        //
+        return view('tutor.gurulibrary');
+    }
+
+    public function wallet()
+    {
+        //
+        return view('tutor.wallet');
+    }
+
+    public function notifications()
+    {
+        //
+        return view('tutor.notifications');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

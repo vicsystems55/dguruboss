@@ -1940,11 +1940,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       'posts': [],
-      'loading': false
+      'loading': false,
+      'material': ''
     };
   },
   mounted: function mounted() {
@@ -1955,12 +1957,15 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.loading = true;
+      this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
       axios.get("getusers").then(function (response) {
         // handle success
         _this.posts = response.data.data;
         _this.loading = false;
+        _this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
       })["catch"](function (error) {
-        _this.loading = false;
+        _this.loading = true;
+        _this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
       });
     }
   }
@@ -37596,11 +37601,28 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
       _vm.loading
-        ? _c("div", { staticClass: "col-md-8" }, [_vm._m(0)])
+        ? _c("div", { staticClass: "col-md-8" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _c(
+                  "img",
+                  _vm._b(
+                    {
+                      staticClass: "mx-auto",
+                      attrs: { width: "90", height: "90", src: _vm.material }
+                    },
+                    "img",
+                    _vm.material,
+                    false
+                  )
+                )
+              ])
+            ])
+          ])
         : _c("div", { staticClass: "col-md-8" }, [
             _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-header" }, [
-                _vm._v("Another j Component")
+                _vm._v("Another Component")
               ]),
               _vm._v(" "),
               _c(
@@ -37609,7 +37631,7 @@ var render = function() {
                 _vm._l(_vm.posts, function(post, index) {
                   return _c("div", { key: index }, [
                     _c("h3", [_vm._v(_vm._s(post.name))]),
-                    _vm._v("jkj\n                        "),
+                    _vm._v(" "),
                     _c("h5", [_vm._v(_vm._s(post.email))])
                   ])
                 }),
@@ -37620,18 +37642,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "card-body" }, [
-        _c("h6", [_vm._v("Loading..b.")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -82,9 +82,13 @@ Route::group(['middleware' => ['auth','admin', 'verified'], 'prefix' => 'admin']
 
 Route::group(['middleware' => ['auth','tutor', 'verified'], 'prefix' => 'tutor'], function(){
 
-    Route::get('/', 'TutorPageController@home')->name('tutor');
+	Route::get('/', 'TutorPageController@home')->name('tutor');
+	Route::get('/allclasses', 'TutorPageController@allclasses')->name('tutor.allclasses');
+	Route::get('/addclasses', 'TutorPageController@allclasses')->name('tutor.addclasses');
+	Route::post('/addclass', 'TutorPageController@addclass')->name('tutor.addclass');
 	Route::get('/profile', 'TutorPageController@profile')->name('tutor.profile');
 	Route::get('/resources', 'TutorPageController@resources')->name('tutor.resources');
+	Route::get('/reports', 'TutorPageController@reports')->name('tutor.reports');
 	Route::get('/notifications', 'TutorPageController@notifications')->name('tutor.notifications');
 	Route::get('/wallet', 'TutorPageController@wallet')->name('tutor.wallet');
 });

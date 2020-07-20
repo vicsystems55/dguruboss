@@ -6,7 +6,7 @@
                     
 
                     <div class="card-body">
-                        <h6>Loading..b.</h6>
+                        <img class="mx-auto" width="90" height="90" v-bind="material" :src="material">
                         
                     </div>
                 </div>
@@ -14,12 +14,13 @@
 
             <div v-else class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Another j Component</div>
+                    <div class="card-header">Another Component</div>
+                    
 
                     <div class="card-body">
 
                         <div v-for="(post, index) in posts" :key="index" >
-                            <h3>{{ post.name}}</h3>jkj
+                            <h3>{{ post.name}}</h3>
                             <h5>{{ post.email}}</h5>
                         </div>
 
@@ -37,6 +38,9 @@
             return{
                 'posts' : [],
                 'loading' : false,
+                'material' : '',
+
+                
 
             }
         },
@@ -47,16 +51,19 @@
             getPosts(){
 
                 this.loading = true;
+                this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
 
                 axios.get("getusers")
                 .then(response => {
                     // handle success
                     this.posts = response.data.data;
                     this.loading = false;
+                    this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
                     
                 })
                 .catch(error => {
-                    this.loading = false; 
+                    this.loading = true; 
+                    this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
                 })
                 
             }
