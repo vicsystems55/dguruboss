@@ -31,6 +31,8 @@ Route::get('/home', 'ChooseRoleController@index')->name('home');
 
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 
+Route::get('/justpaid', 'PaymentController@handleGatewayCallback')->name('justpaid')->middleware('auth');
+
 Auth::routes();
 
 
@@ -82,7 +84,7 @@ Route::group(['middleware' => ['auth','admin', 'verified'], 'prefix' => 'admin']
 
 Route::get('/unpaidmember', function () {
     return view('tutor.unpaid');
-});
+})->middleware('auth');
 
 Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'prefix' => 'tutor'], function(){
 
@@ -96,6 +98,7 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/reports', 'TutorPageController@reports')->name('tutor.reports');
 	Route::get('/notifications', 'TutorPageController@notifications')->name('tutor.notifications');
 	Route::get('/wallet', 'TutorPageController@wallet')->name('tutor.wallet');
+	
 });
 
 Route::group(['middleware' => ['auth','student', 'verified'], 'prefix' => 'student'], function(){

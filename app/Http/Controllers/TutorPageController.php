@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Paystack;
+
 class TutorPageController extends Controller
 {
     /**
@@ -33,6 +35,14 @@ class TutorPageController extends Controller
     {
         //
         return view('tutor.unpaid');
+    }
+
+    public function justpaid()
+    {
+        $paymentDetails = Paystack::getPaymentData();
+
+
+        return 'paid';
     }
 
     
