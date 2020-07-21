@@ -4,6 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 
+use Auth;
+
+
 class PaidMemberMiddleware
 {
     /**
@@ -22,7 +25,7 @@ class PaidMemberMiddleware
 
             else{
 
-                abort(403);
+                return redirect('/unpaidmember');
             }
     }
 }

@@ -29,6 +29,12 @@ class TutorPageController extends Controller
         return view('tutor.addclasses');
     }
 
+    public function unpaidmember()
+    {
+        //
+        return view('tutor.unpaid');
+    }
+
     
 
     public function addclass(Request $request)
