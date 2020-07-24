@@ -23,6 +23,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 Vue.component('another-component', require('./components/AnotherComponent.vue').default);
 
+Vue.component('addcourse-component', require('./components/AddcourseComponent.vue').default);
+
+Vue.component('resources-component', require('./components/ResourcesComponent.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

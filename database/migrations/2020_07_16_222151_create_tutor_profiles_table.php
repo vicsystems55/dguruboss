@@ -15,6 +15,7 @@ class CreateTutorProfilesTable extends Migration
     {
         Schema::create('tutor_profiles', function (Blueprint $table) {
             $table->id();
+            $table->string('avatar');
             $table->timestamps();
         });
     }

@@ -91,7 +91,7 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/', 'TutorPageController@home')->name('tutor');
 	
 	Route::get('/allclasses', 'TutorPageController@allclasses')->name('tutor.allclasses');
-	Route::get('/addclasses', 'TutorPageController@allclasses')->name('tutor.addclasses');
+	Route::get('/addclasses', 'TutorPageController@addclasses')->name('tutor.addclasses');
 	Route::post('/addclass', 'TutorPageController@addclass')->name('tutor.addclass');
 	Route::get('/profile', 'TutorPageController@profile')->name('tutor.profile');
 	Route::get('/resources', 'TutorPageController@resources')->name('tutor.resources');

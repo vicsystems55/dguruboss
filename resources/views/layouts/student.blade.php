@@ -20,7 +20,10 @@
     <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
     </head>
     <body class="{{ $class ?? '' }}">
-        @auth()
+       <div id="app">
+       
+       
+       @auth()
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
@@ -36,6 +39,8 @@
         @guest()
             @include('layouts.page_templates.guest')
         @endguest
+       
+       </div>
         
         
         <!--   Core JS Files   -->

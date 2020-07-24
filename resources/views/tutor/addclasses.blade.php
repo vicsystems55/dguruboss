@@ -3,8 +3,11 @@
 @section('content')
   <div class="content">
     <div class="container-fluid">
+    
+    <addcourse-component></addcourse-component>   
+
+    
      
-      
       
     </div>
   </div>
