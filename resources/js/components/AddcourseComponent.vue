@@ -23,20 +23,22 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fa fa-group"></i>
-                                    </span>
+                                        <span class="input-group-text">
+                                            <i class="fa fa-group"></i>
+                                        </span>
                                     </div>
                                     <textarea placeholder="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
                             </div>
 
-                            <div class="form">
-                                <select name="" id="">
-                                    <option value="">--select course category --</option>
-                                    <option value="">Art</option>
-                                    <option value="">Tech</option>
-                                    <option value="">Education</option>
+                              <div class="form-group">
+                                <label for="exampleFormControlSelect1">Example selecttt</label>
+                                <select class="form-control selectpicker" data-style="btn btn-link">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
                                 </select>
                             </div>
                             

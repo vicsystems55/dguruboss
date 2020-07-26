@@ -17,7 +17,7 @@
             </p>
             <input type="hidden" name="email" value="{{Auth::user()->email}}"> {{-- required --}}
             <input type="hidden" name="orderID" value="345">
-            <input type="hidden" name="amount" value="500000"> {{-- required in kobo --}}
+            <input type="hidden" name="amount" value="100000"> {{-- required in kobo --}}
             <input type="hidden" name="quantity" value="1">
             <input type="hidden" name="currency" value="NGN">
             <input type="hidden" name="callback_url" value="{{ config('app.url')}}justpaid">
