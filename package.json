@@ -24,6 +24,8 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "bootstrap-input-spinner": "^1.13.12"
+        "bootstrap-input-spinner": "^1.13.12",
+        "bootstrap-select": "^1.13.18",
+        "vue-number-input-spinner": "^2.2.0"
     }
 }

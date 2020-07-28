@@ -4,6 +4,7 @@
   <div class="content">
     <div class="container-fluid">
      
+      <allclassescard-component></allclassescard-component>
       
       
     </div>

@@ -3,9 +3,9 @@
         <div class="row justify-content-center">
             
 
-            <div class="col-md-8">
+            <div class="col-lg-9">
                 <div class="card">
-                    <div class="card-header">Add Course.</div>
+                    <div class="card-header">Add Course</div>
         
                     <div class="card-body">
 
@@ -31,16 +31,55 @@
                                 </div>
                             </div>
 
-                              <div class="form-group">
-                                <label for="exampleFormControlSelect1">Example selecttt</label>
-                                <select class="form-control selectpicker" data-style="btn btn-link">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                </select>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-group"></i>
+                                        </span>
+                                    </div>
+                                    <select placeholder="Select " class="form-control" id="exampleFormControlSelect1">
+                                        <option value="">--Select Category--</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Finance and Accounting">Finance and Accounting</option>
+                                    <option value="IT and Software">IT and Software</option>
+                                    <option value="Personal Development">Personal Development</option>
+                                    <option value="Design and Graphics">Design and Graphics</option>
+                                    <option value="Marketting">Marketting</option>
+                                    <option value="Health and Fitness">Health and Fitness</option>
+                                    <option value="Music">Music</option>
+                                    <option value="Teaching and Academics">Teaching and Academics</option>
+                                    <option value="Others">Others</option>
+                                    </select>
+                                </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-group"></i>
+                                        </span>
+                                    </div><button class="btn bnt-primary btn-sm">-</button>
+                                    <input placeholder="Enter Course Fee" type="text" class="form-control">
+                                    <button class="btn bnt-primary btn-sm">+</button>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-group"></i>
+                                        </span>
+                                    </div>
+                                    <input placeholder="Course Banner Cover" type="file" class="form-control">
+                                    
+                                </div>
+                            </div>
+
+                           
                             
 
 

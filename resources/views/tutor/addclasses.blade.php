@@ -6,15 +6,13 @@
     
     <addcourse-component></addcourse-component>   
 
-    <select class="mdb-select md-form">
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
+    <numberspinner-component></numberspinner-component>
+
+   
 
     
-     
+
+    
       
     </div>
   </div>
