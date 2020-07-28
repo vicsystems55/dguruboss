@@ -1,6 +1,6 @@
 <template>
     
-<div class="o">
+<div class="o float-right">
     
         <button class="btn btn-round btn-info" data-toggle="modal" data-target="#signupModal">
     <i class="fa fa-plus" aria-hidden="true"></i>
@@ -27,11 +27,11 @@
                 <div class="description">
                   <h4 class="info-title">Tips</h4>
                   <p class="description">
-                      <ul>
+        <ul>
                           <li>Create a Title</li>
                           <li>Create a Description</li>
                           <li>Upload a banner picture describing the course</li>
-                          <li>Set a Fee for the course or set as Free</li>
+                          <li>Set a Fee for the course. (Optional)</li>
                           <li></li>
                       </ul>
                   </p>

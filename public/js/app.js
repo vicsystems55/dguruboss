@@ -2276,6 +2276,49 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -38255,7 +38298,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "o" }, [
+    return _c("div", { staticClass: "o float-right" }, [
       _c(
         "button",
         {
@@ -38338,9 +38381,7 @@ var staticRenderFns = [
                                 ]),
                                 _vm._v(" "),
                                 _c("li", [
-                                  _vm._v(
-                                    "Set a Fee for the course or set as Free"
-                                  )
+                                  _vm._v("Set a Fee for the course. (Optional)")
                                 ]),
                                 _vm._v(" "),
                                 _c("li")
@@ -38607,17 +38648,21 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "card-body d-flex" }, [
-        _vm._m(1),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "ml-auto" },
-          [_c("addcourseform-component")],
-          1
-        )
+      _c("div", { staticClass: "card-body " }, [
+        _c("div", { staticClass: "row" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-3" },
+            [_c("addcourseform-component")],
+            1
+          )
+        ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _vm._m(2)
   ])
 }
 var staticRenderFns = [
@@ -38628,7 +38673,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "mx-auto col-lg-3 col-md-6 col-sm-6" }, [
         _c("div", { staticClass: "card card-stats" }, [
-          _c("div", { staticClass: "card-header-success " }, [
+          _c("div", { staticClass: "card-header-success text-center" }, [
             _c("p", { staticClass: "card-category" }, [
               _vm._v("Courses In Progress")
             ]),
@@ -38649,7 +38694,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "mx-auto col-lg-3 col-md-6 col-sm-6" }, [
         _c("div", { staticClass: "card card-stats" }, [
-          _c("div", { staticClass: " card-header-danger" }, [
+          _c("div", { staticClass: " card-header-danger text-center" }, [
             _c("p", { staticClass: "card-category" }, [
               _vm._v("Completed Courses")
             ]),
@@ -38670,7 +38715,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "mx-auto col-lg-3 col-md-6 col-sm-6" }, [
         _c("div", { staticClass: "card card-stats" }, [
-          _c("div", { staticClass: " card-header-info" }, [
+          _c("div", { staticClass: " card-header-info text-center" }, [
             _c("p", { staticClass: "card-category" }, [_vm._v("GB Credits")]),
             _vm._v(" "),
             _c("h3", { staticClass: "card-title" }, [_vm._v("0.00GB")])
@@ -38690,22 +38735,90 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("form", { staticClass: "form-inline" }, [
-      _c("div", { staticClass: "form-group no-border" }, [
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "text", placeholder: "Search for a course" }
-        })
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-just-icon btn-round",
-          attrs: { type: "submit" }
-        },
-        [_c("i", { staticClass: "material-icons" }, [_vm._v("search")])]
-      )
+    return _c("form", { staticClass: "form col-9" }, [
+      _c("div", { staticClass: "form-grou " }, [
+        _c("div", { staticClass: "input-group" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", placeholder: "Search for a course..." }
+          }),
+          _vm._v(" "),
+          _c("span", { staticClass: "input-group-btn" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-fab btn-round btn-primary",
+                attrs: { type: "button" }
+              },
+              [_c("i", { staticClass: "material-icons" }, [_vm._v("search")])]
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-3 col-md-4" }, [
+          _c("div", { staticClass: "card card-blog" }, [
+            _c(
+              "div",
+              { staticClass: " card-header card-header-image bg-dark" },
+              [
+                _c("a", { attrs: { href: "#pablo" } }, [
+                  _c("img", {
+                    staticClass: "img",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1511439817358-bee8e21790b5?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
+                      rel: "nofollow"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-title" }, [
+                    _vm._v(
+                      "\n                        This Summer Will be Awesome\n                    "
+                    )
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body pb-0" }, [
+              _c("h6", { staticClass: "card-categor text-info" }, [
+                _vm._v("Fashion")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-description" }, [
+                _vm._v(
+                  "\n                    Rick Owens’ bed design but the back is...\n                  "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                { staticClass: "btn-primary btn btn-sm btn-block" },
+                [_vm._v("more")]
+              ),
+              _vm._v(" "),
+              _c("hr")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-footer pt-0" }, [
+              _c("div", { staticClass: "stats" }, [
+                _c("i", { staticClass: "material-icons" }, [
+                  _vm._v("access_time")
+                ]),
+                _vm._v(" campaign sent 2 days ago\n                ")
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]
