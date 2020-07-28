@@ -33,6 +33,8 @@ Vue.component('numberspinner-component', require('./components/NumberInputSpinne
 
 Vue.component('allclassescard-component', require('./components/AllclassescardComponent.vue').default);
 
+Vue.component('addcourseform-component', require('./components/AddcourseformComponent.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

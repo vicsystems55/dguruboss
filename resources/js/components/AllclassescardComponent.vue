@@ -53,8 +53,8 @@
       </div>
 
       <div class="card">
-        <div class="card-body">
-           <form class="form-inline ml-auto">
+        <div class="card-body d-flex">
+           <form class="form-inline">
                 <div class="form-group no-border">
                   <input type="text" class="form-control" placeholder="Search for a course">
                 </div>
@@ -63,10 +63,9 @@
                 </button>
             </form>
 
-            <div class="float-right">
-              <button class="btn btn-primary btn-round">
-                <i class="material-icons">favorite</i> With Icon
-              </button>
+            <div class="ml-auto">
+              <addcourseform-component></addcourseform-component>
+              
             </div>
         </div>
       </div>
