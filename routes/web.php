@@ -86,6 +86,8 @@ Route::get('/unpaidmember', function () {
     return view('tutor.unpaid');
 })->middleware('auth');
 
+Route::post('/add_course', 'AddCourseController@store')->name('add_course');
+
 Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'prefix' => 'tutor'], function(){
 
 	Route::get('/', 'TutorPageController@home')->name('tutor');

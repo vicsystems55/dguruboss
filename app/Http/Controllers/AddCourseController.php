@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Validator;
+
+use App\User;
+
 class AddCourseController extends Controller
 {
     /**
@@ -40,7 +44,7 @@ class AddCourseController extends Controller
             'category' => ['required', 'string', 'max:200'],
             'fee' =>['required', 'numeric'],
             'duration' => ['required','numeric'],
-            'banner' => ['required|mimes:jpeg,jpg,png','gif|max:10024'],
+            'banner' => 'required|mimes:jpeg,jpg,png,gif|max:10024',
             
 
         ]);

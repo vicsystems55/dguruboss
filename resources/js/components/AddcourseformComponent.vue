@@ -18,7 +18,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <form class="form" method="" action="">
+          <form class="form" method="post" action="/add_course">
+          <input type="hidden" name="_token" :value="csrf">
           <div class="row">
             <div class="col-md-6 ml-auto">
               
@@ -32,7 +33,7 @@
                           <i class="fa fa-book" aria-hidden="true"></i>
                           </div>
                       </div>
-                        <input type="text" class="form-control" placeholder="Course Title">
+                        <input name="title" type="text" class="form-control" placeholder="Course Title">
                     </div>
                   </div>
 
@@ -43,7 +44,7 @@
                         <i class="fa fa-book" aria-hidden="true"></i>
                         </div>
                     </div>
-                      <textarea placeholder="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <textarea name="description" placeholder="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
                 </div>
 
@@ -54,7 +55,7 @@
                         <i class="fa fa-book" aria-hidden="true"></i>
                         </div>
                     </div>
-                      <select placeholder="Select " class="form-control" id="exampleFormControlSelect1">
+                      <select name="category" placeholder="Select " class="form-control" id="exampleFormControlSelect1">
                                     <option value="">--Select Category--</option>
                                     <option value="Business">Business</option>
                                     <option value="Finance and Accounting">Finance and Accounting</option>
@@ -85,7 +86,7 @@
                              <h6 class="float-right"> NGN</h6>
                             </div>
                             <div class="col-6">
-                              <input type="number" class="form-control" placeholder="Course Fee" min="1000" max="5000" step="500">
+                              <input name="fee" type="number" class="form-control" placeholder="Course Fee" min="1000" max="5000" step="500">
                             </div>
                             
                         </div>
@@ -133,11 +134,11 @@
     </div> -->
     <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
     <div>
-        <span class="btn btn-raised btn-round btn-default btn-file">
-            <span class="fileinput-new">Select image</span>
-            <span class="fileinput-exists">Change</span>
-            <input type="file" name="..." />
-        </span>
+        <div class="form-group">
+            <span class="fileinput-new">Select</span>
+            
+            <input class="form-control" type="file" name="banner" />
+        </div>
         
     </div>
 </div>
@@ -165,8 +166,16 @@
 
 <script>
     export default {
+
+        data() {
+        return {
+            csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        }
+},
+      
         mounted() {
             console.log('Component mounted.')
         }
+
     }
 </script>

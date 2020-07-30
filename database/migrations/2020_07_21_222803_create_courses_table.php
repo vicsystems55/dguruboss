@@ -19,7 +19,7 @@ class CreateCoursesTable extends Migration
             $table->string('description');
             $table->string('category');
             $table->integer('fee')->unsigned();
-            $table->integer('tutor_id')->unsigned();
+            $table->bigInteger('tutor_id')->unsigned();
             $table->string('duration');
             $table->string('banner');
             $table->string('requirements')->nullable();

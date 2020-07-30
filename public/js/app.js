@@ -2210,7 +2210,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    };
+  },
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -38319,415 +38325,332 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "o float-right" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: { id: "signupModal", tabindex: "-1", role: "dialog" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "modal-dialog modal-signup modal-lg",
+            attrs: { role: "document" }
+          },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "card card-signup card-plain" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", { staticClass: "modal-body" }, [
+                  _c(
+                    "form",
+                    {
+                      staticClass: "form",
+                      attrs: { method: "post", action: "/add_course" }
+                    },
+                    [
+                      _c("input", {
+                        attrs: { type: "hidden", name: "_token" },
+                        domProps: { value: _vm.csrf }
+                      }),
+                      _vm._v(" "),
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _vm._m(3)
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ]
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "o float-right" }, [
+    return _c(
+      "button",
+      {
+        staticClass: "btn btn-round btn-info",
+        attrs: { "data-toggle": "modal", "data-target": "#signupModal" }
+      },
+      [
+        _c("i", {
+          staticClass: "fa fa-plus",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v("\n    Create\n")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title card-title" }, [
+        _vm._v("Create a Course")
+      ]),
+      _vm._v(" "),
       _c(
         "button",
         {
-          staticClass: "btn btn-round btn-info",
-          attrs: { "data-toggle": "modal", "data-target": "#signupModal" }
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
         },
-        [
-          _c("i", {
-            staticClass: "fa fa-plus",
-            attrs: { "aria-hidden": "true" }
-          }),
-          _vm._v("\n    Create\n")
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "modal fade",
-          attrs: { id: "signupModal", tabindex: "-1", role: "dialog" }
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass: "modal-dialog modal-signup modal-lg",
-              attrs: { role: "document" }
-            },
-            [
-              _c("div", { staticClass: "modal-content" }, [
-                _c("div", { staticClass: "card card-signup card-plain" }, [
-                  _c("div", { staticClass: "modal-header" }, [
-                    _c("h5", { staticClass: "modal-title card-title" }, [
-                      _vm._v("Create a Course")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "close",
-                        attrs: {
-                          type: "button",
-                          "data-dismiss": "modal",
-                          "aria-label": "Close"
-                        }
-                      },
-                      [
-                        _c("i", { staticClass: "material-icons" }, [
-                          _vm._v("clear")
-                        ])
-                      ]
-                    )
+        [_c("i", { staticClass: "material-icons" }, [_vm._v("clear")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-6 ml-auto" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c("div", { staticClass: "input-group" }, [
+              _c("div", { staticClass: "input-group-prepend" }, [
+                _c("div", { staticClass: "input-group-text" }, [
+                  _c("i", {
+                    staticClass: "fa fa-book",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control",
+                attrs: {
+                  name: "title",
+                  type: "text",
+                  placeholder: "Course Title"
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("div", { staticClass: "input-group" }, [
+              _c("div", { staticClass: "input-group-prepend" }, [
+                _c("div", { staticClass: "input-group-text" }, [
+                  _c("i", {
+                    staticClass: "fa fa-book",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("textarea", {
+                staticClass: "form-control",
+                attrs: {
+                  name: "description",
+                  placeholder: "Description",
+                  id: "exampleFormControlTextarea1",
+                  rows: "3"
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("div", { staticClass: "input-group" }, [
+              _c("div", { staticClass: "input-group-prepend" }, [
+                _c("div", { staticClass: "input-group-text" }, [
+                  _c("i", {
+                    staticClass: "fa fa-book",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass: "form-control",
+                  attrs: {
+                    name: "category",
+                    placeholder: "Select ",
+                    id: "exampleFormControlSelect1"
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "" } }, [
+                    _vm._v("--Select Category--")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "modal-body" }, [
-                    _c(
-                      "form",
-                      {
-                        staticClass: "form",
-                        attrs: { method: "", action: "" }
-                      },
-                      [
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "col-md-6 ml-auto" }, [
-                            _c("div", { staticClass: "card-body" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("div", { staticClass: "input-group" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "input-group-prepend" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "input-group-text" },
-                                        [
-                                          _c("i", {
-                                            staticClass: "fa fa-book",
-                                            attrs: { "aria-hidden": "true" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("input", {
-                                    staticClass: "form-control",
-                                    attrs: {
-                                      type: "text",
-                                      placeholder: "Course Title"
-                                    }
-                                  })
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("div", { staticClass: "input-group" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "input-group-prepend" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "input-group-text" },
-                                        [
-                                          _c("i", {
-                                            staticClass: "fa fa-book",
-                                            attrs: { "aria-hidden": "true" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("textarea", {
-                                    staticClass: "form-control",
-                                    attrs: {
-                                      placeholder: "Description",
-                                      id: "exampleFormControlTextarea1",
-                                      rows: "3"
-                                    }
-                                  })
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("div", { staticClass: "input-group" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "input-group-prepend" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "input-group-text" },
-                                        [
-                                          _c("i", {
-                                            staticClass: "fa fa-book",
-                                            attrs: { "aria-hidden": "true" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "select",
-                                    {
-                                      staticClass: "form-control",
-                                      attrs: {
-                                        placeholder: "Select ",
-                                        id: "exampleFormControlSelect1"
-                                      }
-                                    },
-                                    [
-                                      _c("option", { attrs: { value: "" } }, [
-                                        _vm._v("--Select Category--")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        { attrs: { value: "Business" } },
-                                        [_vm._v("Business")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          attrs: {
-                                            value: "Finance and Accounting"
-                                          }
-                                        },
-                                        [_vm._v("Finance and Accounting")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        { attrs: { value: "IT and Software" } },
-                                        [_vm._v("IT and Software")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          attrs: {
-                                            value: "Personal Development"
-                                          }
-                                        },
-                                        [_vm._v("Personal Development")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          attrs: {
-                                            value: "Design and Graphics"
-                                          }
-                                        },
-                                        [_vm._v("Design and Graphics")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        { attrs: { value: "Marketting" } },
-                                        [_vm._v("Marketting")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          attrs: { value: "Health and Fitness" }
-                                        },
-                                        [_vm._v("Health and Fitness")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        { attrs: { value: "Music" } },
-                                        [_vm._v("Music")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        {
-                                          attrs: {
-                                            value: "Teaching and Academics"
-                                          }
-                                        },
-                                        [_vm._v("Teaching and Academics")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "option",
-                                        { attrs: { value: "Others" } },
-                                        [_vm._v("Others")]
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("div", { staticClass: "input-group" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "input-group-prepend" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "input-group-text" },
-                                        [
-                                          _c("i", {
-                                            staticClass: "fa fa-book",
-                                            attrs: { "aria-hidden": "true" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "mx-3 container" }, [
-                                    _c("div", { staticClass: "row" }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "col-6 mt-2 font-weight-bold"
-                                        },
-                                        [
-                                          _c(
-                                            "h6",
-                                            { staticClass: "float-right" },
-                                            [_vm._v(" NGN")]
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-6" }, [
-                                        _c("input", {
-                                          staticClass: "form-control",
-                                          attrs: {
-                                            type: "number",
-                                            placeholder: "Course Fee",
-                                            min: "1000",
-                                            max: "5000",
-                                            step: "500"
-                                          }
-                                        })
-                                      ])
-                                    ])
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("div", { staticClass: "input-group" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "input-group-prepend" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "input-group-text" },
-                                        [
-                                          _c("i", {
-                                            staticClass: "fa fa-book",
-                                            attrs: { "aria-hidden": "true" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "mx-3 container" }, [
-                                    _c("div", { staticClass: "row" }, [
-                                      _c("div", { staticClass: "col-6" }, [
-                                        _c("input", {
-                                          staticClass: "form-control",
-                                          attrs: {
-                                            type: "number",
-                                            placeholder: "Number of Weeks",
-                                            min: "1",
-                                            max: "50",
-                                            step: "1"
-                                          }
-                                        })
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-6 mt-2" }, [
-                                        _vm._v(
-                                          "\n                              Week(s)\n                            "
-                                        )
-                                      ])
-                                    ])
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "col-md-6 mr-auto" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "fileinput fileinput-new text-center",
-                                attrs: { "data-provides": "fileinput" }
-                              },
-                              [
-                                _c("div", {
-                                  staticClass:
-                                    "fileinput-preview fileinput-exists thumbnail img-raised"
-                                }),
-                                _vm._v(" "),
-                                _c("div", [
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "btn btn-raised btn-round btn-default btn-file"
-                                    },
-                                    [
-                                      _c(
-                                        "span",
-                                        { staticClass: "fileinput-new" },
-                                        [_vm._v("Select image")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "fileinput-exists" },
-                                        [_vm._v("Change")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        attrs: { type: "file", name: "..." }
-                                      })
-                                    ]
-                                  )
-                                ])
-                              ]
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "container" }, [
-                          _c("div", { staticClass: "modal-foote" }, [
-                            _c(
-                              "button",
-                              { staticClass: "btn btn-primary float-right" },
-                              [_vm._v("Add Course")]
-                            )
-                          ])
-                        ])
-                      ]
+                  _c("option", { attrs: { value: "Business" } }, [
+                    _vm._v("Business")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "Finance and Accounting" } }, [
+                    _vm._v("Finance and Accounting")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "IT and Software" } }, [
+                    _vm._v("IT and Software")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "Personal Development" } }, [
+                    _vm._v("Personal Development")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "Design and Graphics" } }, [
+                    _vm._v("Design and Graphics")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "Marketting" } }, [
+                    _vm._v("Marketting")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "Health and Fitness" } }, [
+                    _vm._v("Health and Fitness")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "Music" } }, [
+                    _vm._v("Music")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "Teaching and Academics" } }, [
+                    _vm._v("Teaching and Academics")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "Others" } }, [
+                    _vm._v("Others")
+                  ])
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("div", { staticClass: "input-group" }, [
+              _c("div", { staticClass: "input-group-prepend" }, [
+                _c("div", { staticClass: "input-group-text" }, [
+                  _c("i", {
+                    staticClass: "fa fa-book",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "mx-3 container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-6 mt-2 font-weight-bold" }, [
+                    _c("h6", { staticClass: "float-right" }, [_vm._v(" NGN")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "fee",
+                        type: "number",
+                        placeholder: "Course Fee",
+                        min: "1000",
+                        max: "5000",
+                        step: "500"
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("div", { staticClass: "input-group" }, [
+              _c("div", { staticClass: "input-group-prepend" }, [
+                _c("div", { staticClass: "input-group-text" }, [
+                  _c("i", {
+                    staticClass: "fa fa-book",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "mx-3 container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-6" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        placeholder: "Number of Weeks",
+                        min: "1",
+                        max: "50",
+                        step: "1"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6 mt-2" }, [
+                    _vm._v(
+                      "\n                              Week(s)\n                            "
                     )
                   ])
                 ])
               ])
-            ]
-          )
-        ]
-      )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-6 mr-auto" }, [
+        _c(
+          "div",
+          {
+            staticClass: "fileinput fileinput-new text-center",
+            attrs: { "data-provides": "fileinput" }
+          },
+          [
+            _c("div", {
+              staticClass:
+                "fileinput-preview fileinput-exists thumbnail img-raised"
+            }),
+            _vm._v(" "),
+            _c("div", [
+              _c("div", { staticClass: "form-group" }, [
+                _c("span", { staticClass: "fileinput-new" }, [
+                  _vm._v("Select")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "file", name: "banner" }
+                })
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "modal-foote" }, [
+        _c("button", { staticClass: "btn btn-primary float-right" }, [
+          _vm._v("Add Course")
+        ])
+      ])
     ])
   }
 ]
