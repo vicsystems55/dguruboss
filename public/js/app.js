@@ -2203,6 +2203,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -38658,7 +38665,49 @@ var staticRenderFns = [
                             ])
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "col-md-6 mr-auto" })
+                          _c("div", { staticClass: "col-md-6 mr-auto" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "fileinput fileinput-new text-center",
+                                attrs: { "data-provides": "fileinput" }
+                              },
+                              [
+                                _c("div", {
+                                  staticClass:
+                                    "fileinput-preview fileinput-exists thumbnail img-raised"
+                                }),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "btn btn-raised btn-round btn-default btn-file"
+                                    },
+                                    [
+                                      _c(
+                                        "span",
+                                        { staticClass: "fileinput-new" },
+                                        [_vm._v("Select image")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "fileinput-exists" },
+                                        [_vm._v("Change")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        attrs: { type: "file", name: "..." }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ]
+                            )
+                          ])
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "container" }, [

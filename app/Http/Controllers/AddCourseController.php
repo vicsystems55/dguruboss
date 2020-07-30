@@ -40,8 +40,8 @@ class AddCourseController extends Controller
             'category' => ['required', 'string', 'max:200'],
             'fee' =>['required', 'numeric'],
             'duration' => ['required','numeric'],
-            'banner' => ['required','string'],
-            'requirements' => ['required','string']
+            'banner' => ['required|mimes:jpeg,jpg,png','gif|max:10024'],
+            
 
         ]);
 
@@ -53,10 +53,12 @@ class AddCourseController extends Controller
             'tutor_id' => Auth::user()->id,// the person currently logged in is 
             'duration' => $data['duration'],
             'banner' => $data['banner'],
-            'requirements' => $data['requirements'],
+            'requirements' => 'no requirements',
             'status' => 'not-acitve',
-            'password' => Hash::make($data['password']),
+           
         ]);
+
+        
 
     }
 

@@ -22,10 +22,10 @@ class CreateCoursesTable extends Migration
             $table->integer('tutor_id')->unsigned();
             $table->string('duration');
             $table->string('banner');
-            $table->string('requirements');
+            $table->string('requirements')->nullable();
             $table->string('status');
             $table->timestamps();
-            $table->foreign('tutor_id')->references('id')->on('tutor_profiles');
+            $table->foreign('tutor_id')->references('id')->on('users');
         });
     }
 
