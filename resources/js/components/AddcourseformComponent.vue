@@ -4,7 +4,7 @@
     
         <button class="btn btn-round btn-info" data-toggle="modal" data-target="#signupModal">
     <i class="fa fa-plus" aria-hidden="true"></i>
-    SignUp
+    Create
 </button>
 
 <div class="modal fade" id="signupModal" tabindex="-1" role="dialog">
@@ -18,71 +18,19 @@
           </button>
         </div>
         <div class="modal-body">
+          <form class="form" method="" action="">
           <div class="row">
             <div class="col-md-6 ml-auto">
-              <div class="info info-horizontal">
-                <div class="icon icon-rose">
-                  <i class="material-icons">timeline</i>
-                </div>
-                <div class="description">
-                  <h4 class="info-title">Tips</h4>
-                  <p class="description">
-        <ul>
-                          <li>Create a Title</li>
-                          <li>Create a Description</li>
-                          <li>Upload a banner picture describing the course</li>
-                          <li>Set a Fee for the course. (Optional)</li>
-                          <li></li>
-                      </ul>
-                  </p>
-                </div>
-              </div>
-
-              <div class="info info-horizontal">
-                <div class="icon icon-primary">
-                  <i class="material-icons">code</i>
-                </div>
-                <div class="description">
-                  <h4 class="info-title">Fully Coded in HTML5</h4>
-                  <p class="description">
-                  We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
-                  </p>
-                </div>
-              </div>
-
-              <div class="info info-horizontal">
-                <div class="icon icon-info">
-                  <i class="material-icons">group</i>
-                </div>
-                <div class="description">
-                  <h4 class="info-title">Built Audience</h4>
-                  <p class="description">
-                  There is also a Fully Customizable CMS Admin Dashboard for this product.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-5 mr-auto">
-              <div class="social text-center">
-                <button class="btn btn-just-icon btn-round btn-twitter">
-                  <i class="fab fa-twitter"></i>
-                </button>
-                <button class="btn btn-just-icon btn-round btn-dribbble">
-                  <i class="fab fa-dribbble"></i>
-                </button>
-                <button class="btn btn-just-icon btn-round btn-facebook">
-                  <i class="fab fa-facebook"> </i>
-                </button>
-                <h4> or be classical </h4>
-              </div>
-
-              <form class="form" method="" action="">
+              
+                
+              
                 <div class="card-body">
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="material-icons">face</i></div>
+                        <div class="input-group-text">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          </div>
                       </div>
                         <input type="text" class="form-control" placeholder="Course Title">
                     </div>
@@ -91,37 +39,112 @@
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-prepend">
-                      <div class="input-group-text"><i class="material-icons">email</i></div>
+                      <div class="input-group-text">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        </div>
                     </div>
-                      <input type="text" class="form-control" placeholder="Email...">
+                      <textarea placeholder="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-prepend">
-                      <div class="input-group-text"><i class="material-icons">lock_outline</i></div>
+                      <div class="input-group-text">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        </div>
                     </div>
-                      <input type="password" placeholder="Password..." class="form-control" />
+                      <select placeholder="Select " class="form-control" id="exampleFormControlSelect1">
+                                    <option value="">--Select Category--</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Finance and Accounting">Finance and Accounting</option>
+                                    <option value="IT and Software">IT and Software</option>
+                                    <option value="Personal Development">Personal Development</option>
+                                    <option value="Design and Graphics">Design and Graphics</option>
+                                    <option value="Marketting">Marketting</option>
+                                    <option value="Health and Fitness">Health and Fitness</option>
+                                    <option value="Music">Music</option>
+                                    <option value="Teaching and Academics">Teaching and Academics</option>
+                                    <option value="Others">Others</option>
+                        </select>
                   </div>
                 </div>
 
-                <div class="form-check">
-                  <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="" checked>
-                      <span class="form-check-sign">
-                          <span class="check"></span>
-                      </span>
-                      I agree to the <a href="#something">terms and conditions</a>.
-                  </label>
+                
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          </div>
+                      </div>
+                        <div class="mx-3 container">
+                          <div class="row">
+                            <div class="col-6 mt-2 font-weight-bold">
+                             <h6 class="float-right"> NGN</h6>
+                            </div>
+                            <div class="col-6">
+                              <input type="number" class="form-control" placeholder="Course Fee" min="1000" max="5000" step="500">
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          </div>
+                      </div>
+                        <div class="mx-3 container">
+                          <div class="row">
+                            <div class="col-6">
+                              <input type="number" class="form-control" placeholder="Number of Weeks" min="1" max="50" step="1">
+                            </div>
+                            <div class="col-6 mt-2">
+                              Week(s)
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  
+
+                
+
+               
+
+                
                 </div>
-                </div>
-              <div class="modal-footer justify-content-center">
-              <a href="#pablo" class="btn btn-primary btn-round">Add Course</a>
-              </div>
-              </form>
+              
+              
+
+                  
+
+
+
             </div>
+
+            <div class="col-md-6 mr-auto">
+              
+               
+
+            </div>
+
           </div>
+           <div class="container">
+
+                  <div class="modal-foote">
+                  <button class="btn btn-primary float-right">Add Course</button>
+                  </div>
+                </div>
+          </form>
         </div>
       </div>
     </div>

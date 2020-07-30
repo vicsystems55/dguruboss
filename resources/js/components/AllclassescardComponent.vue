@@ -58,14 +58,14 @@
              <form class="form col-9">
                 <div class="form-grou ">
                   
-                  <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search for a course...">
-                      <span class="input-group-btn">
+                    <div class="input-group row">
+                      <input type="text" class="form-control col-8" placeholder="Search for a course...">
+                      <span class="input-group-btn col-4">
                           <button type="button" class="btn btn-fab btn-round btn-primary">
                               <i class="material-icons">search</i>
                           </button>
                       </span>
-                  </div>
+                    </div>
                 </div>
               </form>
 
@@ -90,20 +90,18 @@
                     </a>
                 </div>
                   <div class="card-body pb-0">
-                    <h6 class="card-categor text-info">Fashion</h6>
+                    <h6 class="card-categor text-info"><span class="text-dark">category:</span> Fashion</h6>
                       <p class="card-description">
                         Rick Owens&#x2019; bed design but the back is...
                       </p>
+                      
+                  <hr>
                       <button class="btn-primary btn btn-sm btn-block">more</button>
-                      <hr>
+                      
 
                   </div>
                   
-                  <div class="card-footer pt-0">
-                    <div class="stats">
-                        <i class="material-icons">access_time</i> campaign sent 2 days ago
-                    </div>
-                  </div>
+                  
             </div>
           </div>
 

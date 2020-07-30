@@ -2180,6 +2180,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2197,8 +2220,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -38310,7 +38331,7 @@ var staticRenderFns = [
             staticClass: "fa fa-plus",
             attrs: { "aria-hidden": "true" }
           }),
-          _vm._v("\n    SignUp\n")
+          _vm._v("\n    Create\n")
         ]
       ),
       _vm._v(" "),
@@ -38354,122 +38375,15 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "modal-body" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-md-6 ml-auto" }, [
-                        _c("div", { staticClass: "info info-horizontal" }, [
-                          _c("div", { staticClass: "icon icon-rose" }, [
-                            _c("i", { staticClass: "material-icons" }, [
-                              _vm._v("timeline")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "description" }, [
-                            _c("h4", { staticClass: "info-title" }, [
-                              _vm._v("Tips")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "description" }, [
-                              _c("ul", [
-                                _c("li", [_vm._v("Create a Title")]),
-                                _vm._v(" "),
-                                _c("li", [_vm._v("Create a Description")]),
-                                _vm._v(" "),
-                                _c("li", [
-                                  _vm._v(
-                                    "Upload a banner picture describing the course"
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("li", [
-                                  _vm._v("Set a Fee for the course. (Optional)")
-                                ]),
-                                _vm._v(" "),
-                                _c("li")
-                              ])
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "info info-horizontal" }, [
-                          _c("div", { staticClass: "icon icon-primary" }, [
-                            _c("i", { staticClass: "material-icons" }, [
-                              _vm._v("code")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "description" }, [
-                            _c("h4", { staticClass: "info-title" }, [
-                              _vm._v("Fully Coded in HTML5")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "description" }, [
-                              _vm._v(
-                                "\n                  We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.\n                  "
-                              )
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "info info-horizontal" }, [
-                          _c("div", { staticClass: "icon icon-info" }, [
-                            _c("i", { staticClass: "material-icons" }, [
-                              _vm._v("group")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "description" }, [
-                            _c("h4", { staticClass: "info-title" }, [
-                              _vm._v("Built Audience")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "description" }, [
-                              _vm._v(
-                                "\n                  There is also a Fully Customizable CMS Admin Dashboard for this product.\n                  "
-                              )
-                            ])
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-5 mr-auto" }, [
-                        _c("div", { staticClass: "social text-center" }, [
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "btn btn-just-icon btn-round btn-twitter"
-                            },
-                            [_c("i", { staticClass: "fab fa-twitter" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "btn btn-just-icon btn-round btn-dribbble"
-                            },
-                            [_c("i", { staticClass: "fab fa-dribbble" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "btn btn-just-icon btn-round btn-facebook"
-                            },
-                            [_c("i", { staticClass: "fab fa-facebook" })]
-                          ),
-                          _vm._v(" "),
-                          _c("h4", [_vm._v(" or be classical ")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "form",
-                          {
-                            staticClass: "form",
-                            attrs: { method: "", action: "" }
-                          },
-                          [
+                    _c(
+                      "form",
+                      {
+                        staticClass: "form",
+                        attrs: { method: "", action: "" }
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-md-6 ml-auto" }, [
                             _c("div", { staticClass: "card-body" }, [
                               _c("div", { staticClass: "form-group" }, [
                                 _c("div", { staticClass: "input-group" }, [
@@ -38481,11 +38395,10 @@ var staticRenderFns = [
                                         "div",
                                         { staticClass: "input-group-text" },
                                         [
-                                          _c(
-                                            "i",
-                                            { staticClass: "material-icons" },
-                                            [_vm._v("face")]
-                                          )
+                                          _c("i", {
+                                            staticClass: "fa fa-book",
+                                            attrs: { "aria-hidden": "true" }
+                                          })
                                         ]
                                       )
                                     ]
@@ -38511,21 +38424,21 @@ var staticRenderFns = [
                                         "div",
                                         { staticClass: "input-group-text" },
                                         [
-                                          _c(
-                                            "i",
-                                            { staticClass: "material-icons" },
-                                            [_vm._v("email")]
-                                          )
+                                          _c("i", {
+                                            staticClass: "fa fa-book",
+                                            attrs: { "aria-hidden": "true" }
+                                          })
                                         ]
                                       )
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _c("input", {
+                                  _c("textarea", {
                                     staticClass: "form-control",
                                     attrs: {
-                                      type: "text",
-                                      placeholder: "Email..."
+                                      placeholder: "Description",
+                                      id: "exampleFormControlTextarea1",
+                                      rows: "3"
                                     }
                                   })
                                 ])
@@ -38541,78 +38454,224 @@ var staticRenderFns = [
                                         "div",
                                         { staticClass: "input-group-text" },
                                         [
-                                          _c(
-                                            "i",
-                                            { staticClass: "material-icons" },
-                                            [_vm._v("lock_outline")]
-                                          )
+                                          _c("i", {
+                                            staticClass: "fa fa-book",
+                                            attrs: { "aria-hidden": "true" }
+                                          })
                                         ]
                                       )
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _c("input", {
-                                    staticClass: "form-control",
-                                    attrs: {
-                                      type: "password",
-                                      placeholder: "Password..."
-                                    }
-                                  })
+                                  _c(
+                                    "select",
+                                    {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        placeholder: "Select ",
+                                        id: "exampleFormControlSelect1"
+                                      }
+                                    },
+                                    [
+                                      _c("option", { attrs: { value: "" } }, [
+                                        _vm._v("--Select Category--")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Business" } },
+                                        [_vm._v("Business")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: {
+                                            value: "Finance and Accounting"
+                                          }
+                                        },
+                                        [_vm._v("Finance and Accounting")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "IT and Software" } },
+                                        [_vm._v("IT and Software")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: {
+                                            value: "Personal Development"
+                                          }
+                                        },
+                                        [_vm._v("Personal Development")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: {
+                                            value: "Design and Graphics"
+                                          }
+                                        },
+                                        [_vm._v("Design and Graphics")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Marketting" } },
+                                        [_vm._v("Marketting")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "Health and Fitness" }
+                                        },
+                                        [_vm._v("Health and Fitness")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Music" } },
+                                        [_vm._v("Music")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: {
+                                            value: "Teaching and Academics"
+                                          }
+                                        },
+                                        [_vm._v("Teaching and Academics")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Others" } },
+                                        [_vm._v("Others")]
+                                      )
+                                    ]
+                                  )
                                 ])
                               ]),
                               _vm._v(" "),
-                              _c("div", { staticClass: "form-check" }, [
-                                _c(
-                                  "label",
-                                  { staticClass: "form-check-label" },
-                                  [
-                                    _c("input", {
-                                      staticClass: "form-check-input",
-                                      attrs: {
-                                        type: "checkbox",
-                                        value: "",
-                                        checked: ""
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "form-check-sign" },
-                                      [_c("span", { staticClass: "check" })]
-                                    ),
-                                    _vm._v(
-                                      "\n                      I agree to the "
-                                    ),
-                                    _c("a", { attrs: { href: "#something" } }, [
-                                      _vm._v("terms and conditions")
-                                    ]),
-                                    _vm._v(".\n                  ")
-                                  ]
-                                )
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("div", { staticClass: "input-group" }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "input-group-prepend" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group-text" },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-book",
+                                            attrs: { "aria-hidden": "true" }
+                                          })
+                                        ]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "mx-3 container" }, [
+                                    _c("div", { staticClass: "row" }, [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-6 mt-2 font-weight-bold"
+                                        },
+                                        [
+                                          _c(
+                                            "h6",
+                                            { staticClass: "float-right" },
+                                            [_vm._v(" NGN")]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-6" }, [
+                                        _c("input", {
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            type: "number",
+                                            placeholder: "Course Fee",
+                                            min: "1000",
+                                            max: "5000",
+                                            step: "500"
+                                          }
+                                        })
+                                      ])
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("div", { staticClass: "input-group" }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "input-group-prepend" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "input-group-text" },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-book",
+                                            attrs: { "aria-hidden": "true" }
+                                          })
+                                        ]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "mx-3 container" }, [
+                                    _c("div", { staticClass: "row" }, [
+                                      _c("div", { staticClass: "col-6" }, [
+                                        _c("input", {
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            type: "number",
+                                            placeholder: "Number of Weeks",
+                                            min: "1",
+                                            max: "50",
+                                            step: "1"
+                                          }
+                                        })
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-6 mt-2" }, [
+                                        _vm._v(
+                                          "\n                              Week(s)\n                            "
+                                        )
+                                      ])
+                                    ])
+                                  ])
+                                ])
                               ])
-                            ]),
-                            _vm._v(" "),
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6 mr-auto" })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "container" }, [
+                          _c("div", { staticClass: "modal-foote" }, [
                             _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "modal-footer justify-content-center"
-                              },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "btn btn-primary btn-round",
-                                    attrs: { href: "#pablo" }
-                                  },
-                                  [_vm._v("Add Course")]
-                                )
-                              ]
+                              "button",
+                              { staticClass: "btn btn-primary float-right" },
+                              [_vm._v("Add Course")]
                             )
-                          ]
-                        )
-                      ])
-                    ])
+                          ])
+                        ])
+                      ]
+                    )
                   ])
                 ])
               ])
@@ -38737,13 +38796,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("form", { staticClass: "form col-9" }, [
       _c("div", { staticClass: "form-grou " }, [
-        _c("div", { staticClass: "input-group" }, [
+        _c("div", { staticClass: "input-group row" }, [
           _c("input", {
-            staticClass: "form-control",
+            staticClass: "form-control col-8",
             attrs: { type: "text", placeholder: "Search for a course..." }
           }),
           _vm._v(" "),
-          _c("span", { staticClass: "input-group-btn" }, [
+          _c("span", { staticClass: "input-group-btn col-4" }, [
             _c(
               "button",
               {
@@ -38790,7 +38849,8 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "card-body pb-0" }, [
               _c("h6", { staticClass: "card-categor text-info" }, [
-                _vm._v("Fashion")
+                _c("span", { staticClass: "text-dark" }, [_vm._v("category:")]),
+                _vm._v(" Fashion")
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "card-description" }, [
@@ -38799,22 +38859,13 @@ var staticRenderFns = [
                 )
               ]),
               _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
               _c(
                 "button",
                 { staticClass: "btn-primary btn btn-sm btn-block" },
                 [_vm._v("more")]
-              ),
-              _vm._v(" "),
-              _c("hr")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-footer pt-0" }, [
-              _c("div", { staticClass: "stats" }, [
-                _c("i", { staticClass: "material-icons" }, [
-                  _vm._v("access_time")
-                ]),
-                _vm._v(" campaign sent 2 days ago\n                ")
-              ])
+              )
             ])
           ])
         ])

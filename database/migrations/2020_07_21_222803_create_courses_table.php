@@ -17,6 +17,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
+            $table->string('category');
             $table->integer('fee')->unsigned();
             $table->integer('tutor_id')->unsigned();
             $table->string('duration');
