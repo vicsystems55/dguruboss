@@ -21,6 +21,8 @@ Route::view('/vue', 'student.sample');
 
 Route::get('/getusers', 'StudentPageController@users');
 
+Route::get('/loadcourses', 'TutorPageController@loadcourses');
+
 Route::get('/sample', function () {
     return view('admin.home');
 });
@@ -36,35 +38,35 @@ Route::get('/justpaid', 'PaymentController@handleGatewayCallback')->name('justpa
 Auth::routes();
 
 
-Route::group(['middleware' => 'auth'], function () {
-	Route::get('table-list', function () {
-		return view('pages.table_list');
-	})->name('table');
+// Route::group(['middleware' => 'auth'], function () {
+// 	Route::get('table-list', function () {
+// 		return view('pages.table_list');
+// 	})->name('table');
 
-	Route::get('typography', function () {
-		return view('pages.typography');
-	})->name('typography');
+// 	Route::get('typography', function () {
+// 		return view('pages.typography');
+// 	})->name('typography');
 
-	Route::get('icons', function () {
-		return view('pages.icons');
-	})->name('icons');
+// 	Route::get('icons', function () {
+// 		return view('pages.icons');
+// 	})->name('icons');
 
-	Route::get('map', function () {
-		return view('pages.map');
-	})->name('map');
+// 	Route::get('map', function () {
+// 		return view('pages.map');
+// 	})->name('map');
 
-	Route::get('notifications', function () {
-		return view('pages.notifications');
-	})->name('notifications');
+// 	Route::get('notifications', function () {
+// 		return view('pages.notifications');
+// 	})->name('notifications');
 
-	Route::get('rtl-support', function () {
-		return view('pages.language');
-	})->name('language');
+// 	Route::get('rtl-support', function () {
+// 		return view('pages.language');
+// 	})->name('language');
 
-	Route::get('upgrade', function () {
-		return view('pages.upgrade');
-	})->name('upgrade');
-});
+// 	Route::get('upgrade', function () {
+// 		return view('pages.upgrade');
+// 	})->name('upgrade');
+// });
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
@@ -88,6 +90,8 @@ Route::get('/unpaidmember', function () {
 
 Route::post('/add_course', 'AddCourseController@store')->name('add_course');
 
+
+
 Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'prefix' => 'tutor'], function(){
 
 	Route::get('/', 'TutorPageController@home')->name('tutor');
@@ -96,7 +100,10 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/addclasses', 'TutorPageController@addclasses')->name('tutor.addclasses');
 	Route::post('/addclass', 'TutorPageController@addclass')->name('tutor.addclass');
 	Route::get('/profile', 'TutorPageController@profile')->name('tutor.profile');
-	Route::get('/resources', 'TutorPageController@resources')->name('tutor.resources');
+	Route::get('/resources', 'TutorPageController@gurulibrary')->name('tutor.resources');
+	
+	Route::get('/loadcourses', 'TutorPageController@loadcourses');
+
 	Route::get('/reports', 'TutorPageController@reports')->name('tutor.reports');
 	Route::get('/notifications', 'TutorPageController@notifications')->name('tutor.notifications');
 	Route::get('/wallet', 'TutorPageController@wallet')->name('tutor.wallet');

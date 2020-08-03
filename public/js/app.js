@@ -2205,12 +2205,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2343,19 +2337,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      'courses': [],
+      'loading': false,
+      'material': ''
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log('aaa Component mounted.'), this.getPosts();
+  },
+  methods: {
+    getPosts: function getPosts() {
+      var _this = this;
+
+      this.loading = true; // this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
+
+      axios.get("all_courses").then(function (response) {
+        // handle success
+        _this.courses = response.data.data;
+        _this.loading = false; // this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
+      })["catch"](function (error) {
+        _this.loading = true;
+        _this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
+      });
+    }
   }
 });
 
@@ -2403,10 +2410,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      'posts': [],
+      'courses': [],
       'loading': false,
       'material': ''
     };
@@ -2420,9 +2438,9 @@ __webpack_require__.r(__webpack_exports__);
 
       this.loading = true;
       this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
-      axios.get("getusers").then(function (response) {
+      axios.get("loadcourses").then(function (response) {
         // handle success
-        _this.posts = response.data.data;
+        _this.courses = response.data.data;
         _this.loading = false;
         _this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
       })["catch"](function (error) {
@@ -38351,7 +38369,11 @@ var render = function() {
                     "form",
                     {
                       staticClass: "form",
-                      attrs: { method: "post", action: "/add_course" }
+                      attrs: {
+                        method: "post",
+                        action: "/add_course",
+                        enctype: "multipart/form-data"
+                      }
                     },
                     [
                       _c("input", {
@@ -38590,6 +38612,7 @@ var staticRenderFns = [
                     _c("input", {
                       staticClass: "form-control",
                       attrs: {
+                        name: "duration",
                         type: "number",
                         placeholder: "Number of Weeks",
                         min: "1",
@@ -38619,22 +38642,50 @@ var staticRenderFns = [
             attrs: { "data-provides": "fileinput" }
           },
           [
+            _c("div", { staticClass: "fileinput-new thumbnail img-raised" }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+                  rel: "nofollow",
+                  alt: "..."
+                }
+              })
+            ]),
+            _vm._v(" "),
             _c("div", {
               staticClass:
-                "fileinput-preview fileinput-exists thumbnail img-raised"
+                "fileinput-preview fileinput-exists img-thumbnail img-raised",
+              staticStyle: { width: "150px", height: "150px" }
             }),
             _vm._v(" "),
             _c("div", [
-              _c("div", { staticClass: "form-group" }, [
-                _c("span", { staticClass: "fileinput-new" }, [
-                  _vm._v("Select")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "file", name: "banner" }
-                })
-              ])
+              _c(
+                "span",
+                {
+                  staticClass: "btn btn-raised btn-round btn-default btn-file"
+                },
+                [
+                  _c("span", { staticClass: "fileinput-new" }, [
+                    _vm._v("Select image")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "fileinput-exists" }, [
+                    _vm._v("Change")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", { attrs: { type: "file", name: "..." } })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-danger btn-round fileinput-exists",
+                  attrs: { href: "#pablo", "data-dismiss": "fileinput" }
+                },
+                [_c("i", { staticClass: "fa fa-times" }), _vm._v(" Remove")]
+              )
             ])
           ]
         )
@@ -38693,7 +38744,22 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(2)
+    _c(
+      "div",
+      { staticClass: "container" },
+      [
+        _vm._l(_vm.courses, function(course, index) {
+          return _c("div", { key: index }, [
+            _c("h3", [_vm._v(_vm._s(course.title))]),
+            _vm._v(" "),
+            _c("h5", [_vm._v(_vm._s(course.description))])
+          ])
+        }),
+        _vm._v(" "),
+        _vm._m(2)
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = [
@@ -38792,52 +38858,32 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-3 col-md-4" }, [
-          _c("div", { staticClass: "card card-blog" }, [
-            _c(
-              "div",
-              { staticClass: " card-header card-header-image bg-dark" },
-              [
-                _c("a", { attrs: { href: "#pablo" } }, [
-                  _c("img", {
-                    staticClass: "img",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1511439817358-bee8e21790b5?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
-                      rel: "nofollow"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-title" }, [
-                    _vm._v(
-                      "\n                        This Summer Will be Awesome\n                    "
-                    )
-                  ])
-                ])
-              ]
-            ),
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-lg-3 col-md-4" }, [
+        _c("div", { staticClass: "card mb-3" }, [
+          _c("img", {
+            staticClass: "card-img-top",
+            attrs: {
+              src:
+                "https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80",
+              rel: "nofollow",
+              alt: "Card image cap"
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("h4", { staticClass: "card-title" }, [_vm._v("Card title")]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-body pb-0" }, [
-              _c("h6", { staticClass: "card-categor text-info" }, [
-                _c("span", { staticClass: "text-dark" }, [_vm._v("category:")]),
-                _vm._v(" Fashion")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "card-description" }, [
-                _vm._v(
-                  "\n                    Rick Owens’ bed design but the back is...\n                  "
-                )
-              ]),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _c(
-                "button",
-                { staticClass: "btn-primary btn btn-sm btn-block" },
-                [_vm._v("more")]
+            _c("p", { staticClass: "card-text" }, [
+              _vm._v(
+                "This is a wider card with supporting text below as a natural lead-in to additional content."
               )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text" }, [
+              _c("small", { staticClass: "text-muted" }, [
+                _vm._v("Last updated 3 mins ago")
+              ])
             ])
           ])
         ])
@@ -38867,50 +38913,75 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _vm.loading
-        ? _c("div", { staticClass: "col-md-8" }, [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-body" }, [
-                _c(
-                  "img",
-                  _vm._b(
-                    {
-                      staticClass: "mx-auto",
-                      attrs: { width: "90", height: "90", src: _vm.material }
-                    },
-                    "img",
-                    _vm.material,
-                    false
-                  )
-                )
-              ])
-            ])
-          ])
-        : _c("div", { staticClass: "col-md-8" }, [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-header" }, [
-                _vm._v("Another Component")
-              ]),
-              _vm._v(" "),
+    _vm.loading
+      ? _c("div", { staticClass: "c" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-body" }, [
               _c(
-                "div",
-                { staticClass: "card-body" },
-                _vm._l(_vm.posts, function(post, index) {
-                  return _c("div", { key: index }, [
-                    _c("h3", [_vm._v(_vm._s(post.name))]),
-                    _vm._v(" "),
-                    _c("h5", [_vm._v(_vm._s(post.email))])
-                  ])
-                }),
-                0
+                "img",
+                _vm._b(
+                  {
+                    staticClass: "mx-auto",
+                    attrs: { width: "90", height: "90", src: _vm.material }
+                  },
+                  "img",
+                  _vm.material,
+                  false
+                )
               )
             ])
           ])
-    ])
+        ])
+      : _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            { staticClass: "row" },
+            _vm._l(_vm.courses, function(course, index) {
+              return _c("div", { key: index, staticClass: "col-md-4" }, [
+                _c("div", {}, [
+                  _c("div", { staticClass: "card mb-3" }, [
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1517303650219-83c8b1788c4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd4c162d27ea317ff8c67255e955e3c8&auto=format&fit=crop&w=2691&q=80",
+                        rel: "nofollow",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body" }, [
+                      _c("h4", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(course.title))
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "card-text" }, [
+                        _vm._v(_vm._s(course.description))
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(0, true)
+                    ])
+                  ])
+                ])
+              ])
+            }),
+            0
+          )
+        ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "card-text" }, [
+      _c("small", { staticClass: "text-muted" }, [
+        _vm._v("Last updated 3 mins ago")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

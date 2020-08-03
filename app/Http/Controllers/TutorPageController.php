@@ -4,7 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Resources\CoursesResource;
+
 use Paystack;
+
+use App\User;
+
+use App\Course;
 
 class TutorPageController extends Controller
 {
@@ -23,6 +29,13 @@ class TutorPageController extends Controller
     {
         //
         return view('tutor.allclasses');
+    }
+
+    public function loadcourses()
+    {
+        $courses = Course::get(); 
+
+        return CoursesResource::collection($courses);
     }
 
     public function addclasses()

@@ -18,7 +18,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form class="form" method="post" action="/add_course">
+          <form class="form" method="post" action="/add_course" enctype="multipart/form-data">
           <input type="hidden" name="_token" :value="csrf">
           <div class="row">
             <div class="col-md-6 ml-auto">
@@ -35,6 +35,7 @@
                       </div>
                         <input name="title" type="text" class="form-control" placeholder="Course Title">
                     </div>
+                    
                   </div>
 
                 <div class="form-group">
@@ -105,7 +106,7 @@
                         <div class="mx-3 container">
                           <div class="row">
                             <div class="col-6">
-                              <input type="number" class="form-control" placeholder="Number of Weeks" min="1" max="50" step="1">
+                              <input name="duration" type="number" class="form-control" placeholder="Number of Weeks" min="1" max="50" step="1">
                             </div>
                             <div class="col-6 mt-2">
                               Week(s)
@@ -114,34 +115,27 @@
                         </div>
                     </div>
                   </div>
-
-                  
-
-                
-
-               
-
                 
                 </div>
  
             </div>
 
             <div class="col-md-6 mr-auto">
-              
-               <div class="fileinput fileinput-new text-center" data-provides="fileinput">
-    <!-- <div class="fileinput-new thumbnail img-raised">
-        <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" rel="nofollow" alt="...">
-    </div> -->
-    <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
-    <div>
-        <div class="form-group">
-            <span class="fileinput-new">Select</span>
-            
-            <input class="form-control" type="file" name="banner" />
-        </div>
-        
-    </div>
-</div>
+
+                  <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                    <div class="fileinput-new thumbnail img-raised">
+                        <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" rel="nofollow" alt="...">
+                    </div>
+                    <div style="width: 150px; height: 150px;" class="fileinput-preview fileinput-exists img-thumbnail img-raised"></div>
+                    <div>
+                        <span class="btn btn-raised btn-round btn-default btn-file">
+                            <span class="fileinput-new">Select image</span>
+                            <span class="fileinput-exists">Change</span>
+                            <input type="file" name="..." />
+                        </span>
+                        <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                    </div>
+                </div>
 
             </div>
 

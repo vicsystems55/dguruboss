@@ -6,15 +6,15 @@
         <h1>Vue Sample</h1>
         <hr>
 
-        <div id="ap">
+       klkl
 
-               <example-component></example-component> 
+            
 
                <another-component></another-component>  
 
-               <addcourse-component></addcourse-component>  
+               
 
-        </div>
+        
         
     </div>
   </div>

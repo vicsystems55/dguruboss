@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+ Route::get('all_courses', 'AllCoursesController@index');
+
+ Route::get('tutor_courses/{tutor_id}', 'AllCoursesController@tutor_courses');
+
+ Route::get('one_course/{id}', 'AllCoursesController@one_course');
+
+

@@ -4,7 +4,9 @@
   <div class="content">
     <div class="container-fluid">
      
-    <resources-component></resources-component>  
+    
+
+    <another-component></another-component>  
       
     </div>
   </div>
