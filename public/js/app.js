@@ -38674,7 +38674,7 @@ var staticRenderFns = [
                     _vm._v("Change")
                   ]),
                   _vm._v(" "),
-                  _c("input", { attrs: { type: "file", name: "..." } })
+                  _c("input", { attrs: { type: "file", name: "banner" } })
                 ]
               ),
               _vm._v(" "),
