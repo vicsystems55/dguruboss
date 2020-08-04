@@ -42,31 +42,31 @@
         </div>
       </li>
       <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('table') }}">
+        <a class="nav-link" href="">
           <i class="material-icons"></i>
             <p>{{ __('Table List') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('typography') }}">
+        <a class="nav-link" href="">
           <i class="material-icons"></i>
             <p>{{ __('Typography') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'icons' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('icons') }}">
+        <a class="nav-link" href="">
           <i class="material-icons"></i>
           <p>{{ __('Icons') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('map') }}">
+        <a class="nav-link" href="">
           <i class="material-icons"></i>
             <p>{{ __('Maps') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('notifications') }}">
+        <a class="nav-link" href="">
           <i class="material-icons"></i>
           <p>{{ __('Notifications') }}</p>
         </a>
