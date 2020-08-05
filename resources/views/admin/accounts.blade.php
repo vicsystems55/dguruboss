@@ -5,6 +5,8 @@
     <div class="container-fluid">
 
         All Accounts
+
+        <allaccountstable-component></allaccountstable-component>
      
       
     </div>
