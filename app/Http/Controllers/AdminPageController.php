@@ -17,6 +17,24 @@ class AdminPageController extends Controller
         return view('admin.home');
     }
 
+    public function resources()
+    {
+        //
+        return view('admin.guruboss');
+    }
+
+    public function tournament()
+    {
+        //
+        return view('admin.tournament');
+    }
+
+    public function accounts()
+    {
+        //
+        return view('admin.accounts');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

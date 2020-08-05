@@ -35,6 +35,8 @@ Vue.component('allclassescard-component', require('./components/AllclassescardCo
 
 Vue.component('addcourseform-component', require('./components/AddcourseformComponent.vue').default);
 
+Vue.component('allaccountstable-component', require('./components/AllaccountstableComponent.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

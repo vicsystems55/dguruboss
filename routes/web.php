@@ -80,8 +80,10 @@ Route::group(['middleware' => ['auth','admin', 'verified'], 'prefix' => 'admin']
     Route::get('/', 'AdminPageController@home')->name('admin');
 	Route::get('/accounts', 'AdminPageController@accounts')->name('admin.accounts');
 	Route::get('/resources', 'AdminPageController@resources')->name('admin.resources');
+	Route::get('/tournament', 'AdminPageController@tournament')->name('admin.tournament');
 	Route::get('/notifications', 'AdminPageController@notifications')->name('admin.notifications');
 	Route::get('/wallet', 'AdminPageController@wallet')->name('admin.wallet');
+	
 });
 
 Route::get('/unpaidmember', function () {

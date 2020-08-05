@@ -6,12 +6,12 @@
   -->
   <div class="logo">
     <a href="{{ config('app.url') }}" class="simple-text logo-normal">
-      GuruBoss
+      Administrator
     </a>
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
-      <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
+      <li class="nav-item {{ (request()->is('admin')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('home') }}">
           <i class="material-icons"></i>
             <p>{{ __('Dashboard') }}</p>
@@ -26,43 +26,38 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('profile.edit') }}">
+            <li class="nav-item {{ (request()->is('admin/accounts')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('admin.accounts') }}">
                 <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('Tutors Accounts') }} </span>
+                <span class="sidebar-normal">{{ __('All Registrations') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('user.index') }}">
                 <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('Students Accounts') }} </span>
+                <span class="sidebar-normal"> {{ __('Add New Account') }} </span>
               </a>
             </li>
           </ul>
         </div>
       </li>
-      <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="">
+      
+      <li class="nav-item {{ (request()->is('admin/tournament')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.tournament')}}">
           <i class="material-icons"></i>
-            <p>{{ __('Table List') }}</p>
+          <p>{{ __('Tournament') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">
-        <a class="nav-link" href="">
+      <li class="nav-item {{ (request()->is('admin/resources')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.resources')}}">
           <i class="material-icons"></i>
-            <p>{{ __('Typography') }}</p>
-        </a>
-      </li>
-      <li class="nav-item{{ $activePage == 'icons' ? ' active' : '' }}">
-        <a class="nav-link" href="">
-          <i class="material-icons"></i>
-          <p>{{ __('Icons') }}</p>
+          <p>{{ __('Guruboss Library') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'map' ? ' active' : '' }}">
         <a class="nav-link" href="">
           <i class="material-icons"></i>
-            <p>{{ __('Maps') }}</p>
+            <p>{{ __('Reports') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
