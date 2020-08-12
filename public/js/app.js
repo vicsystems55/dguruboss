@@ -2306,9 +2306,9 @@ __webpack_require__.r(__webpack_exports__);
 
       this.loading = true;
       this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
-      axios.get("getuser").then(function (response) {
+      axios.get("/getusers").then(function (response) {
         // handle success
-        _this.posts = response.data.data;
+        _this.users = response.data.data;
         _this.loading = false;
         _this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
       })["catch"](function (error) {
@@ -39517,11 +39517,45 @@ var render = function() {
                   _vm.material,
                   false
                 )
-              )
+              ),
+              _vm._v(" "),
+              _c("h3", [_vm._v("Loading ...")])
             ])
           ])
         ])
-      : _c("div", { staticClass: "row justify-content-center" }, [_vm._m(0)])
+      : _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-md-10" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header" }, [_vm._v("  k")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("table", { staticClass: "table table-hover" }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c(
+                    "tbody",
+                    _vm._l(_vm.users, function(user, index) {
+                      return _c("tr", { key: index }, [
+                        _c("td", [_vm._v("4")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(user.name))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(user.email))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("Korea, South")]),
+                        _vm._v(" "),
+                        _vm._m(1, true),
+                        _vm._v(" "),
+                        _vm._m(2, true)
+                      ])
+                    }),
+                    0
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
   ])
 }
 var staticRenderFns = [
@@ -39529,66 +39563,50 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-10" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
-          _vm._v("All Accounts Component")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("table", { staticClass: "table table-hover" }, [
-            _c("thead", { staticClass: "text-warning" }, [
-              _c("th", [_vm._v("SN")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Name")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Email")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Phone")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Status")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("More")])
-            ]),
-            _vm._v(" "),
-            _c("tbody", [
-              _c("tr", [
-                _c("td", [_vm._v("4")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Philip Chaney")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$38,735")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Korea, South")]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "togglebutton" }, [
-                    _c("label", [
-                      _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "toggle" }),
-                      _vm._v(
-                        "\n                            Toggle is on\n                        "
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-success btn-sm",
-                      attrs: { href: "/course_details" }
-                    },
-                    [_vm._v("view more")]
-                  )
-                ])
-              ])
-            ])
-          ])
+    return _c("thead", { staticClass: "text-warning" }, [
+      _c("th", [_vm._v("SN")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Name")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Email")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Phone")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Status")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("More")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("div", { staticClass: "togglebutton" }, [
+        _c("label", [
+          _c("input", { attrs: { type: "checkbox", checked: "" } }),
+          _vm._v(" "),
+          _c("span", { staticClass: "toggle" }),
+          _vm._v(
+            "\n                            Active\n                        "
+          )
         ])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-success btn-sm",
+          attrs: { href: "/course_details" }
+        },
+        [_vm._v("view more")]
+      )
     ])
   }
 ]

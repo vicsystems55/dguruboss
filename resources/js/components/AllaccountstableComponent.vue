@@ -5,7 +5,7 @@
                     
 
                     <div class="card-body">
-                        <img class="mx-auto" width="90" height="90" v-bind="material" :src="material">
+                        <img class="mx-auto" width="90" height="90" v-bind="material" :src="material"> <h3>Loading ...</h3>
                         
                     </div>
                 </div>
@@ -14,7 +14,7 @@
         <div v-else class="row justify-content-center">
             <div  class="col-md-10">
                 <div class="card">
-                    <div class="card-header">All Accounts Component</div>
+                    <div class="card-header">  k</div>
 
                     <div class="card-body">
                        <table class="table table-hover">
@@ -28,17 +28,17 @@
                 </thead>
                 <tbody>
                  
-                  <tr>
+                  <tr v-for="(user, index) in users" :key="index">
                         <td>4</td>
-                        <td>Philip Chaney</td>
-                        <td>$38,735</td>
+                        <td>{{ user.name}}</td>
+                        <td>{{ user.email}}</td>
                         <td>Korea, South</td>
                         <td>
                             <div class="togglebutton">
                             <label>
                                 <input type="checkbox" checked="">
                                 <span class="toggle"></span>
-                                Toggle is on
+                                Active
                             </label>
                             </div>
                         </td>
@@ -82,10 +82,10 @@
                 this.loading = true;
                 this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
 
-                axios.get("getuser")
+                axios.get("/getusers")
                 .then(response => {
                     // handle success
-                    this.posts = response.data.data;
+                    this.users = response.data.data;
                     this.loading = false;
                     this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
                     
