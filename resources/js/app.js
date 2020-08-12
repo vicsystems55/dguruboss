@@ -21,6 +21,11 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+import Vue from 'vue'
+import VueMaterial from 'vue-material'
+
+Vue.use(VueMaterial)
+
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 Vue.component('another-component', require('./components/AnotherComponent.vue').default);
@@ -37,6 +42,7 @@ Vue.component('addcourseform-component', require('./components/AddcourseformComp
 
 Vue.component('allaccountstable-component', require('./components/AllaccountstableComponent.vue').default);
 
+Vue.component('autocomplete-component', require('./components/AutocompleteComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

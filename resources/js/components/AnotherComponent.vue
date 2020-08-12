@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="containe">
         
         <div v-if="loading" class="c">
 
@@ -14,7 +14,7 @@
 
         </div>
 
-        <div v-else="" class="container">
+        <div v-else class="container">
 
                 <div class="row">
 
