@@ -84,11 +84,61 @@
                 </h3> -->
             </div>
             <div class="tab-pane" id="audio">
+            <div class="alert alert-default" role="alert">
+              <div class="row">
+                <div class="col-1">
+                <i class="far fa-file-audio fa-2x"></i>
+                  </div>
+
+                  <div class="col">
+                  This is a primary alert—check 
+                  </div>
+
+                  <div class="col font-italics float-right">
+                  32:12
+                  </div>
+              </div> 
+            </div>
+
+            <div class="alert alert-default" role="alert">
+              <div class="row">
+                <div class="col-1">
+                <i class="far fa-file-audio fa-2x"></i>
+                  </div>
+
+                  <div class="col">
+                  This is a primary alert—check 
+                  </div>
+
+                  <div class="col font-italics">
+                  32:12
+                  </div>
+              </div> 
+            </div>
+           
             <h3 class="text-dark text-center">
                     No Records Founds!!
                 </h3>
             </div>
             <div class="tab-pane" id="documents">
+
+            <div class="alert alert-default" role="alert">
+              <div class="row">
+                <div class="col-1">
+                <i class="far fa-file-alt fa-2x"></i>
+               
+                  </div>
+
+                  <div class="col">
+                  This is a primary alert—check 
+                  </div>
+
+                  <div class="col font-italics">
+                  32:12
+                  </div>
+              </div> 
+            </div>
+            
             <h3 class="text-dark text-center">
                     No Records Founds!!
                 </h3>
