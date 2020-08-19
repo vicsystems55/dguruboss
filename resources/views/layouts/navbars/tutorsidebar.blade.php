@@ -26,7 +26,13 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item {{ (request()->is('tutor/allclasses')) ? 'active' : '' }}">
+          
+            <li class="nav-item 
+            {{ (request()->is('tutor/allclasses')) ? 'active' : '' }}
+
+            {{ (request()->is('tutor/one_class/*')) ? 'active' : '' }}
+            
+            ">
               <a class="nav-link" href="{{ route('tutor.allclasses') }}">
               <i class="material-icons">bubble_chart</i>
                 <span class="sidebar-normal">{{ __('All Classes') }} </span>

@@ -17,40 +17,8 @@
                     
 
                     <div class="card-body">
-                       <table class="table table-hover">
-                <thead class="text-warning">
-                  <th>SN</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Status</th>
-                  <th>More</th>
-                </thead>
-                <tbody>
-                 
-                  <tr v-for="(user, index) in users" :key="index">
-                        <td>{{ index + 1}}</td>
-                        <td>{{ user.name}}</td>
-                        <td>{{ user.email}}</td>
-                        <td>Korea, South</td>
-                        <td>
-                            <div class="togglebutton">
-                            <label>
-                                <input type="checkbox" checked="">
-                                <span class="toggle"></span>
-                                Active
-                            </label>
-                            </div>
-                        </td>
-                        <td>
-                            <a :href="'/admin/accounts_details/'+ (index + 1)" class="btn btn-success btn-sm">view details</a>
-                        </td>
-                  </tr>
-
-
-                </tbody>
-              </table>
-              
+                       
+              one student
 
 
                     </div>
@@ -82,7 +50,7 @@
                 this.loading = true;
                 this.material = "http://localhost/laravelvuew/public/material/img/loading.gif";
 
-                axios.get("/getusers")
+                axios.get("/oneuser/2")
                 .then(response => {
                     // handle success
                     this.users = response.data.data;

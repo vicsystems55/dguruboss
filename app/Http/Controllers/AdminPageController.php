@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+
 class AdminPageController extends Controller
 {
     /**
@@ -33,6 +35,14 @@ class AdminPageController extends Controller
     {
         //
         return view('admin.accounts');
+    }
+
+    public function account_details($id)
+    {
+        $user = User::find($id);
+        return view('admin.account_details',[
+            'user' => $user,
+        ]);
     }
 
     /**

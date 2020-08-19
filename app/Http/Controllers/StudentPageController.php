@@ -81,6 +81,13 @@ class StudentPageController extends Controller
         return UserResource::collection($users);
     }
 
+    public function oneuser($id)
+    {
+        $users = User::find($id); 
+
+        return UserResource::collection($users);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

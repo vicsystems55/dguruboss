@@ -96,6 +96,12 @@ class TutorPageController extends Controller
         return view('tutor.notifications');
     }
 
+    public function one_class($id)
+    {
+        //
+        return view('tutor.one_class');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

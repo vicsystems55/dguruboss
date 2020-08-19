@@ -43,6 +43,8 @@ Vue.component('addcourseform-component', require('./components/AddcourseformComp
 Vue.component('allaccountstable-component', require('./components/AllaccountstableComponent.vue').default);
 
 Vue.component('autocomplete-component', require('./components/AutocompleteComponent.vue').default);
+
+Vue.component('singleaccount-component', require('./components/SingleaccountComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

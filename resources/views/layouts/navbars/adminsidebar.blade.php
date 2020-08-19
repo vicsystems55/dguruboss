@@ -26,7 +26,14 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item {{ (request()->is('admin/accounts')) ? 'active' : '' }}">
+            <li class="nav-item
+            {{ (request()->is('admin/accounts')) ? 'active' : '' }}
+
+            {{ (request()->is('admin/accounts_details/')) ? 'active' : '' }}
+
+            {{ (request()->is('admin/accounts_details/*')) ? 'active' : '' }}
+            
+            ">
               <a class="nav-link" href="{{ route('admin.accounts') }}">
                 <span class="sidebar-mini"> UP </span>
                 <span class="sidebar-normal">{{ __('All Registrations') }} </span>

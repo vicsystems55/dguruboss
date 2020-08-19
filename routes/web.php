@@ -21,6 +21,8 @@ Route::view('/vue', 'student.sample');
 
 Route::get('/getusers', 'StudentPageController@users');
 
+Route::get('/oneuser/{id}', 'StudentPageController@oneuser');
+
 Route::get('/loadcourses', 'TutorPageController@loadcourses');
 
 Route::get('/sample', function () {
@@ -83,6 +85,8 @@ Route::group(['middleware' => ['auth','admin', 'verified'], 'prefix' => 'admin']
 	Route::get('/tournament', 'AdminPageController@tournament')->name('admin.tournament');
 	Route::get('/notifications', 'AdminPageController@notifications')->name('admin.notifications');
 	Route::get('/wallet', 'AdminPageController@wallet')->name('admin.wallet');
+	Route::get('/accounts_details/{id}', 'AdminPageController@account_details')->name('admin.accounts_details');
+	
 	
 });
 
@@ -109,6 +113,8 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/reports', 'TutorPageController@reports')->name('tutor.reports');
 	Route::get('/notifications', 'TutorPageController@notifications')->name('tutor.notifications');
 	Route::get('/wallet', 'TutorPageController@wallet')->name('tutor.wallet');
+
+	Route::get('/one_class/{id}', 'TutorPageController@one_class')->name('tutor.one_class');
 	
 });
 
