@@ -18,6 +18,7 @@
     <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
+    <link href="{{ asset('material') }}/demo/custom.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     
@@ -91,7 +92,93 @@
         <script src="{{ asset('material') }}/demo/demo.js"></script>
         <script src="{{ asset('material') }}/js/settings.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
-       
+        <script src="{{ asset('input-spinner') }}/bootstrap-input-spinner.js"></script>
+
+        
+<script>
+    $("input[type='number']").inputSpinner()
+</script>
+<script>
+    var $inputChangeClass = $("#inputChangeClass")
+    var $classInput = $("#classInput")
+    $classInput.on("input", function () {
+        $inputChangeClass.prop("class", this.value)
+    })
+</script>
+<script>
+    var $inputDisabled = $("#inputDisabled")
+    var $disabledSwitch = $("#disabledSwitch")
+    $disabledSwitch.on("change", function () {
+        $inputDisabled.prop("disabled", $(this).prop("checked"))
+    })
+</script>
+<!--suppress JSUnusedLocalSymbols -->
+<script>
+    var $changedInput = $("#changedInput")
+    var $valueOnInput = $("#valueOnInput")
+    var $valueOnChange = $("#valueOnChange")
+    $changedInput.on("input", function (event) {
+        $valueOnInput.html($changedInput.val())
+    })
+    $changedInput.on("change", function (event) {
+        $valueOnChange.html($changedInput.val())
+    })
+</script>
+<!--suppress JSUnusedLocalSymbols -->
+<script>
+    var $minInput = $("#minInput")
+    var $maxInput = $("#maxInput")
+    var $stepInput = $("#stepInput")
+    var $dataDecimalsInput = $("#dataDecimalsInput")
+    var $minMaxTester = $("#minMaxTester")
+    $minInput.on("change", function (event) {
+        $minMaxTester.attr("min", $minInput.val())
+    })
+    $maxInput.on("change", function (event) {
+        $minMaxTester.attr("max", $maxInput.val())
+    })
+    $stepInput.on("change", function (event) {
+        $minMaxTester.attr("step", $stepInput.val())
+    })
+    $dataDecimalsInput.on("change", function (event) {
+        $minMaxTester.attr("data-decimals", $dataDecimalsInput.val())
+    })
+</script>
+<!--suppress JSUnusedLocalSymbols -->
+<script>
+    var $inputNet = $("#inputNet")
+    var $inputGross = $("#inputGross")
+    $inputNet.on("change", function (event) {
+        $inputGross.val($inputNet.val() * 1.19)
+    })
+    $inputGross.on("change", function (event) {
+        $inputNet.val($inputGross.val() / 1.19)
+    })
+    $inputGross.val($inputNet.val() * 1.19)
+</script>
+<script>
+    var $inputLoop = $("#inputLoop")
+    $inputLoop.on("change", function (event) {
+        var value = $inputLoop.val()
+        value = (value < 0) ? 360 + parseInt(value, 10) : value % 360
+        $inputLoop.val(value)
+    })
+</script>
+<script>
+    var $buttonDestroy = $("#buttonDestroy")
+    var $buttonCreate = $("#buttonCreate")
+    var $inputDestroyCreate = $("#inputDestroyCreate")
+    $buttonDestroy.click(function () {
+        $inputDestroyCreate.inputSpinner("destroy")
+        $buttonDestroy.attr("disabled", true)
+        $buttonCreate.attr("disabled", false)
+    })
+    $buttonCreate.click(function () {
+        $inputDestroyCreate.inputSpinner()
+        $buttonDestroy.attr("disabled", false)
+        $buttonCreate.attr("disabled", true)
+    })
+</script>
         
         @stack('js')
     </body>

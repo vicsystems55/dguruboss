@@ -41,7 +41,7 @@ class TutorPageController extends Controller
     public function addclasses()
     {
         //
-        return view('tutor.addclasses');
+        return view('tutor.classadd');
     }
 
     public function unpaidmember()
