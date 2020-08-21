@@ -115,6 +115,8 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/wallet', 'TutorPageController@wallet')->name('tutor.wallet');
 
 	Route::get('/one_class/{id}', 'TutorPageController@one_class')->name('tutor.one_class');
+
+	Route::post('/create-class', 'CreateClassController@store')->name('tutor.create-class');
 	
 });
 

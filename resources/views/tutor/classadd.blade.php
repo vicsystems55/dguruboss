@@ -11,14 +11,19 @@
             <div class="car col-md-9">
                 <div class="card-bod">
                 <h3 class="display-4 font-weight-bold">Class Setup</h3>
-                    <form action="">
-                    
+                    <form method="post" action="{{ route('tutor.create-class')}}">
+                    @csrf
                         <div class="ro">
 
                             <div class="col-md-9 p-1 mx-auto">
-                                <div class="form-group">
+                                <div class="form-group  @error('course_title') has-danger @enderror">
                                 <h5 for="">Class Title</h5>
-                                    <input class="form-control" type="text" placeholder="Enter Course Title" name="course_title">
+                                    <input class="form-control  " type="text" placeholder="Enter Course Title" name="course_title">
+                                    @if ($errors->has('course_title'))
+                                        <div id="course_title-error" class="error text-danger pl-3" for="course_title" style="display: block;">
+                                        <strong>{{ $errors->first('course_title') }}</strong>
+                                        </div>
+                                    @endif
                                 </div>
 
                                 <div class="form-group">
