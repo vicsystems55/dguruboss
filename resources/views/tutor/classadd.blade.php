@@ -8,7 +8,7 @@
             <div class="row">
             
             <div class="col-md-10">
-            <div class="car col-md-9">
+            <div class="car ">
                 <div class="card-bod">
                 <h3 class="display-4 font-weight-bold">Class Setup</h3>
                     <form method="post" action="{{ route('tutor.create-class')}}">
@@ -26,18 +26,35 @@
                                     @endif
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group @error('course_description') has-danger @enderror">
                                     <h5 for="">Class Description</h5>
-                                    <textarea placeholder="Course Description" name="form-control" class="form-control" id="course_description" rows="3"></textarea>
+                                    <textarea placeholder="Course Description" name="course_description" class="form-control" id="course_description" rows="3"></textarea>
+                                    @if ($errors->has('course_description'))
+                                        <div id="course_description-error" class="error text-danger pl-3" for="course_description" style="display: block;">
+                                        <strong>{{ $errors->first('course_description') }}</strong>
+                                        </div>
+                                    @endif
                                 </div>
 
                                 <div class="form-group">
                                     <h5 for="">Pick a Category</h5>
-                                    <select class="form-control">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                    <select style="font-size:13pt;" placeholder="Select " class="form-control" id="exampleFormControlSelect1">
+                                    <option value="">--Select Category--</option>
+                                    @foreach($class_category as $category)
+                                    <option value="{{$category->id}}">{{$category->category_name}}</option>
+
+                                    @endforeach
+                                        <!-- <option value="">--Select Category--</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Finance and Accounting">Finance and Accounting</option>
+                                    <option value="IT and Software">IT and Software</option>
+                                    <option value="Personal Development">Personal Development</option>
+                                    <option value="Design and Graphics">Design and Graphics</option>
+                                    <option value="Marketting">Marketting</option>
+                                    <option value="Health and Fitness">Health and Fitness</option>
+                                    <option value="Music">Music</option>
+                                    <option value="Teaching and Academics">Teaching and Academics</option>
+                                    <option value="Others">Others</option> -->
                                     </select>
                                 </div>
 
@@ -56,7 +73,7 @@
                                             <label class="btn btn-sm btn-prmary btn-file">
                                                 <span>Choose Banner</span>
                                                 <!-- The file is stored here. -->
-                                                <input type="file" name="image-file">
+                                                <input type="file" value="https://loc" name="image-file">
                                             </label>
                                             <button type="button" class="btn btn-sm btn-default">Remove</button>
                                         </div>
@@ -88,14 +105,14 @@
                             <div class="col-md-9 mx-auto">
 
                             <div class="row">
-                                <div class="col">
+                                <div class="col-md-6">
                                 <div class="form-group">
                                 <h5 for="">Fee</h5>
                                     <input data-prefix="&nbsp NGN &nbsp" class="form-control-sm col-3" type="number" value="500" min="500" max="5000" step="500"/>
                             </div>
                                 </div>
 
-                                <div class="col">
+                                <div class="col-md-6">
                                 <div class="form-group">
                                 <h5 for="">Duration</h5>
                                     <input data-suffix="&nbsp  Weeks &nbsp" class="form-control-sm col-3" type="number" value="2" min="2" max="40" step="1"/>

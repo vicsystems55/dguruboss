@@ -12,6 +12,8 @@ use App\User;
 
 use App\Course;
 
+use App\ClassCategory;
+
 class TutorPageController extends Controller
 {
     /**
@@ -40,8 +42,10 @@ class TutorPageController extends Controller
 
     public function addclasses()
     {
-        //
-        return view('tutor.classadd');
+        $class_category = ClassCategory::get();
+        return view('tutor.classadd', [
+            'class_category' => $class_category
+        ]);
     }
 
     public function unpaidmember()
@@ -101,6 +105,8 @@ class TutorPageController extends Controller
         //
         return view('tutor.one_class');
     }
+
+    
 
     /**
      * Show the form for creating a new resource.

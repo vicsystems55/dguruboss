@@ -36,8 +36,8 @@ class CreateClassController extends Controller
     {
         $this->validate($request, [
 
-            'course_title' => 'max:4',
-            'course_description' => 'max:4',
+            'course_title' => 'max:10',
+            'course_description' => 'max:12',
             'course_category' => 'max:4',
             'course_banner' => 'max:4',
             'course_fee' => 'max:4',
