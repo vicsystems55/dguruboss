@@ -20,6 +20,8 @@
     <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
     <link href="{{ asset('material') }}/demo/custom.css" rel="stylesheet" />
 
+    <link href="{{ asset('img-upload') }}/css/bootstrap-imageupload.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     
     </head>
@@ -49,6 +51,7 @@
         
         <!--   Core JS Files   -->
        <script src="{{asset('js/app.js')}}" ></script>
+       <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
         <script src="{{ asset('material') }}/js/core/popper.min.js"></script>
         <script src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js"></script>
         <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
@@ -93,6 +96,8 @@
         <script src="{{ asset('material') }}/js/settings.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
         <script src="{{ asset('input-spinner') }}/bootstrap-input-spinner.js"></script>
+        <script src="{{ asset('img-upload') }}/js/bootstrap-imageupload.js"></script>
+        
 
         
 <script>
@@ -179,6 +184,26 @@
         $buttonCreate.attr("disabled", true)
     })
 </script>
+
+<script>
+            var $imageupload = $('.imageupload');
+            $imageupload.imageupload();
+
+            $('#imageupload-disable').on('click', function() {
+                $imageupload.imageupload('disable');
+                $(this).blur();
+            })
+
+            $('#imageupload-enable').on('click', function() {
+                $imageupload.imageupload('enable');
+                $(this).blur();
+            })
+
+            $('#imageupload-reset').on('click', function() {
+                $imageupload.imageupload('reset');
+                $(this).blur();
+            });
+        </script>
         
         @stack('js')
     </body>
