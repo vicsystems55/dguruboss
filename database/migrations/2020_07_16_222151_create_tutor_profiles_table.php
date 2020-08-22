@@ -16,7 +16,16 @@ class CreateTutorProfilesTable extends Migration
         Schema::create('tutor_profiles', function (Blueprint $table) {
             $table->id();
             $table->string('avatar');
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('nationality')->default('Nigeria');
+            $table->string('state_residence');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('expertise');
+            $table->string('bio');
+            $table->string('status')->default('active');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

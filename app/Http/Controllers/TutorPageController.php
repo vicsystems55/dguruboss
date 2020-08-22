@@ -14,6 +14,10 @@ use App\Course;
 
 use App\ClassCategory;
 
+use App\TutorProfile;
+
+use Auth;
+
 class TutorPageController extends Controller
 {
     /**
@@ -69,11 +73,24 @@ class TutorPageController extends Controller
         //
         
     }
+    public function update_profile()
+    {
+        //
+        return view('tutor.update_profile');
+    }
 
     public function profile()
     {
-        //
-        return view('tutor.profile');
+        $tutor_profile = TutorProfile::where('user_id', Auth::user()->id)->first();
+        
+            if($tutor_profile === null){
+                return view('tutor.update_profile');
+            }
+            else{
+                return view('tutor.profile');
+            }
+
+        
     }
 
     public function reports()

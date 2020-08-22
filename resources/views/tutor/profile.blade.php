@@ -12,9 +12,9 @@
             position: absolute;
             width: 100%;
             min-height: 100%;
-            background-color: black;
+            background-color: purple;
             z-index: 0;
-            opacity: 45%;
+            opacity: 0.3;
           "
           >
         
@@ -63,9 +63,25 @@
                 <div class="card-body text-dark">
                     <h4>user information</h4>
 
-                    <div class="form-group">
-                      <input type="text" class="form-control" value="{{Auth::user()->name}}">
-                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 col-form-label">Full Name:</label>
+                        <div class="col-sm-7">
+                          <div class="form-grou ">
+                            <input class="form-control" name="name" id="input-name" type="text" placeholder="Name" value="{{Auth::user()->name}}" required="true" aria-required="true">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <label class="col-sm-2 col-form-label">Email:</label>
+                        <div class="col-sm-7">
+                          <div class="form-grou ">
+                            <input class="form-control" name="name" id="input-name" type="text" placeholder="Name" value="{{Auth::user()->email}}" required="true" aria-required="true">
+                          </div>
+                        </div>
+                      </div>
+
+
                     <div class="form-group">
                       <input type="text" class="form-control" value="{{Auth::user()->email}}">
                     </div>
