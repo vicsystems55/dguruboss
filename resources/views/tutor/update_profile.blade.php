@@ -13,13 +13,14 @@
                 <div class="card col-md-10">
                     <div class="card-body">
 
-                    <div class="col-md-3">
-                          <div class="mt-4 card-avatar shadow">
-                            <a href="#pablo">
-                              <img class="img rounded-circle shadow" src="http://i.pravatar.cc/200">
-                            </a>
-                          </div>
-                      </div>
+                    <div  style="background-image: url({{asset('/material/img/faces/avatar.jpg')}});
+                      background-size: cover;
+                    "  id="image-preview">
+                      <label  for="image-upload" id="image-label">Choose File</label>
+                      <input type="file" name="image" id="image-upload" />
+                    </div>
+
+                   
 
                     <div class="form-group col-md-6">
                             <textarea placeholder="Tell us about yourself" name="bio" id="" row="3" class="form-control"></textarea>

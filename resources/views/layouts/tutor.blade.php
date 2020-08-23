@@ -97,6 +97,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
         <script src="{{ asset('input-spinner') }}/bootstrap-input-spinner.js"></script>
         <script src="{{ asset('img-upload') }}/js/bootstrap-imageupload.js"></script>
+        <script src="{{ asset('upload-preview') }}/js/uploadPreview.min.js"></script>
         
 
         
@@ -203,6 +204,20 @@
                 $imageupload.imageupload('reset');
                 $(this).blur();
             });
+        </script>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+        $.uploadPreview({
+            input_field: "#image-upload",   // Default: .image-upload
+            preview_box: "#image-preview",  // Default: .image-preview
+            label_field: "#image-label",    // Default: .image-label
+            label_default: "Choose File",   // Default: Choose File
+            label_selected: "Change File",  // Default: Change File
+            no_label: false,                // Default: false
+            success_callback: null          // Default: null
+        });
+        });
         </script>
         
         @stack('js')
