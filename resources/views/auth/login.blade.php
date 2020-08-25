@@ -15,7 +15,10 @@
             
           </div>
           <div class="card-body">
-            <div class="p-3"></div>
+            <div class="p-3">
+            <i class="material-icons">finger_print</i>
+            </div>
+
             <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
               <div class="input-group">
                 <div class="input-group-prepend">

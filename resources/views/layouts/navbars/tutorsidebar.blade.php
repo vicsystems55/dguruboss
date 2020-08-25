@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="purple" data-background-color="azure" data-image="{{ asset('material') }}/img/tutorsidebar-1.jpg">
+<div class="sidebar" data-color="purple" data-background-color="azure" data-image="https://material-dashboard-pro-laravel.creative-tim.com/material/img/sidebar-1.jpg">
   <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -28,7 +28,7 @@
           <ul class="nav">
           
             <li class="nav-item 
-            {{ (request()->is('tutor/allclasses')) ? 'active' : '' }}
+            {{ (request()->is('tutor/allclasses','tutor/one_class_edit/*')) ? 'active' : '' }}
 
             {{ (request()->is('tutor/one_class/*')) ? 'active' : '' }}
             

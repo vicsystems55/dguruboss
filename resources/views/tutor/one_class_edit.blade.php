@@ -7,20 +7,33 @@
    
     <li class="breadcrumb-item"><a href="javascript:;">Dashboard</a></li>
     <li class="breadcrumb-item"><a href="javascript:;">All Classes</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Class Details</li>
+    <li class="breadcrumb-item active" aria-current="page">Edit Class</li>
   </ol>
 </nav>
     <div class="container-fluid">
 
-            <h2>Introduction To Graphics Design</h2>
+            <h2></h2>
 
-            <a class="btn btn-primary" href="{{ route('tutor.one_class_edit',2)}}">Edit Class</a>
+                <form action="">
+                <div class="form-group col-md-6">
+                <input type="text" class="form-control" value="Introduction To Graphics Design">
+                </div>
+
+                
+
+                <div class="form-group col-md-6">
+                    <textarea class="form-control" name="" id="" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptates aliquam sequi, temporibus, aperiam quos reprehenderit quae voluptatem odit, magni eaque. Eveniet perspiciatis molestias cumque saepe reprehenderit assumenda aspernatur ipsam.
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary ">Update</button>
+                </div>
+
+                </form>
 
             <p class="col-md-6 p-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptates aliquam sequi, 
-              temporibus, aperiam quos reprehenderit quae voluptatem odit, magni eaque. 
-              Eveniet perspiciatis molestias cumque saepe reprehenderit 
-              assumenda aspernatur ipsam.
+              
             </p>
 
             <div class="card card-nav-tabs card-plain">
@@ -45,41 +58,45 @@
         <div class="tab-content col-md-6">
             <div class="tab-pane active" id="video">
 
-            <div class="alert alert-default" role="alert">
-              <div class="row">
-                <div class="col-1">
-                <span class="material-icons">
-                play_circle_outline
-                </span>
-                  </div>
+                    <div class="alert alert-default" role="alert">
+                        <div class="row">
+                            <div class="col-1">
+                            <span class="material-icons">
+                            play_circle_outline
+                            </span>
+                            </div>
 
-                  <div class="col">
-                  This is a primary alert—check 
-                  </div>
+                            <div class="col">
+                            This is a primary alert—check 
+                            </div>
 
-                  <div class="col font-italics">
-                  32:12
-                  </div>
-              </div> 
-            </div>
+                            <div class="col font-italics">
+                            32:12
+                            </div>
+                        </div> 
+                    </div>
 
-            <div class="alert alert-default" role="alert">
-              <div class="row">
-                <div class="col-1">
-                <span class="material-icons">
-                play_circle_outline
-                </span>
-                  </div>
+                    <div class="alert alert-default" role="alert">
+                        <div class="row">
+                            <div class="col-1">
+                            <span class="material-icons">
+                            play_circle_outline
+                            </span>
+                            </div>
 
-                  <div class="col">
-                  This is a primary alert—check 
-                  </div>
+                            <div class="col">
+                            This is a primary alert—check 
+                            </div>
 
-                  <div class="col font-italics">
-                  32:12
-                  </div>
-              </div> 
-            </div>
+                            <div class="col font-italics">
+                            32:12
+                            </div>
+                        </div> 
+                    </div>
+
+                    @include('tutor.add_material_form')
+
+
 
                 <!-- <h3 class="text-dark text-center">
                     No Records Founds!!
@@ -118,32 +135,30 @@
               </div> 
             </div>
            
-            <h3 class="text-dark text-center">
-                    No Records Founds!!
-                </h3>
+           
+            @include('tutor.add_audio_form')
+                
             </div>
             <div class="tab-pane" id="documents">
 
             <div class="alert alert-default" role="alert">
-              <div class="row">
-                <div class="col-1">
-                <i class="far fa-file-alt fa-2x"></i>
-               
-                  </div>
+                <div class="row">
+                    <div class="col-1">
+                        <i class="far fa-file-alt fa-2x"></i>
+                
+                    </div>
 
-                  <div class="col">
-                  This is a primary alert—check 
-                  </div>
+                    <div class="col">
+                    This is a primary alert—check 
+                    </div>
 
-                  <div class="col font-italics">
-                  32:12
-                  </div>
-              </div> 
-            </div>
+                    <div class="col font-italics">
+                    32:12
+                    </div>
+                    </div> 
+                </div>
             
-            <h3 class="text-dark text-center">
-                    No Records Founds!!
-                </h3>
+                @include('tutor.add_doc_form')
             </div>
         </div>
     </div>

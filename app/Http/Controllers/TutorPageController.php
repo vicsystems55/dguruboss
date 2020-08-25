@@ -84,7 +84,7 @@ class TutorPageController extends Controller
         $tutor_profile = TutorProfile::where('user_id', Auth::user()->id)->first();
         
             if($tutor_profile === null){
-                return view('tutor.update_profile');
+                return view('tutor.profile');
             }
             else{
                 return view('tutor.profile');
@@ -121,6 +121,12 @@ class TutorPageController extends Controller
     {
         //
         return view('tutor.one_class');
+    }
+
+    public function one_class_edit($id)
+    {
+        //
+        return view('tutor.one_class_edit');
     }
 
     

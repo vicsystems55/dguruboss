@@ -1,7 +1,7 @@
 @extends('layouts.tutor', ['activePage' => 'dashboard', 'titlePage' => __('Dashboard')])
 
 @section('content')
-  <div style="min-height: 600px;" class="conten">
+  <div style="min-height: 700px;" class="conten">
   <div style="height: 30px;" class="d mt-2 p-2"></div>
       <div style="min-height: 320px; position: relative;" class="container-flui mt-5 bg-dark text-white p-2">
         <div
