@@ -70,7 +70,7 @@
 
         <div class="container text-center">
         <h1 class="lead text-center">No Classes Created Yet.</h1>
-        <a href="/addclass" class="btn btn-primary">Create Class</a>
+        <a href="tutor/addclasses" class="btn btn-primary">Create Class</a>
         </div>
 
         @else
