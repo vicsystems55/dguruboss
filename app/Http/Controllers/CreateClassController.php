@@ -47,7 +47,7 @@ class CreateClassController extends Controller
         ]);
 
 
-        return 123;
+        return view('tutor.classenrich');
     }
 
     /**

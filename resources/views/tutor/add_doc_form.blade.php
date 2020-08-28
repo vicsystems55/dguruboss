@@ -46,7 +46,10 @@
                                     <div class="input-group-text"><i class="material-icons">lock_outline</i></div>
                                   </div>
                                   <select name="" id="">
-                                    <option value="">--</option>
+                                    <option value="">-1 mins-</option>
+                                    <option value="">-1 mins-</option>
+                                    <option value="">-1 mins-</option>
+                                    <option value="">-1 mins-</option>
                                   </select>
                                 </div>
                             </div>

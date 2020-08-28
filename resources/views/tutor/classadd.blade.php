@@ -44,17 +44,7 @@
                                     <option value="{{$category->id}}">{{$category->category_name}}</option>
 
                                     @endforeach
-                                        <!-- <option value="">--Select Category--</option>
-                                    <option value="Business">Business</option>
-                                    <option value="Finance and Accounting">Finance and Accounting</option>
-                                    <option value="IT and Software">IT and Software</option>
-                                    <option value="Personal Development">Personal Development</option>
-                                    <option value="Design and Graphics">Design and Graphics</option>
-                                    <option value="Marketting">Marketting</option>
-                                    <option value="Health and Fitness">Health and Fitness</option>
-                                    <option value="Music">Music</option>
-                                    <option value="Teaching and Academics">Teaching and Academics</option>
-                                    <option value="Others">Others</option> -->
+                                      
                                     </select>
                                 </div>
 

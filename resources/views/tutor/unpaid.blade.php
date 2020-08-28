@@ -2,10 +2,10 @@
 
 @section('content')
   <div class="content">
-    <div class="container-fluid">
+    <div class="container-fluid text-center">
      
-      
-      <h1>Account has been locked please proceed to payment</h1>
+        <div class="p-5"></div>
+      <h3>Account has been locked please proceed to payment</h3>
 
       <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
         <div class="row" style="margin-bottom:40px;">

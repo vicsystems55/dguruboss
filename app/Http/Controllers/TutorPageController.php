@@ -27,8 +27,33 @@ class TutorPageController extends Controller
      */
     public function home()
     {
-        //
-        return view('tutor.home');
+        $tutor_profile = TutorProfile::where('user_id', Auth::user()->id)->first();
+
+        $tutor_class = Course::where('tutor_id', Auth::user()->id)->first();
+
+        $tutor_regcourse = Course::where('tutor_id', Auth::user()->id)->get();
+        
+            if($tutor_profile === null){
+                $profile = "not-updated";
+            }
+            else{
+                $profile = "updated";
+            }
+
+            if($tutor_class === null){
+                $class = "not-updated";
+            }
+            else{
+                $class = "updated";
+            }
+
+            return view('tutor.home', [
+
+                "profile" => $profile,
+                "tutor_regcourse" => $tutor_regcourse,
+                "class" => $class
+            ]);
+
     }
 
     public function allclasses()
@@ -84,7 +109,7 @@ class TutorPageController extends Controller
         $tutor_profile = TutorProfile::where('user_id', Auth::user()->id)->first();
         
             if($tutor_profile === null){
-                return view('tutor.profile');
+                return view('tutor.update_profile');
             }
             else{
                 return view('tutor.profile');

@@ -101,6 +101,8 @@
         <script src="{{ asset('input-spinner') }}/bootstrap-input-spinner.js"></script>
         <script src="{{ asset('img-upload') }}/js/bootstrap-imageupload.js"></script>
         <script src="{{ asset('upload-preview') }}/js/uploadPreview.min.js"></script>
+
+        
         
     
 
@@ -233,6 +235,32 @@
                    choices: {columnCount:'3' },
                 }});
 </script>
+
+<script type="text/javascript">
+    $(function(){
+        $('#people').multiSelect();
+        $('#ice-cream').multiSelect();
+        $('#line-wrap-example').multiSelect({
+            positionMenuWithin: $('.position-menu-within')
+        });
+        $('#categories').multiSelect({
+            noneText: 'All categories',
+            presets: [
+                {
+                    name: 'All categories',
+                    options: []
+                },
+                {
+                    name: 'My categories',
+                    options: ['a', 'c']
+                }
+            ]
+        });
+        $('#modal-example').multiSelect({
+            'modalHTML': '<div class="multi-select-modal">'
+        });
+    });
+    </script>
 
  
         
