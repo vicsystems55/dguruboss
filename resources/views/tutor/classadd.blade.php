@@ -38,24 +38,24 @@
 
                                 <div class="form-group">
                                     <h5 for="">Pick a Category</h5>
-                                    <select style="font-size:13pt;" placeholder="Select " class="form-control" id="exampleFormControlSelect1">
+                                    <select name="course_category" style="font-size:13pt;" placeholder="Select " class="form-control" id="exampleFormControlSelect1">
                                     <option value="">--Select Category--</option>
                                     @foreach($class_category as $category)
-                                    <option value="{{$category->id}}">{{$category->category_name}}</option>
+                                    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
 
                                     @endforeach
                                       
                                     </select>
                                 </div>
 
-                                <div class="form-check mr-auto ml-3 mt-3">
+                                <!-- <div class="form-check mr-auto ml-3 mt-3">
                                     <label class="form-check-label">
                                         <input class="form-check-input" type="checkbox" name="featured_course" > {{ __('Featured Course?') }}
                                         <span class="form-check-sign">
                                         <span class="check"></span>
                                         </span>
                                     </label>
-                                    </div>
+                                    </div> -->
 
                                 <div class="container">
 
@@ -105,23 +105,39 @@
 
                             <div class="row">
                                 <div class="col-md-6">
-                                <div class="form-group">
-                                <h5 for="">Fee</h5>
-                                    <input data-prefix="&nbsp NGN &nbsp" class="form-control-sm col-3" type="number" value="500" min="500" max="5000" step="500"/>
-                            </div>
+                                    <div class="form-group">
+                                        <h5 for="">Fee</h5>
+                                        <input name="course_fee" data-prefix="&nbsp NGN &nbsp" class="form-control-sm col-3" type="number" value="500" min="500" max="5000" step="500"/>
+                                    </div>
                                 </div>
 
-                                <div class="col-md-6">
-                                <div class="form-group">
-                                <h5 for="">Duration</h5>
-                                    <input data-suffix="&nbsp  Weeks &nbsp" class="form-control-sm col-3" type="number" value="2" min="2" max="40" step="1"/>
-                            </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <h5 for="">Duration</h5>
+                                        <input name="duration_value" class="form-control-sm col-3" type="number" value="2" min="2" max="40" step="1"/>
+                                    </div>
                                 </div>
+
+                                <div class="col-3">
+                                    <div class="form-group">
+                                    <h5 for="">.</h5>
+                                        <select class="form-control" name="duration_type" id="">
+                                            <option value="hours">select duration</option>
+                                            <option value="hours">Hours</option>
+                                            <option value="days">Days</option>
+                                            <option value="weeks">Weeks</option>
+                                        </select>
+                                    </div>
+                                
+                                </div>
+
+                               
+
                             </div>
                             
 
                             
-
+           
                                 
 
                                 <div class="form-group">

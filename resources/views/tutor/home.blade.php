@@ -7,14 +7,14 @@
     <h3>Welcome, {{Auth::user()->name}}</h3>
       <div class="row">
         
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
+        <div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
+          <div class="card card-stats ">
             <div class="card-header card-header-success card-header-icon">
               <div class="card-icon">
                 <i class="material-icons">store</i>
               </div>
-              <p class="card-category">Revenue</p>
-              <h3 class="card-title">$0</h3>
+              <p class="card-category">Guruboss Credit</p>
+              <h3 class="card-title">0.00GB</h3>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
           <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
               <div class="card-icon">
@@ -39,7 +39,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
           <div class="card card-stats">
             <div class="card-header card-header-info card-header-icon">
               <div class="card-icon">
@@ -59,22 +59,24 @@
 
         @if($profile == 'not-updated')
 
-        <div class="container text-center">
-        <h1 class="lead text-center">Proceed to Update Profile.</h1>
-        <a href="/tutor/profile" class="btn btn-primary">Update Profile</a>
-        </div>
+       
+        
       
         @endif
 
         @if($class == 'not-updated')
 
-        <div class="container text-center">
+        <div class="container text-center p-2">
         <h1 class="lead text-center">No Classes Created Yet.</h1>
         <a href="tutor/addclasses" class="btn btn-primary">Create Class</a>
         </div>
 
         @else
+
+        <h3>Recently Created Classes</h3>
+        <hr>
         <div class="row">
+        
               @foreach($tutor_regcourse as $course)
 
                   

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Resources\CoursesResource;
 
+use DB;
+
 use Paystack;
 
 use App\User;
@@ -15,6 +17,8 @@ use App\Course;
 use App\ClassCategory;
 
 use App\TutorProfile;
+
+use App\Topic;
 
 use Auth;
 
@@ -104,16 +108,48 @@ class TutorPageController extends Controller
         return view('tutor.update_profile');
     }
 
+    public function regprofile()
+    {
+        //  $this->validate($request, [
+        //     'title' => ['required', 'string', 'max:50'],
+        //     'description' => ['required', 'string', 'max:255'],
+        //     'category' => ['required', 'string', 'max:200'],
+        //     'fee' =>['required', 'numeric'],
+        //     'duration' => ['required','numeric'],
+        //     'banner' => 'required|mimes:jpeg,jpg,png,gif|max:10024',
+            
+
+        // ]);
+
+        
+        $img_file = $request->file('tutor_avatar');
+
+        $new_name = rand().".".$img_file->getClientOriginalExtension();
+
+        $img_size = $img_file->getSize();
+  
+        $img_file->move(public_path("tutor_avatar"), $new_name);
+
+        TutorProfile::create([
+            'bio' => $request->bio,
+            'phone' => $request->phone,
+            'home_address' => $request->home_address,
+            'state_res' => $request->state_res,
+            'user_id' => Auth::user()->id,// the person currently logged in is 
+            'duration' => $request->duration .' weeks',
+            'banner' => $new_name,
+            'requirements' => 'no requirements',
+            'status' => 'not-acitve',
+           
+        ]);
+    }
+
     public function profile()
     {
         $tutor_profile = TutorProfile::where('user_id', Auth::user()->id)->first();
-        
-            if($tutor_profile === null){
-                return view('tutor.update_profile');
-            }
-            else{
+      
                 return view('tutor.profile');
-            }
+            
 
         
     }
@@ -152,6 +188,18 @@ class TutorPageController extends Controller
     {
         //
         return view('tutor.one_class_edit');
+    }
+
+    public function class_enrich($id)
+    {
+        //
+
+        $topics = DB::table('topics')->where('course_id', '2')->get();
+
+        return view('tutor.classenrich',[
+
+            'topics' => $topics
+        ]);
     }
 
     

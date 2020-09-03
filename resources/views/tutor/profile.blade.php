@@ -1,7 +1,7 @@
 @extends('layouts.tutor', ['activePage' => 'dashboard', 'titlePage' => __('Dashboard')])
 
 @section('content')
-  <div style="min-height: 700px;" class="conten">
+  <div style="min-height: 800px;" class="conten">
   <div style="height: 30px;" class="d mt-2 p-2"></div>
       <div style="min-height: 320px; position: relative;" class="container-flui mt-5 bg-dark text-white p-2">
         <div
@@ -33,7 +33,7 @@
 
                       <div class="col-md-7">
                         <h1 class="mt-5">Hello, {{Auth::user()->name}}</h1>
-                          <h4>Bio:</h4>
+                          
                           <p class="col-md-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                           Accusamus, mollitia quae aspernatur voluptatem recusandae nesciunt
                           
@@ -58,10 +58,10 @@
 
           <div class="row">
           
-          <div class="col-md-7 card bg-white">
+          <div class="col-md-6 card bg-white">
 
                 <div class="card-body text-dark">
-                    <h4>user information</h4>
+                    <h3>user information</h3>
 
                     <div class="row">
                         <label class="col-sm-2 col-form-label">Full Name:</label>
@@ -81,15 +81,34 @@
                         </div>
                       </div>
 
+                      <div class="row">
+                        <label class="col-sm-2 col-form-label">Phone:</label>
+                        <div class="col-sm-7">
+                          <div class="form-grou ">
+                            <input class="form-control" name="phone" id="input-name" type="text" placeholder="Phone" value="{{Auth::user()->phone}}" required="true" aria-required="true">
+                          </div>
+                        </div>
+                      </div>
 
-                    <div class="form-group">
-                      <input type="text" class="form-control" value="{{Auth::user()->email}}">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" value="" placeholder="">
-                    </div><div class="form-group">
-                      <input type="text" class="form-control" value="">
-                    </div>
+                      <div class="row">
+                        <label class="col-sm-2 col-form-label">Address:</label>
+                        <div class="col-sm-7">
+                          <div class="form-grou ">
+                          <textarea type="text" name="address" id="address" class="form-control" placeholder="{{ __('Address') }}" row="3"></textarea>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h3>Bank Info</h3>
+
+                      <h4>No records yet</h4>
+
+                      <a class="btn btn-primary" href="">Update Record</a>
+
+                    
+                      
+
+                  
 
           </div>
 
@@ -98,10 +117,72 @@
           <div class="col-md-4">
             <div class="card">
               <div class="card-body">
-                <h3>us</h3>
+                <h3>Update Password </h3>
+
+                <form method="post" action="{{ route('profile.password') }}" class="form-horizontal">
+                    @csrf
+                    @method('put')
+
+                    <div class="car ">
+                    
+                      <div class="card-bod ">
+                        @if (session('status_password'))
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <i class="material-icons">close</i>
+                                </button>
+                                <span>{{ session('status_password') }}</span>
+                              </div>
+                            </div>
+                          </div>
+                        @endif
+                        <div class="row">
+                          
+                          <div class="col-sm-12">
+                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                              <input class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input type="password" name="old_password" id="input-current-password" placeholder="{{ __('Current Password') }}" value="" required />
+                              @if ($errors->has('old_password'))
+                                <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('old_password') }}</span>
+                              @endif
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                        
+                          <div class="col-sm-12">
+                            <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                              <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="input-password" type="password" placeholder="{{ __('New Password') }}" value="" required />
+                              @if ($errors->has('password'))
+                                <span id="password-error" class="error text-danger" for="input-password">{{ $errors->first('password') }}</span>
+                              @endif
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirm New Password') }}" value="" required />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-footer ml-auto mr-auto">
+                        <button type="submit" class="btn btn-primary">{{ __('Change password') }}</button>
+                      </div>
+                    </div>
+                </form>
+
               </div>
             </div>
           </div>
+
+          
+
+
+
     </div>
   </div>
 

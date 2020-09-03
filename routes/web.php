@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/regInstructor', function () {
+    return view('auth.register_tutor');
+});
+
 Route::view('/vue', 'student.sample');
 
 Route::get('/getusers', 'StudentPageController@users');
@@ -105,7 +109,11 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/allclasses', 'TutorPageController@allclasses')->name('tutor.allclasses');
 	Route::get('/addclasses', 'TutorPageController@addclasses')->name('tutor.addclasses');
 	Route::post('/addclass', 'TutorPageController@addclass')->name('tutor.addclass');
+
 	Route::get('/profile', 'TutorPageController@profile')->name('tutor.profile');
+	Route::post('/regprofile', 'TutorPageController@regprofile')->name('tutor.regprofile');
+
+
 	Route::get('/resources', 'TutorPageController@gurulibrary')->name('tutor.resources');
 	
 	Route::get('/loadcourses', 'TutorPageController@loadcourses');
@@ -119,6 +127,10 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/one_class_edit/{id}', 'TutorPageController@one_class_edit')->name('tutor.one_class_edit');
 
 	Route::post('/create-class', 'CreateClassController@store')->name('tutor.create-class');
+
+	Route::post('/create_topic', 'CreateTopicController@create')->name('tutor.create_topic');
+
+	Route::get('/class-enrich/{id}', 'TutorPageController@class_enrich')->name('tutor.class-enrich');
 	
 });
 

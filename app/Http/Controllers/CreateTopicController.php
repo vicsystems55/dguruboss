@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Topic;
+
 use DB;
 
-use App\Course;
 
-use Auth;
-
-class CreateClassController extends Controller
+class CreateTopicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,9 +26,18 @@ class CreateClassController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $course_topic = new Topic();
+
+        $course_topic->title = $request->input('title');
+        $course_topic->course_id =$request->input('couse_id');
+
+        $course_topic->save();
+
+
+
+        return back();
     }
 
     /**
@@ -40,37 +48,7 @@ class CreateClassController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-
-            'course_title' => 'max:100',
-            'course_description' => 'max:120',
-            'course_category' => 'max:120',
-            'course_banner' => 'max:120',
-            'course_fee' => 'max:120',
-            'duration_value' => 'max:120',
-            'duration_type' => 'max:120',
-
-            
-            
-        ]);
-
-        $course = new Course();
-
-        $course->title = $request->course_title;
-        $course->description = $request->course_description;
-        $course->category = $request->course_category;
-        $course->banner = 'pix.png';
-        $course->fee = $request->course_fee;
-        $course->duration_value = $request->duration_value;
-        $course->duration_type = $request->duration_type;
-
-        $course->tutor_id = Auth::user()->id;
-
-        $course->save();
-
-
-
-        return redirect('/tutor/class-enrich/'.$course->id);
+        //
     }
 
     /**

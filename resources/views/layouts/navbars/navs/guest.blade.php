@@ -17,8 +17,8 @@
       <ul class="navbar-nav">
         
         <li class="nav-item{{ $activePage == 'register' ? ' active' : '' }}">
-          <a href="{{ route('register') }}" class="nav-link">
-            <i class="material-icons"></i> {{ __('Register') }}
+          <a href="/regInstructor" class="nav-link">
+            <i class="material-icons"></i> {{ __('Become a Tutor') }}
           </a>
         </li>
         <li class="nav-item{{ $activePage == 'login' ? ' active' : '' }}">

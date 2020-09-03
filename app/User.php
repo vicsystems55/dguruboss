@@ -47,5 +47,10 @@ class User extends Authenticatable
         return $this->hasMany('App\TutorProfile');
     }
 
+    public function tutor_bank()
+    {
+        return $this->hasOne('App\TutorBankDetail');
+    }
+
     
 }

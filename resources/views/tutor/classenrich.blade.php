@@ -23,41 +23,43 @@
               assumenda aspernatur ipsam.
             </p>
 
-            <div class="card card-nav-tabs card-plain">
-    <div class="card-header card-header-primary">
-        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-        <div class="nav-tabs-navigation">
-            <div class="nav-tabs-wrapper">
-                <ul class="nav nav-tabs justify-content-center" data-tabs="tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#video" data-toggle="tab">Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#audio" data-toggle="tab">audios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#documents" data-toggle="tab">Documents</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div><div class="card-body ">
-        <div class="tab-content col-md-6">
 
-            <div class="tab-pane active" id="video">
-            @include('tutor.add_material_form')
+          <h3>Topics</h3>
+            <div id="accordion" role="tablist">
+
+
+              @foreach($topics as $topic)
+
+              <div class="card card-collapse">
+                <div class="card-header" role="tab" id="headingOne">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#{{$loop->iteration}}" aria-expanded="true" aria-controls="{{$loop->iteration}}">
+                    {{$loop->iteration}}. {{$topic->title}}
+                      <i class="material-icons">keyboard_arrow_down</i>
+                    </a>
+                  </h5>
+                </div>
+
+                <div id="{{$loop->iteration}}" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                  <ul class="list-group">
+                    NO lessons added
+                  
+                  </ul>
+                  @include('tutor.add_doc_form')
+                  </div>
+                </div>
+              </div>
+
+              @endforeach
+
+                
+              </div>
             </div>
 
-            <div class="tab-pane" id="audio">
+            
+
             @include('tutor.add_audio_form')
-            </div>
-
-            <div class="tab-pane" id="documents">
-            @include('tutor.add_doc_form')
-            </div>
-        </div>
-    </div>
-  </div>
 
     
    

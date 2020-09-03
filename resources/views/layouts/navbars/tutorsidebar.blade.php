@@ -20,7 +20,7 @@
       <li class="nav-item {{ ($activePage == 'allclasses' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
         <i class="material-icons">library_books</i>
-          <p>{{ __('Classes') }}
+          <p>{{ __('Course Mangement') }}
             <b class="caret"></b>
           </p>
         </a>
@@ -35,13 +35,27 @@
             ">
               <a class="nav-link" href="{{ route('tutor.allclasses') }}">
               <i class="material-icons">bubble_chart</i>
-                <span class="sidebar-normal">{{ __('All Classes') }} </span>
+                <span class="sidebar-normal">{{ __('My Courses') }} </span>
               </a>
             </li>
             <li class="nav-item {{ (request()->is('tutor/addclasses')) ? 'active' : '' }}">
               <a class="nav-link" href="{{ route('tutor.addclasses') }}">
               <i class="material-icons">bubble_chart</i>
-                <span class="sidebar-normal"> {{ __('Add New Class') }} </span>
+                <span class="sidebar-normal"> {{ __('Create New') }} </span>
+              </a>
+            </li>
+
+            <li class="nav-item {{ (request()->is('tutor/addclasses')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('tutor.addclasses') }}">
+              <i class="material-icons">bubble_chart</i>
+                <span class="sidebar-normal"> {{ __('Quiz Settings') }} </span>
+              </a>
+            </li>
+
+            <li class="nav-item {{ (request()->is('tutor/addclasses')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('tutor.addclasses') }}">
+              <i class="material-icons">bubble_chart</i>
+                <span class="sidebar-normal"> {{ __('Create New') }} </span>
               </a>
             </li>
           </ul>

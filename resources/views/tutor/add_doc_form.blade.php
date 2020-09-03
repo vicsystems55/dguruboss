@@ -1,7 +1,9 @@
-<button class="btn btn-round" data-toggle="modal" data-target="#doc">
-    Add<i class="material-icons">assignment</i>
+<div class="s text-center">
+<button class="btn btn-round btn-primary" data-toggle="modal" data-target="#doc">
+    Add a Lession<i class="material-icons">assignment</i>
 
 </button>
+</div>
 
 <div class="modal fade" id="doc" tabindex="-1" role="">
     <div class="modal-dialog modal-login" role="document">

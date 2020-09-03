@@ -4,11 +4,11 @@
   <div class="content">
     <div class="container-flui">
 
-        <h1>Update Profile</h1>
+        <h3>Update Profile</h3>
 
         <div class="containe">
         
-            <form method="post" action="">
+            <form method="post" action="{{ route('tutor.regprofile')}}">
             
                 <div class="card col-md-10">
                     <div class="card-body">
@@ -17,7 +17,7 @@
                         background-size: cover;
                       "  id="image-preview">
                         <label  for="image-upload" id="image-label">Choose File</label>
-                        <input type="file" name="image" id="image-upload" />
+                        <input type="file" name="tutor_avatar" id="image-upload" />
                       </div>
 
                    
@@ -26,18 +26,16 @@
                         <textarea placeholder="Tell us about yourself..." name="bio" class="form-control" id="bio" rows="3"></textarea>
                       </div>
 
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Home Address">
+                      <div class="form-group">
+                            <input name="phone" type="text" class="form-control" placeholder="Phone">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone">
+                            <input name="home_address" type="text" class="form-control" placeholder="Home Address">
                         </div>
 
-                        
-
                         <div class="form-group">
-                            <select class="form-control" name="" id="">
+                            <select class="form-control" name="state_res" id="">
                                 <option value="">--select state of residence--</option>
                                 <option value="">FCT Abuja</option>
                                 <option value="Adamawa State">Adamawa State</option>
@@ -79,7 +77,7 @@
                             </select>
                         </div>
 
-               @include('tutor.select_expertise')
+               
 
                         <div class="container text-center">
                         
