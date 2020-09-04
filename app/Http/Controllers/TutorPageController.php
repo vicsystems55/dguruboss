@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Resources\CoursesResource;
 
+use Carbon\Carbon;
+
 use DB;
 
 use Paystack;
@@ -31,6 +33,7 @@ class TutorPageController extends Controller
      */
     public function home()
     {
+       
         $tutor_profile = TutorProfile::where('user_id', Auth::user()->id)->first();
 
         $tutor_class = Course::where('tutor_id', Auth::user()->id)->first();
@@ -75,9 +78,13 @@ class TutorPageController extends Controller
 
     public function addclasses()
     {
-        $class_category = ClassCategory::get();
+        
+
+       $class_categories = DB::table('class_categories')->get();
+
         return view('tutor.classadd', [
-            'class_category' => $class_category
+            'class_category' => $class_categories
+           
         ]);
     }
 
@@ -147,8 +154,13 @@ class TutorPageController extends Controller
     public function profile()
     {
         $tutor_profile = TutorProfile::where('user_id', Auth::user()->id)->first();
+        $user = User::where('id', Auth::user()->id)->first();
       
-                return view('tutor.profile');
+                return view('tutor.profile',
+                [
+                    'user' => $user
+                ]
+            );
             
 
         
@@ -194,10 +206,16 @@ class TutorPageController extends Controller
     {
         //
 
-        $topics = DB::table('topics')->where('course_id', '2')->get();
+        
+
+        $course_details = DB::table('courses')->where('id', $id)->first();
+        
+        $topics = DB::table('topics')->where('course_id', $id)->get();
 
         return view('tutor.classenrich',[
 
+            
+            'course_details' => $course_details,
             'topics' => $topics
         ]);
     }

@@ -1,5 +1,5 @@
 <div class="text-center o">
-<button class="btn btn-round btn-primary" data-toggle="modal" data-target="#audio">
+<button class="btn btn-round btn-primary btn-sm" data-toggle="modal" data-target="#audio">
     Add New Topic<i class="material-icons">assignment</i>
 
 </button>
@@ -10,19 +10,20 @@
         <div class="modal-content">
             <div class="car  ">
                 <div class="modal-heade">
-                  <div class="card-header card-header-primary text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                      <i class="material-icons">clear</i>
-                    </button>
+                  <div class="card- card-header-primary text-center">
+                  
+                      
+                    
 
-                    <h4 class="card-title">Add a new topic</h4>
+                    
                     
                   </div>
                 </div>
                 <div class="modal-body">
+                <h4 class="card-title">Add a new topic</h4>
                     <form class="form" method="post" action="{{ route('tutor.create_topic')}}">
                         @csrf
-                        <input type="hidden" name="couse_id" value="2">
+                        <input type="hidden" name="course_id" value="{{$course_details->id}}">
                         <div class="card-bod">
 
                             <div class="form-group bmd-form-group">
@@ -40,8 +41,8 @@
                         </div>
                    
                 </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="submit" class="btn btn-primary  btn-lg">create</button>
+                <div class="modal-foote text-center justify-content-center">
+                    <button type="submit" class="btn btn-primary  btn-sm">create</button>
                 </div>
 
                 </form>

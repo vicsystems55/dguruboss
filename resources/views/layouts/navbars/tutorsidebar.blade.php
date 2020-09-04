@@ -45,14 +45,14 @@
               </a>
             </li>
 
-            <li class="nav-item {{ (request()->is('tutor/addclasses')) ? 'active' : '' }}">
+            <li class="nav-item {{ (request()->is('tutor/addclasses')) ? '' : '' }}">
               <a class="nav-link" href="{{ route('tutor.addclasses') }}">
               <i class="material-icons">bubble_chart</i>
                 <span class="sidebar-normal"> {{ __('Quiz Settings') }} </span>
               </a>
             </li>
 
-            <li class="nav-item {{ (request()->is('tutor/addclasses')) ? 'active' : '' }}">
+            <li class="nav-item {{ (request()->is('tutor/addclasses')) ? '' : '' }}">
               <a class="nav-link" href="{{ route('tutor.addclasses') }}">
               <i class="material-icons">bubble_chart</i>
                 <span class="sidebar-normal"> {{ __('Create New') }} </span>

@@ -30,7 +30,7 @@
                 <i class="material-icons">info_outline</i>
               </div>
               <p class="card-category">Classes Created</p>
-              <h3 class="card-title">0</h3>
+              <h3 class="card-title">{{$tutor_regcourse->count()}}</h3>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -75,32 +75,74 @@
 
         <h3>Recently Created Classes</h3>
         <hr>
+
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">ALL COURSES</h4>
+            <a class="btn btn-sm btn-secondary" class="float-right" href="">Create New</a>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+                  <th>
+                    SN
+                  </th>
+                  <th>
+                    Course Title
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                  <th>
+                    Date Created
+                  </th>
+                  <th>
+                    Fee
+                  </th>
+                  <th>
+                    Edit
+                  </th>
+                </thead>
+                <tbody>
+
+                          @foreach($tutor_regcourse as $course)
+                          <tr>
+                            <td>
+                              {{$loop->iteration}}
+                            </td>
+                            <td>
+                              {{$course->title}}
+                            </td>
+                            <td class="">
+                              <span class="badge badge-success">{{$course->status}}</span>
+                            </td>
+                            <td>
+                              {{$course->created_at->diffForHumans()}}
+                            </td>
+                            <td class="text-primary">
+                              <span class="text-info font-weight-bold">NGN {{$course->fee}}.00</span>
+                            </td>
+                            <td class="text-primary">
+                              <a class="btn btn-secondary btn-sm" href="">Details</a>
+                            </td>
+                          </tr>
+
+                          @endforeach
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
         <div class="row">
+
         
               @foreach($tutor_regcourse as $course)
 
                   
 
-                        <div class="col-md-4">
-
-                            <div class="card card-blog d-flex justify-content-center">
-                              <div class="card-header card-header-image">
-                                  <a href="{{ route('tutor.one_class',2)}}">
-                                      <img class="img" src="https://images.unsplash.com/photo-1511439817358-bee8e21790b5?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" rel="nofollow">
-                                      <div class="card-title">
-                                          This Summer Will be Awesome
-                                      </div>
-                                  </a>
-                              </div>
-                              <div class="card-body">
-                                  <h6 class="card-category text-info">Fashion</h6>
-                                  <p class="card-description">
-                                      Don&apos;t be scared of the truth because we need to restart thenye I love Rick Owens&#x2019; bed design but the back is...
-                                  </p>
-                              </div>
-                          </div>
                         
-                        </div>
 
                    
 

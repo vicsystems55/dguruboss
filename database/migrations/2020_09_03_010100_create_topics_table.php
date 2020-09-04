@@ -16,10 +16,13 @@ class CreateTopicsTable extends Migration
         Schema::create('topics', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->bigInteger('tutor_id')->unsigned();
             $table->bigInteger('course_id')->unsigned();
             $table->string('status')->default('active');
             $table->timestamps();
             $table->foreign('course_id')->references('id')->on('courses');
+            $table->foreign('tutor_id')->references('id')->on('users');
+
         });
     }
 

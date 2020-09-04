@@ -34,9 +34,8 @@
                       <div class="col-md-7">
                         <h1 class="mt-5">Hello, {{Auth::user()->name}}</h1>
                           
-                          <p class="col-md-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                          Accusamus, mollitia quae aspernatur voluptatem recusandae nesciunt
-                          
+                          <p class="col-md-10">
+                          {{ Auth::user()->bio}}
                           </p>
                       </div>
 
@@ -64,37 +63,50 @@
                     <h3>user information</h3>
 
                     <div class="row">
-                        <label class="col-sm-2 col-form-label">Full Name:</label>
+                        <label class="col-sm-3 col-form-label">Full Name:</label>
                         <div class="col-sm-7">
                           <div class="form-grou ">
-                            <input class="form-control" name="name" id="input-name" type="text" placeholder="Name" value="{{Auth::user()->name}}" required="true" aria-required="true">
+                            <input class="form-control" name="name" id="input-name" type="text" placeholder="Name" value="{{$user->name}}" required="true" aria-required="true">
                           </div>
                         </div>
                       </div>
 
                       <div class="row">
-                        <label class="col-sm-2 col-form-label">Email:</label>
+                        <label class="col-sm-3 col-form-label">Email:</label>
                         <div class="col-sm-7">
                           <div class="form-grou ">
-                            <input class="form-control" name="name" id="input-name" type="text" placeholder="Name" value="{{Auth::user()->email}}" required="true" aria-required="true">
+                            <input class="form-control" name="name" id="input-name" type="text" placeholder="Name" value="{{$user->email}}" required="true" aria-required="true">
                           </div>
                         </div>
                       </div>
 
                       <div class="row">
-                        <label class="col-sm-2 col-form-label">Phone:</label>
+                        <label class="col-sm-3 col-form-label">Phone:</label>
                         <div class="col-sm-7">
                           <div class="form-grou ">
-                            <input class="form-control" name="phone" id="input-name" type="text" placeholder="Phone" value="{{Auth::user()->phone}}" required="true" aria-required="true">
+                            <input class="form-control" name="phone" id="input-name" type="text" placeholder="Phone" value="{{$user->phone}}" required="true" aria-required="true">
                           </div>
                         </div>
                       </div>
 
                       <div class="row">
-                        <label class="col-sm-2 col-form-label">Address:</label>
+                        <label class="col-sm-3 col-form-label">Bio:</label>
                         <div class="col-sm-7">
                           <div class="form-grou ">
-                          <textarea type="text" name="address" id="address" class="form-control" placeholder="{{ __('Address') }}" row="3"></textarea>
+                          <textarea type="text" name="bio" id="Bio">
+                            {{$user->bio}}
+                          </textarea>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <label class="col-sm-3 col-form-label">Address:</label>
+                        <div class="col-sm-7">
+                          <div class="form-grou ">
+                          <textarea type="text" name="address" id="address"  >
+                            {{$user->address}}
+                          </textarea>
                           </div>
                         </div>
                       </div>

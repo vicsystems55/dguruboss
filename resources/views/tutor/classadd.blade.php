@@ -2,15 +2,24 @@
 
 @section('content')
 
-  <div class="content cus bg-white" style="background-image: url('{{ asset('material') }}/img/1021.png'); background-size: contain; background-repeat: no-repeat; background-position: top right; align-items: center;">
+  <div class="content cus" >
     <div class="container-flui">
+
+    <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+    
+      <li class="breadcrumb-item"><a href="javascript:;">Dashboard</a></li>
+      <li class="breadcrumb-item"><a href="javascript:;">All Classes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Class Details</li>
+    </ol>
+  </nav>
 
             <div class="row">
             
-            <div class="col-md-10">
-            <div class="car ">
-                <div class="card-bod">
-                <h3 class="display-4 font-weight-bold">Class Setup</h3>
+            <div class="col-md-10 mx-auto">
+            <div class="card ">
+                <div class="card-body">
+                <h3 class="text-center">Class Setup</h3>
                     <form method="post" action="{{ route('tutor.create-class')}}">
                     @csrf
                         <div class="ro">
@@ -36,16 +45,35 @@
                                     @endif
                                 </div>
 
+                                
+
+
+
                                 <div class="form-group">
                                     <h5 for="">Pick a Category</h5>
-                                    <select name="course_category" style="font-size:13pt;" placeholder="Select " class="form-control" id="exampleFormControlSelect1">
-                                    <option value="">--Select Category--</option>
+
+                                    <div class="row">
+                                        @foreach($class_category as $category)
+                                                <div class="col-md-6">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="{{$category->category_name}}">
+                                                            {{$category->category_name}}
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                        @endforeach
+
+                                    </div>
+
                                     @foreach($class_category as $category)
-                                    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+                                    
 
                                     @endforeach
-                                      
-                                    </select>
+
                                 </div>
 
                                 <!-- <div class="form-check mr-auto ml-3 mt-3">
@@ -57,53 +85,7 @@
                                     </label>
                                     </div> -->
 
-                                <div class="container">
-
-                                    <!-- bootstrap-imageupload. -->
-                                    <div class="card card-body imageupload panel panel-default">
-                                        <div class="panel-heading clearfix">
-                                            <h5 class="panel-title pull-left">Upload Banner</h5>
-                                            <div class="btn-group pull-right">
-                                                <button type="button" class="btn btn-sm btn-secondary active">File</button>
-                                                <button type="button" class="btn btn-sm btn-secondary">URL</button>
-                                            </div>
-                                        </div>
-                                        <div class="file-tab panel-body">
-                                            <label class="btn btn-sm btn-prmary btn-file">
-                                                <span>Choose Banner</span>
-                                                <!-- The file is stored here. -->
-                                                <input type="file" value="https://loc" name="image-file">
-                                            </label>
-                                            <button type="button" class="btn btn-sm btn-default">Remove</button>
-                                        </div>
-                                        <div class="url-tab panel-body">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control hasclear" placeholder="Image URL">
-                                                <div class="input-group-btn">
-                                                    <button type="button" class="btn btn-sm btn-default">Upload</button>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="btn btn-default">Remove</button>
-                                            <!-- The URL is stored here. -->
-                                            <input type="hidden" name="image-url">
-                                            <br>
-                                            <button type="button" id="imageupload-reset" class="btn btn-default btn-sm">Reset..</button>
-                                        </div>
-                                    </div>
-
-                                    <!-- bootstrap-imageupload method buttons. -->
-                                    
-                                    
-
-                                </div>
-
-
-
-                            </div>
-
-                            <div class="col-md-9 mx-auto">
-
-                            <div class="row">
+                                    <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <h5 for="">Fee</h5>
@@ -131,23 +113,20 @@
                                 
                                 </div>
 
+
+                                                   
+
                                
 
                             </div>
-                            
-
-                            
-           
-                                
-
-                                <div class="form-group">
-                                    <input class="" type="file"  name="banner">
-                                </div>
 
                                 
 
 
-                            </div>
+
+                            
+
+                            
 
                         </div>
 

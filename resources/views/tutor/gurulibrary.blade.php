@@ -77,7 +77,7 @@
             <hr>
 
               <div class="row">
-                <div class="col-md-3 d-flex justify-content-center">
+                  <div class="col-md-3 d-flex justify-content-center">
 
 
 
@@ -97,8 +97,10 @@
                               </p>
                           </div>
                       </div>
+
+                  </div>
+
                 </div>
-              </div>
             
             </div>
 

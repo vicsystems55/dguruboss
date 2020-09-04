@@ -8,7 +8,7 @@
         @csrf
         <input type="hidden" name="type" value="tutor">
         <div class="card card-login card-hidden mb-3">
-          <div class="card-header card-header-primary text-center">
+          <div class="card-header card-header-info text-center">
             <h4 class="card-title"><strong>{{ __('Signup as an Instructor') }}</strong></h4>
             
           </div>
@@ -18,7 +18,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                      <i class="material-icons"></i>
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                   </span>
                 </div>
                 <input type="text" name="name" class="form-control" placeholder="{{ __('Name...') }}" value="{{ old('name') }}" required>
@@ -33,7 +33,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons"></i>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
                   </span>
                 </div>
                 <input type="email" name="email" class="form-control" placeholder="{{ __('Email...') }}" value="{{ old('email') }}" required>
@@ -49,7 +49,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons"></i>
+                  <i class="fa fa-key" aria-hidden="true"></i>
                   </span>
                 </div>
                 <input type="password" name="password" id="password" class="form-control" placeholder="{{ __('Password...') }}" required>
@@ -64,7 +64,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons"></i>
+                  <i class="fa fa-key" aria-hidden="true"></i>
                   </span>
                 </div>
                 <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="{{ __('Confirm Password...') }}" required>
@@ -80,7 +80,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons"></i>
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
                   </span>
                 </div>
                 <input type="text" name="phone" id="phone" class="form-control" placeholder="{{ __('Phone Number') }}" required>
@@ -96,7 +96,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons"></i>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
                   </span>
                 </div>
                 <textarea type="text" name="address" id="address" class="form-control" placeholder="{{ __('Address') }}" row="3"></textarea>
@@ -114,7 +114,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons"></i>
+                  <i class="fa fa-address-card-o" aria-hidden="true"></i>
                   </span>
                 </div>
                 <textarea type="text" name="bio" id="bio" class="form-control" placeholder="{{ __('Bio') }}" row="3"></textarea>
@@ -137,7 +137,7 @@
             </div>
           </div>
           <div class="card-footer justify-content-center">
-            <button  type="submit" class="btn btn-primary btn-lg">{{ __('Create account') }}</button>
+            <button  type="submit" class="btn btn-info btn-lg">{{ __('Create account') }}</button>
           </div>
         </div>
       </form>

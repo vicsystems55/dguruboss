@@ -107,19 +107,23 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/', 'TutorPageController@home')->name('tutor');
 	
 	Route::get('/allclasses', 'TutorPageController@allclasses')->name('tutor.allclasses');
+
 	Route::get('/addclasses', 'TutorPageController@addclasses')->name('tutor.addclasses');
+
 	Route::post('/addclass', 'TutorPageController@addclass')->name('tutor.addclass');
 
 	Route::get('/profile', 'TutorPageController@profile')->name('tutor.profile');
-	Route::post('/regprofile', 'TutorPageController@regprofile')->name('tutor.regprofile');
 
+	Route::post('/regprofile', 'TutorPageController@regprofile')->name('tutor.regprofile');
 
 	Route::get('/resources', 'TutorPageController@gurulibrary')->name('tutor.resources');
 	
 	Route::get('/loadcourses', 'TutorPageController@loadcourses');
 
 	Route::get('/reports', 'TutorPageController@reports')->name('tutor.reports');
+
 	Route::get('/notifications', 'TutorPageController@notifications')->name('tutor.notifications');
+
 	Route::get('/wallet', 'TutorPageController@wallet')->name('tutor.wallet');
 
 	Route::get('/one_class/{id}', 'TutorPageController@one_class')->name('tutor.one_class');
@@ -129,6 +133,10 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::post('/create-class', 'CreateClassController@store')->name('tutor.create-class');
 
 	Route::post('/create_topic', 'CreateTopicController@create')->name('tutor.create_topic');
+
+	Route::post('/create_topic', 'CreateTopicController@create')->name('tutor.create_topic');
+
+	Route::get('/edit_topic/{id},{course}', 'CreateTopicController@edit_topic')->name('tutor.edit_topic');
 
 	Route::get('/class-enrich/{id}', 'TutorPageController@class_enrich')->name('tutor.class-enrich');
 	

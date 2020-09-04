@@ -31,7 +31,8 @@ class CreateTopicController extends Controller
         $course_topic = new Topic();
 
         $course_topic->title = $request->input('title');
-        $course_topic->course_id =$request->input('couse_id');
+
+        $course_topic->course_id = $request->input('course_id');
 
         $course_topic->save();
 
@@ -68,9 +69,13 @@ class CreateTopicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit_topic($id, $course_id)
     {
-        //
+        $topic = DB::table('topics')->where('id', $id)->first();
+        return view('tutor.edit_topic',[
+            'topic' => $topic,
+            'course_id' => $course_id
+        ]);
     }
 
     /**

@@ -17,12 +17,12 @@
       <ul class="navbar-nav">
         
         <li class="nav-item{{ $activePage == 'register' ? ' active' : '' }}">
-          <a href="/regInstructor" class="nav-link">
+          <a class="btn btn-info" href="/regInstructor" class="nav-link">
             <i class="material-icons"></i> {{ __('Become a Tutor') }}
           </a>
         </li>
         <li class="nav-item{{ $activePage == 'login' ? ' active' : '' }}">
-          <a href="{{ route('login') }}" class="nav-link">
+          <a class="btn btn-secondary" href="{{ route('login') }}" class="nav-link">
             <i class="material-icons"></i> {{ __('Login') }}
           </a>
         </li>
