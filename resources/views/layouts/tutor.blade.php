@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>tinymce.init({ selector:'textareaq' });</script>
+    <script src="https://cdn.tiny.cloud/1/f6kzm0d5bzj37za3q6fowc1je27bbcopwhc0wqakz3x5l8xa/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     </head>
     <body class="{{ $class ?? '' }}">
         <div id="app">
