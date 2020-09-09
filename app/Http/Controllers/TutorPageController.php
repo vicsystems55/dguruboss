@@ -249,9 +249,16 @@ class TutorPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function course_details($id)
     {
-        //
+        $course = DB::table('courses')->where('id', $id)->first();
+
+        $topics = DB::table('topics')->where('course_id', $id)->get();
+
+        return view('tutor.course_details',[
+            'course_details' => $course,
+            'topics' => $topics
+        ]);
     }
 
     /**
@@ -260,9 +267,16 @@ class TutorPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function my_topics()
     {
-        //
+      
+       
+
+        
+
+        return view('tutor.my_topics',[
+          
+        ]);
     }
 
     /**

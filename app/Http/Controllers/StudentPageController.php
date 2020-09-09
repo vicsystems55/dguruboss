@@ -69,6 +69,12 @@ class StudentPageController extends Controller
         return view('student.singleclass');
     }
 
+    public function onecourse()
+    {
+        //
+        return view('onecourse');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

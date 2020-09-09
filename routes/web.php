@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/old', function () {
     return view('welcome');
 });
 
@@ -74,6 +74,18 @@ Auth::routes();
 // 	})->name('upgrade');
 // });
 
+Route::group( [], function () {
+	Route::get('/', 'FrontpageController@index')->name('frontpage');
+	Route::get('/blog', 'FrontpageController@blog')->name('blog');
+	Route::get('/course_session', 'FrontpageController@course_session')->name('course_session');
+	Route::get('/course_details', 'FrontpageController@course_details')->name('course_details');
+	Route::get('/courses', 'FrontpageController@courses')->name('courses');
+	Route::get('/blog_details', 'FrontpageController@blog_details')->name('blog_details');
+	Route::get('/about', 'FrontpageController@about')->name('about');
+	
+	
+});
+
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
@@ -110,6 +122,10 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 
 	Route::get('/addclasses', 'TutorPageController@addclasses')->name('tutor.addclasses');
 
+	Route::get('/course_details/{id}', 'TutorPageController@course_details')->name('tutor.course_details');
+
+	Route::get('/my_topics', 'TutorPageController@my_topics')->name('tutor.my_topics');
+
 	Route::post('/addclass', 'TutorPageController@addclass')->name('tutor.addclass');
 
 	Route::get('/profile', 'TutorPageController@profile')->name('tutor.profile');
@@ -136,6 +152,10 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 
 	Route::post('/create_topic', 'CreateTopicController@create')->name('tutor.create_topic');
 
+	Route::post('/publish_course', 'CreateTopicController@publish_course')->name('tutor.publish_course');
+
+	Route::post('/draft_course', 'CreateTopicController@draft_course')->name('tutor.draft_course');
+
 	Route::get('/edit_topic/{id},{course}', 'CreateTopicController@edit_topic')->name('tutor.edit_topic');
 
 	Route::get('/class-enrich/{id}', 'TutorPageController@class_enrich')->name('tutor.class-enrich');
@@ -153,7 +173,9 @@ Route::group(['middleware' => ['auth','student', 'verified'], 'prefix' => 'stude
 	Route::get('/singleclass', 'StudentPageController@singleclass')->name('student.singleclass');
 	Route::get('/resources', 'StudentPageController@resources')->name('student.resources');
 	Route::get('/notifications', 'StudentPageController@notifications')->name('student.notifications');
-	Route::get('/wallet', 'StudentPageController@wallet')->name('student.wallet');
+	Route::get('/wallet', 'StudentPageController@wallet')->name('student.wallet');  
+
+	Route::get('/onecourse', 'StudentPageController@onecourse')->name('student.onecourse');
 });
 
 

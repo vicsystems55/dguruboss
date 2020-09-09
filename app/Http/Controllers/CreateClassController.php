@@ -27,10 +27,18 @@ class CreateClassController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function publish_course(Request $request)
     {
-        //
+        return back();
     }
+
+    public function draft_course(Request $request)
+    {
+        return back();
+    }
+
+    
+    
 
     /**
      * Store a newly created resource in storage.

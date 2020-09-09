@@ -25,7 +25,7 @@ class CreateCoursesTable extends Migration
             $table->string('duration_type');
             $table->string('banner');
             $table->string('requirements')->nullable();
-            $table->string('status')->default('active');
+            $table->string('status')->default('pending');
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('courses');
             $table->foreign('tutor_id')->references('id')->on('users');

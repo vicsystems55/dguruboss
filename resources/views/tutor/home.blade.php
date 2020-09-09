@@ -115,7 +115,7 @@
                               {{$course->title}}
                             </td>
                             <td class="">
-                              <span class="badge badge-success">{{$course->status}}</span>
+                              <span class="badge badge-warning">{{$course->status}}</span>
                             </td>
                             <td>
                               {{$course->created_at->diffForHumans()}}
@@ -124,7 +124,7 @@
                               <span class="text-info font-weight-bold">NGN {{$course->fee}}.00</span>
                             </td>
                             <td class="text-primary">
-                              <a class="btn btn-secondary btn-sm" href="">Details</a>
+                              <a target="_blank" class="btn btn-dark btn-sm" href="{{ route('tutor.course_details', $course->id)}}">Details</a>
                             </td>
                           </tr>
 

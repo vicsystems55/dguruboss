@@ -38,6 +38,12 @@
                 <span class="sidebar-normal">{{ __('My Courses') }} </span>
               </a>
             </li>
+            <li class="nav-item {{ (request()->is('tutor/my_topics')) ? 'active' : '' }}">
+              <a class="nav-link" href="{{ route('tutor.my_topics') }}">
+              <i class="material-icons">bubble_chart</i>
+                <span class="sidebar-normal"> {{ __('My Topics') }} </span>
+              </a>
+            </li>
             <li class="nav-item {{ (request()->is('tutor/addclasses')) ? 'active' : '' }}">
               <a class="nav-link" href="{{ route('tutor.addclasses') }}">
               <i class="material-icons">bubble_chart</i>
