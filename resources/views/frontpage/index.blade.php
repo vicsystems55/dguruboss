@@ -140,7 +140,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/featured3.png" alt=""></a>
+                                <a href="#"><img src="{{url('')}}" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>

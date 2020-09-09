@@ -13,7 +13,7 @@ class FrontPageController extends Controller
      */
     public function index()
     {
-        return view('frontpage.index');
+        return view('frontpage.index') ;
     }
 
  
