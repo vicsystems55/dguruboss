@@ -75,13 +75,13 @@ Auth::routes();
 // });
 
 Route::group( [], function () {
-	Route::get('/', 'FrontpageController@index')->name('frontpage');
-	Route::get('/blog', 'FrontpageController@blog')->name('blog');
-	Route::get('/course_session', 'FrontpageController@course_session')->name('course_session');
-	Route::get('/course_details', 'FrontpageController@course_details')->name('course_details');
-	Route::get('/courses', 'FrontpageController@courses')->name('courses');
-	Route::get('/blog_details', 'FrontpageController@blog_details')->name('blog_details');
-	Route::get('/about', 'FrontpageController@about')->name('about');
+	Route::get('/', 'FrontPageController@index')->name('frontpage');  
+	Route::get('/blog', 'FrontPageController@blog')->name('blog');
+	Route::get('/course_session', 'FrontPageController@course_session')->name('course_session');
+	Route::get('/course_details', 'FrontPageController@course_details')->name('course_details');
+	Route::get('/courses', 'FrontPageController@courses')->name('courses');
+	Route::get('/blog_details', 'FrontPageController@blog_details')->name('blog_details');
+	Route::get('/about', 'FrontPageController@about')->name('about');
 	
 	
 });
