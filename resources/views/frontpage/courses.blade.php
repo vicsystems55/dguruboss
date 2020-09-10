@@ -36,16 +36,33 @@
                         </div>
                     </div>
                 </div>
+                    
+                <div class="container mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                        <form action="" class="form-inline">
+                            <div class="form-group">
+                                <input placeholder="Enter keyword" type="text" class="single-input-accent">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-sm btn-primary ml-3">Search</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="properties properties2 mb-30">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/featured1.png" alt=""></a>
+                                    <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured1.png')}}" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>User Experience</p>
-                                    <h3><a href="#">Fundamental of UX for Application design</a></h3>
+                                    <h3><a target="_blank" href="{{ url('course_details')}}">Fundamental of UX for Application design</a></h3>
                                     <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">
@@ -60,7 +77,7 @@
                                             <p><span>(4.5)</span> based on 120</p>
                                         </div>
                                         <div class="price">
-                                            <span>$135</span>
+                                            <span>NGN 135</span>
                                         </div>
                                     </div>
                                     <a href="#" class="border-btn border-btn2">Find out more</a>
@@ -72,40 +89,7 @@
                         <div class="properties properties2 mb-30">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/featured2.png" alt=""></a>
-                                </div>
-                                <div class="properties__caption">
-                                    <p>User Experience</p>
-                                    <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                    <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-                                        
-                                    </p>
-                                    <div class="properties__footer d-flex justify-content-between align-items-center">
-                                        <div class="restaurant-name">
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half"></i>
-                                            </div>
-                                            <p><span>(4.5)</span> based on 120</p>
-                                        </div>
-                                        <div class="price">
-                                            <span>$135</span>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="border-btn border-btn2">Find out more</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="properties properties2 mb-30">
-                            <div class="properties__card">
-                                <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/featured3.png" alt=""></a>
+                                    <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured2.png')}}" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>User Experience</p>
@@ -138,7 +122,7 @@
                         <div class="properties properties2 mb-30">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/featured4.png" alt=""></a>
+                                    <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured3.png')}}" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>User Experience</p>
@@ -171,7 +155,7 @@
                         <div class="properties properties2 mb-30">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/featured5.png" alt=""></a>
+                                    <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured4.png')}}" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>User Experience</p>
@@ -204,7 +188,40 @@
                         <div class="properties properties2 mb-30">
                             <div class="properties__card">
                                 <div class="properties__img overlay1">
-                                    <a href="#"><img src="assets/img/gallery/featured6.png" alt=""></a>
+                                    <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured5.png')}}" alt=""></a>
+                                </div>
+                                <div class="properties__caption">
+                                    <p>User Experience</p>
+                                    <h3><a href="#">Fundamental of UX for Application design</a></h3>
+                                    <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
+                                        
+                                    </p>
+                                    <div class="properties__footer d-flex justify-content-between align-items-center">
+                                        <div class="restaurant-name">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half"></i>
+                                            </div>
+                                            <p><span>(4.5)</span> based on 120</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$135</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="border-btn border-btn2">Find out more</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="properties properties2 mb-30">
+                            <div class="properties__card">
+                                <div class="properties__img overlay1">
+                                    <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured6.png')}}" alt=""></a>
                                 </div>
                                 <div class="properties__caption">
                                     <p>User Experience</p>

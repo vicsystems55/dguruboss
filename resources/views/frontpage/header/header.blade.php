@@ -1,6 +1,6 @@
 <header>
         <!-- Header Start -->
-        <div class="header-area header-transparent">
+        <div class="header-area footer-bg" >
             <div class="main-header ">
                 <div class="header-bottom  header-sticky">
                     <div class="container-fluid">
@@ -17,20 +17,16 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li class="active" ><a href="index.html">Home</a></li>
-                                                <li><a href="courses.html">Courses</a></li>
+                                                <li class="active" ><a href="{{ route('frontpage')}}">Home</a></li>
+                                                <li><a href="{{ route('courses')}}">Courses</a></li>
                                                 <li><a href="about.html">About</a></li>
                                                 <li><a href="#">Blog</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
-                                                    </ul>
+                                                   
                                                 </li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="">Contact</a></li>
                                                 <!-- Button -->
-                                                <li class="button-header margin-left "><a href="" class="btn">Become an Instructor</a></li>
-                                                <li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li>
+                                                <li class="button-header margin-left "><a href="/regInstructor" class="btn">Become an Instructor</a></li>
+                                                <li class="button-header"><a href="{{ route('login')}}" class="btn btn3">Log in</a></li>
                                             </ul>
                                         </nav>
                                     </div>

@@ -140,7 +140,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{url('')}}" alt=""></a>
+                                <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured3.png')}}" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>
@@ -160,7 +160,7 @@
                                         <p><span>(4.5)</span> based on 120</p>
                                     </div>
                                     <div class="price">
-                                        <span>$135</span>
+                                        <span>NGN 1200</span>
                                     </div>
                                 </div>
                                 <a href="#" class="border-btn border-btn2">Find out more</a>
@@ -173,7 +173,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/featured2.png" alt=""></a>
+                                <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured2.png')}}" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>
@@ -193,7 +193,7 @@
                                         <p><span>(4.5)</span> based on 120</p>
                                     </div>
                                     <div class="price">
-                                        <span>$135</span>
+                                        <span>NGN 2500</span>
                                     </div>
                                 </div>
                                 <a href="#" class="border-btn border-btn2">Find out more</a>
@@ -211,7 +211,7 @@
             <div class="support-wrapper align-items-center">
                 <div class="left-content1">
                     <div class="about-icon">
-                        <img src="assets/img/icon/about.svg" alt="">
+                        <img src="{{ url('/frontpage/assets/img/icon/about.svg')}}" alt="">
                     </div>
                     <!-- section tittle -->
                     <div class="section-tittle section-tittle2 mb-55">
@@ -224,7 +224,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="{{url('/frontpage/assets/img/icon/right-icon.svg')}}" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Techniques to engage effectively with vulnerable children and young people.</p>
@@ -232,7 +232,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="{{ url('/frontpage/assets/img/icon/right-icon.svg')}}" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Join millions of people from around the world  learning together.</p>
@@ -241,7 +241,7 @@
 
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="{{ url('/frontpage/assets/img/icon/right-icon.svg')}}" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Join millions of people from around the world learning together. Online learning is as easy and natural.</p>
@@ -275,7 +275,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic1.png" alt="">
+                                <img src="{{ url('/frontpage/assets/img/gallery/topic1.png')}}" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -287,7 +287,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic2.png" alt="">
+                                <img src="{{ url('/frontpage/assets/img/gallery/topic2.png')}}" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -299,7 +299,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic3.png" alt="">
+                                <img src="{{ url('/frontpage/assets/img/gallery/topic3.png')}}" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -311,7 +311,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic4.png" alt="">
+                                <img src="{{ url('/frontpage/assets/img/gallery/topic4.png')}}" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -323,7 +323,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic5.png" alt="">
+                                <img src="{{ url('/frontpage/assets/img/gallery/topic5.png')}}" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -335,7 +335,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic6.png" alt="">
+                                <img src="{{ url('/frontpage/assets/img/gallery/topic6.png')}}" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -347,7 +347,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic7.png" alt="">
+                                <img src="{{ url('/frontpage/assets/img/gallery/topic7.png')}}" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -359,7 +359,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic8.png" alt="">
+                                <img src="{{ url('frontpage/assets/img/gallery/topic8.png')}}" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -385,7 +385,7 @@
                 <div class="right-content3">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="assets/img/gallery/about3.png" alt="">
+                        <img src="{{ url('/frontpage/assets/img/gallery/about3.png')}}" alt="">
                     </div>
                 </div>
                 <div class="left-content3">
