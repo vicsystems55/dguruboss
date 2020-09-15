@@ -42,7 +42,7 @@
                                              @include('frontpage.course.overview')
                                              </div>
                                              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                             
+                                             @include('frontpage.course.curriculum')
                                              </div>
                                              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                                           
@@ -56,11 +56,15 @@
                                  </div>
 
                                  <div class="col-md-3">
+                                 <h3>Top Courses</h3>
 
-                                          <ul>
-                                                <li>on</li>
-
-                                          </ul>
+                                    <ul class="list-group">
+                                       <li class="list-group-item active">Cras justo odio</li>
+                                       <li class="list-group-item">Dapibus ac facilisis in</li>
+                                       <li class="list-group-item">Morbi leo risus</li>
+                                       <li class="list-group-item">Porta ac consectetur ac</li>
+                                       <li class="list-group-item">Vestibulum at eros</li>
+                                    </ul>
                                  
                                  
                                  </div>

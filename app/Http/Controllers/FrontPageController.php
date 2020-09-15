@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+
+use App\Course;
+
 class FrontPageController extends Controller
 {
     /**
@@ -19,7 +23,11 @@ class FrontPageController extends Controller
  
     public function courses()
     {
-        return view('frontpage.courses');
+        $courses = DB::table('courses')->get();
+
+        return view('frontpage.courses',[
+            'courses' => $courses
+        ]);
     }
 
     public function course_session()
