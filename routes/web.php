@@ -82,6 +82,8 @@ Route::group( [], function () {
 	Route::get('/courses', 'FrontPageController@courses')->name('courses');
 	Route::get('/blog_details', 'FrontPageController@blog_details')->name('blog_details');
 	Route::get('/about', 'FrontPageController@about')->name('about');
+	Route::get('/tournament', 'FrontPageController@tour')->name('tournament');
+	Route::post('/upload_tour', 'TournamentController@create_tournament')->name('upload_tour');
 	
 	
 });

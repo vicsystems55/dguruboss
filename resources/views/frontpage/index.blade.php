@@ -13,7 +13,7 @@
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay="0.2s">Online learning<br> platform</h1>
                                     <p data-animation="fadeInLeft" data-delay="0.4s">Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
-                                    <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Join for Free</a>
+                                    <a target="_blank" href="{{ route('tournament')}}" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Join Tournament</a>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,68 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8">
                         <div class="section-tittle text-center mb-55">
-                            <h2>Our featured courses</h2>
+                            <h2>Our Tournament Courses</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses-actives">
+                    <!-- Single -->
+                    @foreach($tour_courses as $tournament)
+
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="{{ url('/frontpage/assets/img/gallery/featured1.png')}}" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>User Experience</p>
+                                <h3><a href="#">{{ $tournament->title}}</a></h3>
+                                <p>
+                                    {{ $tournament->description}}
+
+                                </p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                    <div class="restaurant-name">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half"></i>
+                                        </div>
+                                        <p><i class="fas fa-thumbs-up p-2"></i> <span>{{$tournament->total_likes}}</span> <i class="fas fa-thumbs-down p-2"></i> <span>{{$tournament->total_unlikes}}</span></p>
+                                    </div>
+                                    <div class="price">
+                                        <span>NGN 1000</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="border-btn border-btn2">Find out more</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    @endforeach
+                    <!-- Single -->
+                    <!-- Single -->
+                    
+                    <!-- Single -->
+                    <!-- Single -->
+                    
+                    <!-- Single -->
+                    <!-- Single -->
+                    
+                    <!-- Single -->
+                </div>
+            </div>
+        </div>
+
+        <div class="courses-area section-padding40 fix">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <h2>Our Bonus Courses</h2>
                         </div>
                     </div>
                 </div>
@@ -96,7 +157,7 @@
                                         <p><span>(4.5)</span> based on 120</p>
                                     </div>
                                     <div class="price">
-                                        <span>$135</span>
+                                        <span>FREE</span>
                                     </div>
                                 </div>
                                 <a href="#" class="border-btn border-btn2">Find out more</a>
@@ -128,7 +189,7 @@
                                         <p><span>(4.5)</span> based on 120</p>
                                     </div>
                                     <div class="price">
-                                        <span>$135</span>
+                                        <span>FREE</span>
                                     </div>
                                 </div>
                                 <a href="#" class="border-btn border-btn2">Find out more</a>
@@ -160,7 +221,7 @@
                                         <p><span>(4.5)</span> based on 120</p>
                                     </div>
                                     <div class="price">
-                                        <span>NGN 1200</span>
+                                        <span>FREE</span>
                                     </div>
                                 </div>
                                 <a href="#" class="border-btn border-btn2">Find out more</a>
@@ -193,7 +254,7 @@
                                         <p><span>(4.5)</span> based on 120</p>
                                     </div>
                                     <div class="price">
-                                        <span>NGN 2500</span>
+                                        <span>FREE</span>
                                     </div>
                                 </div>
                                 <a href="#" class="border-btn border-btn2">Find out more</a>

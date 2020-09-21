@@ -12,6 +12,8 @@ use Auth;
 
 use App\Course;
 
+use App\Tournament;
+
 class FrontPageController extends Controller
 {
     /**
@@ -21,7 +23,12 @@ class FrontPageController extends Controller
      */
     public function index()
     {
-        return view('frontpage.index') ;
+        $tour_courses = DB::table('tournaments')->get();
+        $_courses = DB::table('courses')->get();
+        return view('frontpage.index',[
+            'tour_courses' => $tour_courses,
+            '_courses' => $_courses
+        ]) ;
     }
 
  
@@ -76,6 +83,15 @@ class FrontPageController extends Controller
     {
         return view('frontpage.about');
     }
+
+
+    public function tour()
+    {
+        return view('frontpage.tournament');
+    }
+
+
+   
 
 
 
