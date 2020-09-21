@@ -25,8 +25,20 @@
                                                 </li>
                                                 <li><a href="">Contact</a></li>
                                                 <!-- Button -->
-                                                <li class="button-header margin-left "><a href="/regInstructor" class="btn">Become an Instructor</a></li>
-                                                <li class="button-header"><a href="{{ route('login')}}" class="btn btn3">Log in</a></li>
+                                                
+                                                @guest
+                                                <li class="button-header margin-left "><a href="/regInstructor" class="btn">Register</a></li>
+                                                <li class="button-header"><a href="{{ route('login')}}" class="btn btn3">Log in</a></li> 
+                                                @endguest
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+
+                                                @auth
+                                                <a class="" href="" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log out</a>
+                                                <li class="button-header"><a href="{{ route('login')}}" class="btn btn3">My Library</a></li>
+                                                @endauth
                                             </ul>
                                         </nav>
                                     </div>

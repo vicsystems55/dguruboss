@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="properties__caption">
                                     <p>User Experience</p>
-                                    <h3><a target="_blank" href="{{ url('course_details')}}">Fundamental of UX for Application design</a></h3>
+                                    <h3><a target="_blank" href="{{ url('course_details','2')}}">Fundamental of UX for Application design</a></h3>
                                     <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
                                     </p>
                                     <div class="properties__footer d-flex justify-content-between align-items-center">

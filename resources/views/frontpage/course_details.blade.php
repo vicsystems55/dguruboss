@@ -12,7 +12,7 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis suscipit, nobis consequuntur vitae eos totam. Ea, et pariatur. Dolorem, dolor numquam qui velit cumque sunt officiis pariatur expedita at doloribus?
                </p>
 
-               <a target="_blank" class="btn btn-primary" href="/course_session">Enroll</a>
+               <a target="_blank" class="btn btn-primary" href="/course_session/2">Enroll</a>
 
             </div>
 

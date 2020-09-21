@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use DB;
 
+use App\CourseSubscription;
+
+use Auth;
+
 use App\Course;
 
 class FrontPageController extends Controller
@@ -30,12 +34,25 @@ class FrontPageController extends Controller
         ]);
     }
 
-    public function course_session()
+    public function course_session($id)
     {
-        return view('frontpage.course_session');
+        $user_sub = DB::table('course_subscriptions')->where('user_id', Auth::user()->id)->get();
+
+        $course_data = DB::table('courses')->where('id', $id)->get();
+
+        if ($user_sub->count() == 0) {
+            return "you have not bought this course";
+        }
+        else{
+            return view('frontpage.course_session',[
+                'course_data' => $course_data
+            ]);
+        }
+
+        
     }
 
-    public function course_details()
+    public function course_details($id)
     {
         return view('frontpage.course_details');
     }

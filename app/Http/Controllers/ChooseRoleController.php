@@ -20,7 +20,7 @@ class ChooseRoleController extends Controller
         }
 
         elseif (Auth::user()->role =='student') {
-            return redirect('/student');
+            return redirect('/');
         }
 
         elseif (Auth::user()->role =='tutor') {

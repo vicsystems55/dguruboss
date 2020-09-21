@@ -77,8 +77,8 @@ Auth::routes();
 Route::group( [], function () {
 	Route::get('/', 'FrontPageController@index')->name('frontpage');  
 	Route::get('/blog', 'FrontPageController@blog')->name('blog');
-	Route::get('/course_session', 'FrontPageController@course_session')->name('course_session');
-	Route::get('/course_details', 'FrontPageController@course_details')->name('course_details');
+	Route::get('/course_session/{id}', 'FrontPageController@course_session')->name('course_session')->middleware('auth');
+	Route::get('/course_details/{id}', 'FrontPageController@course_details')->name('course_details');
 	Route::get('/courses', 'FrontPageController@courses')->name('courses');
 	Route::get('/blog_details', 'FrontPageController@blog_details')->name('blog_details');
 	Route::get('/about', 'FrontPageController@about')->name('about');
