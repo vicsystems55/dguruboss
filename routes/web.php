@@ -43,6 +43,8 @@ Route::get('/justpaid', 'PaymentController@handleGatewayCallback')->name('justpa
 
 Auth::routes();
 
+Route::resource('video', 'VideoController');
+
 
 // Route::group(['middleware' => 'auth'], function () {
 // 	Route::get('table-list', function () {
