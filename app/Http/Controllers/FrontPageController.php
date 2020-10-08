@@ -25,7 +25,7 @@ class FrontPageController extends Controller
     {
         $tour_courses = DB::table('tournaments')->get();
         $_courses = DB::table('courses')->get();
-        return view('frontpage.index',[
+        return view('edu.pages.index4',[
             'tour_courses' => $tour_courses,
             '_courses' => $_courses
         ]) ;
@@ -36,7 +36,7 @@ class FrontPageController extends Controller
     {
         $courses = DB::table('courses')->get();
 
-        return view('frontpage.courses',[
+        return view('edu.pages.courses',[
             'courses' => $courses
         ]);
     }

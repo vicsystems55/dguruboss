@@ -21,7 +21,6 @@ class CreateCourseSubscriptionsTable extends Migration
             $table->bigInteger('course_fee')->unsigned();
             $table->string('duration')->default('365');
             $table->string('status')->default('active');
-
             $table->timestamps();
         });
     }

@@ -23,6 +23,8 @@ class TournamentController extends Controller
         $tournament->video_url = $request->video_url;
         $tournament->tutor_id = Auth::user()->id;
 
+        
+
         $tournament->save();
 
         return back();
