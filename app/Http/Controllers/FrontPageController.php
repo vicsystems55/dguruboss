@@ -31,12 +31,63 @@ class FrontPageController extends Controller
         ]) ;
     }
 
+    public function events()
+    {
+        $tour_courses = DB::table('tournaments')->get();
+        $_courses = DB::table('courses')->get();
+        return view('edu.pages.events',[
+            'tour_courses' => $tour_courses,
+            '_courses' => $_courses
+        ]) ;
+    }
+
+    public function event_single($id)
+    {
+        $tour_courses = DB::table('tournaments')->get();
+        $_courses = DB::table('courses')->get();
+        return view('edu.pages.event_single',[
+            'tour_courses' => $tour_courses,
+            '_courses' => $_courses
+        ]) ;
+    }
+
+
+    public function teachers()
+    {
+        $tour_courses = DB::table('tournaments')->get();
+        $_courses = DB::table('courses')->get();
+        return view('edu.pages.teachers',[
+            'tour_courses' => $tour_courses,
+            '_courses' => $_courses
+        ]) ;
+    }
+
+    public function teacher_single($id)
+    {
+        $user_data = DB::table('users')->where('id', $id)->first();
+        return view('edu.pages.teacher_single',[
+            'user_data' => $user_data
+        ]) ;
+    }
+
+    
+    
+
  
     public function courses()
     {
         $courses = DB::table('courses')->get();
 
         return view('edu.pages.courses',[
+            'courses' => $courses
+        ]);
+    }
+
+    public function course_single($id)
+    {
+        $courses = DB::table('courses')->get();
+
+        return view('edu.pages.course_single',[
             'courses' => $courses
         ]);
     }
@@ -66,28 +117,29 @@ class FrontPageController extends Controller
 
     public function contact()
     {
-        return view('frontpage.contact');
+        return view('edu.pages.contact');
     }
 
     public function blog()
     {
-        return view('frontpage.blog');
+        return view('edu.pages.blog');
     }
 
-    public function blog_details()
+
+    public function blog_single($id)
     {
-        return view('frontpage.blog_details');
+        return view('edu.pages.blog_single');
     }
 
     public function about()
     {
-        return view('frontpage.about');
+        return view('edu.pages.about');
     }
 
 
     public function tour()
     {
-        return view('frontpage.tournament');
+        return view('edu.pages.tour_setup');
     }
 
 

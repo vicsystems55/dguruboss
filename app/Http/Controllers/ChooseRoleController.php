@@ -32,6 +32,26 @@ class ChooseRoleController extends Controller
         }
     }
 
+
+    public function where()
+    {
+        if (Auth::user()->role =='admin') {
+            return redirect('/admin');
+        }
+
+        elseif (Auth::user()->tournament =='yes') {
+            return redirect('/');
+        }
+
+        elseif (Auth::user()->role =='tutor') {
+            return redirect('/tutor');
+        }
+
+        else{
+            abort(403);
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -18,7 +18,7 @@ Route::get('/old', function () {
 });
 
 Route::get('/regInstructor', function () {
-    return view('auth.register_tutor');
+    return view('auth.register3');
 });
 
 Route::view('/vue', 'student.sample');
@@ -79,9 +79,17 @@ Route::resource('video', 'VideoController');
 Route::group( [], function () {
 	Route::get('/', 'FrontPageController@index')->name('frontpage');  
 	Route::get('/blog', 'FrontPageController@blog')->name('blog');
+	Route::get('/events', 'FrontPageController@events')->name('events');
+	Route::get('/event_single/{id}', 'FrontPageController@event_single')->name('event_single');
+	Route::get('/teachers', 'FrontPageController@teachers')->name('teachers');
+	Route::get('/teacher_single/{id}', 'FrontPageController@teacher_single')->name('teacher_single');
+	Route::get('/blog', 'FrontPageController@blog')->name('blog');
+	Route::get('/blog_single/{id}', 'FrontPageController@blog_single')->name('blog_single');
+	Route::get('/contact', 'FrontPageController@contact')->name('contact');
 	Route::get('/course_session/{id}', 'FrontPageController@course_session')->name('course_session')->middleware('auth');
 	Route::get('/course_details/{id}', 'FrontPageController@course_details')->name('course_details');
 	Route::get('/courses', 'FrontPageController@courses')->name('courses');
+	Route::get('/course_single/{id}', 'FrontPageController@course_single')->name('course_single');
 	Route::get('/blog_details', 'FrontPageController@blog_details')->name('blog_details');
 	Route::get('/about', 'FrontPageController@about')->name('about');
 	Route::get('/tournament', 'FrontPageController@tour')->name('tournament');

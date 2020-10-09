@@ -5,8 +5,63 @@
   
    
     <!--====== SLIDER PART START ======-->
+
+    <section id="slider-part" class="slider-active">
+        <div class="single-slider bg_cover pt-150" style="background-image: url(/edu/images/slider/s-1.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Take a course in an area of choice</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">
+                                Get the skills you need to stand out in the emerging world of technology
+                            </p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{{ route('courses')}}">Our Courses</a></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        
+        <div class="single-slider bg_cover pt-150" style="background-image: url(/edu/images/slider/s-2.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Become a Guruboss Instructor Today</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
+                            <ul>
+                               
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Signup</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        
+        <div class="single-slider bg_cover pt-150" style="background-image: url(/edu/images/slider/s-3.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Join the Guruboss Tournament</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
+                            <ul>
+                                
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Get Started</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+    </section>
     
-    <section id="slider-part-3" class="bg_cover"  style="background-image: url(/edu/images/slider/s-3.jpg)">
+    <!-- <section id="slider-part-3" class="bg_cover"  style="background-image: url(/edu/images/slider/s-3.jpg)">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -32,13 +87,13 @@
                                     <div class="col-sm-3">
                                         <button type="button" class="main-btn">Search Now</button>
                                     </div>
-                                </div> <!-- row -->
+                                </div> 
                             </form>
                         </div>
-                    </div> <!-- slider cont3 -->
+                    </div> 
                 </div>
-            </div> <!-- row -->
-            <div class="slider-feature pt-30 d-none d-md-block">
+            </div> 
+             <div class="slider-feature pt-30 d-none d-md-block">
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6">
                         <div class="singel-slider-feature justify-content-center mt-30">
@@ -49,7 +104,7 @@
                                 <h3>13,0000</h3>
                                 <span>Worldwide Students</span>
                             </div>
-                        </div> <!-- singel slider feature -->
+                        </div> 
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="singel-slider-feature justify-content-center mt-30">
@@ -60,7 +115,7 @@
                                 <h3>4,000509</h3>
                                 <span>Available Courses</span>
                             </div>
-                        </div> <!-- singel slider feature -->
+                        </div> 
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="singel-slider-feature justify-content-center mt-30">
@@ -71,12 +126,12 @@
                                 <h3>Expert Instructor</h3>
                                 <span>Expert Instructors</span>
                             </div>
-                        </div> <!-- singel slider feature -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- slider feature -->
-        </div> <!-- container -->
-    </section>
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> -->
+    <!-- </section>  -->
     
     <!--====== SLIDER PART ENDS ======-->
     
@@ -167,10 +222,10 @@
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="/edu/images/course/teacher/t-1.jpg" alt="teacher"></a>
+                                    <a href=""><img src="/edu/images/course/teacher/t-1.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <a href="{{ route('teacher_single', 2)}}"><h6>Mark anthem</h6></a>
                                 </div>
                                 <div class="review">
                                     <ul>
@@ -184,7 +239,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                            <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -199,10 +254,10 @@
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="/edu/images/course/teacher/t-2.jpg" alt="teacher"></a>
+                                    <a href=""><img src="/edu/images/course/teacher/t-2.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <a href="{{ route('teacher_single', 2)}}"><h6>Mark anthem</h6></a>
                                 </div>
                                 <div class="review">
                                     <ul>
@@ -216,7 +271,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                            <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -231,10 +286,10 @@
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="/edu/images/course/teacher/t-3.jpg" alt="teacher"></a>
+                                    <a href=""><img src="/edu/images/course/teacher/t-3.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <a href="{{ route('teacher_single', 2)}}"><h6>Mark anthem</h6></a>
                                 </div>
                                 <div class="review">
                                     <ul>
@@ -248,7 +303,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                            <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -263,10 +318,10 @@
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="/edu/images/course/teacher/t-4.jpg" alt="teacher"></a>
+                                    <a href=""><img src="/edu/images/course/teacher/t-4.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <a href="{{ route('teacher_single', 2)}}"><h6>Mark anthem</h6></a>
                                 </div>
                                 <div class="review">
                                     <ul>
@@ -280,7 +335,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                            <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -295,10 +350,10 @@
                             </div>
                             <div class="course-teacher">
                                 <div class="thum">
-                                    <a href="courses-singel.html"><img src="/edu/images/course/teacher/t-5.jpg" alt="teacher"></a>
+                                    <a href=""><img src="/edu/images/course/teacher/t-5.jpg" alt="teacher"></a>
                                 </div>
                                 <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
+                                    <a href="{{ route('teacher_single', 2)}}"><h6>Mark anthem</h6></a>
                                 </div>
                                 <div class="review">
                                     <ul>
@@ -312,7 +367,7 @@
                             </div>
                         </div>
                         <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                            <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                         </div>
                     </div> <!-- singel course -->
                 </div>
@@ -329,7 +384,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
                     <div class="count-down-cont pt-50">
-                        <h3>Create a 3 minutes information clip and earn</h3>
+                        <h3>Create a 3 minutes informative clip and earn</h3>
                         <h2>Sign up Now</h2>
                         <div data-countdown="2020/10/30"></div>
                     </div> <!-- count down cont -->
@@ -337,22 +392,54 @@
                 <div class="col-lg-5 offset-lg-1 col-md-8">
                     <div class="category-form category-form-3 pt-50">
                         <div class="form-title text-center">
-                            <h3>Get 50 courses free!</h3>
-                            <span>Sign up now </span>
+                            <h3>Become a Guruboss Instructor</h3>
+                        
                         </div>
                         <div class="main-form">
-                            <form action="#">
+                            <form method="post" action="{{route('register')}}">
+                            @csrf
                                 <div class="singel-form">
-                                    <input type="text" placeholder="Your name">
+                                    <input type="text" name="name" placeholder="Your name">
+                                    <input type="hidden" name="tournament" value="yes" placeholder="Your name">
+                                    @if ($errors->has('password'))
+                                        <div>
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="singel-form">
-                                    <input type="email" placeholder="Your Mail">
+                                    <input type="email" name="email" placeholder="Your Mail">
+                                    @if ($errors->has('password'))
+                                        <div>
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                        </div>
+                                    @endif
                                 </div>
+
                                 <div class="singel-form">
-                                    <input type="text" placeholder="Your Phone">
+                                    <input type="text" name="phone" placeholder="Your Phone">
+                                    @if ($errors->has('password'))
+                                        <div>
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                        </div>
+                                    @endif
                                 </div>
+
                                 <div class="singel-form">
-                                    <button class="main-btn" type="button">Get it Now</button>
+                                    <input type="password" name="password" placeholder="Password">
+                                </div>
+
+                                <div class="singel-form">
+                                    <input type="password" name="password_confirmation" placeholder="Confirm Password">
+                                    @if ($errors->has('password'))
+                                        <div>
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                        </div>
+                                    @endif
+                                </div>
+
+                                <div class="singel-form">
+                                    <button class="main-btn" type="button">Enter Tournament</button>
                                 </div>
                             </form>
                         </div>

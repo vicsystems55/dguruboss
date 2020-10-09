@@ -5,13 +5,13 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-about mt-40">
                             <div class="logo">
-                                <a href="#"><img src="images/logo-2.png" alt="Logo"></a>
+                                <a href="/"><img src="/edu/images/logo-2.png" alt="Logo"></a>
                             </div>
                             <p>Gravida nibh vel velit auctor aliquetn quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate.</p>
                             <ul class="mt-20">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
@@ -25,12 +25,11 @@
                                 <li><a href="index-2.html"><i class="fa fa-angle-right"></i>Home</a></li>
                                 <li><a href="about.html"><i class="fa fa-angle-right"></i>About us</a></li>
                                 <li><a href="courses.html"><i class="fa fa-angle-right"></i>Courses</a></li>
-                                <li><a href="blog.html"><i class="fa fa-angle-right"></i>News</a></li>
+                                
                                 <li><a href="events.html"><i class="fa fa-angle-right"></i>Event</a></li>
                             </ul>
                             <ul>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>Gallery</a></li>
-                                <li><a href="shop.html"><i class="fa fa-angle-right"></i>Shop</a></li>
+                                
                                 <li><a href="teachers.html"><i class="fa fa-angle-right"></i>Teachers</a></li>
                                 <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
                                 <li><a href="contact.html"><i class="fa fa-angle-right"></i>Contact</a></li>

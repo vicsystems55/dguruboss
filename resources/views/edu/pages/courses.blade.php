@@ -78,7 +78,7 @@
                             <div class="singel-course mt-30">
                                 <div class="thum">
                                     <div class="image">
-                                        <img src="images/course/cu-1.jpg" alt="Course">
+                                        <img src="/edu/images/course/cu-1.jpg" alt="Course">
                                     </div>
                                     <div class="price">
                                         <span>Free</span>
@@ -93,7 +93,7 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                     <span>(20 Reviws)</span>
-                                    <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                                    <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                                     <div class="course-teacher">
                                         <div class="thum">
                                             <a href="#"><img src="/edu/images/course/teacher/t-1.jpg" alt="teacher"></a>
@@ -130,7 +130,7 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                     <span>(20 Reviws)</span>
-                                    <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                                    <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                                     <div class="course-teacher">
                                         <div class="thum">
                                             <a href="#"><img src="/edu/images/course/teacher/t-2.jpg" alt="teacher"></a>
@@ -167,7 +167,7 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                     <span>(20 Reviws)</span>
-                                    <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                                    <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                                     <div class="course-teacher">
                                         <div class="thum">
                                             <a href="#"><img src="/edu/images/course/teacher/t-3.jpg" alt="teacher"></a>
@@ -204,7 +204,7 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                     <span>(20 Reviws)</span>
-                                    <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                                    <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                                     <div class="course-teacher">
                                         <div class="thum">
                                             <a href="#"><img src="/edu/images/course/teacher/t-4.jpg" alt="teacher"></a>
@@ -241,7 +241,7 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                     <span>(20 Reviws)</span>
-                                    <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                                    <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                                     <div class="course-teacher">
                                         <div class="thum">
                                             <a href="#"><img src="/edu/images/course/teacher/t-5.jpg" alt="teacher"></a>
@@ -278,7 +278,7 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                     <span>(20 Reviws)</span>
-                                    <a href="courses-singel.html"><h4>Learn basis javascirpt from start for beginner</h4></a>
+                                    <a href="{{ route('course_single', 2)}}"><h4>Learn basis javascirpt from start for beginner</h4></a>
                                     <div class="course-teacher">
                                         <div class="thum">
                                             <a href="#"><img src="/edu/images/course/teacher/t-1.jpg" alt="teacher"></a>
