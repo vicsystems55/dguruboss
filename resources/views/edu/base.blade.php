@@ -43,6 +43,8 @@
     
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="{{asset('edu')}}/css/responsive.css">
+
+    <link href="{{ asset('img-upload') }}/css/bootstrap-imageupload.css" rel="stylesheet" />
   
   
 </head>
@@ -115,6 +117,36 @@
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
     <script src="{{('edu')}}/js/map-script.js"></script>
+
+    <script src="{{ asset('img-upload') }}/js/bootstrap-imageupload.js"></script>
+    <script src="{{ asset('upload-preview') }}/js/uploadPreview.min.js"></script>
+
+    <script>
+            var $imageupload = $('.imageupload');
+            $imageupload.imageupload();
+
+            $('.img-upload').imgupload({
+            allowedFormats: [ "jpg", "jpeg", "png", "gif", "mp4" ],
+            previewWidth: 250,
+            previewHeight: 250,
+            maxFileSizeKb: 2048
+            });
+
+            $('#imageupload-disable').on('click', function() {
+                $imageupload.imageupload('disable');
+                $(this).blur();
+            })
+
+            $('#imageupload-enable').on('click', function() {
+                $imageupload.imageupload('enable');
+                $(this).blur();
+            })
+
+            $('#imageupload-reset').on('click', function() {
+                $imageupload.imageupload('reset');
+                $(this).blur();
+            });
+        </script>
 
 </body>
 </html>

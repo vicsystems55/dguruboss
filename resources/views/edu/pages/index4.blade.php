@@ -390,7 +390,20 @@
                     </div> <!-- count down cont -->
                 </div>
                 <div class="col-lg-5 offset-lg-1 col-md-8">
-                    <div class="category-form category-form-3 pt-50">
+
+                @auth
+
+
+                <div class="button float-left p-1">
+                    <a href="/tournament" class="main-btn">Setup Tournament</a>
+                </div>
+
+                @endauth
+
+
+                @guest
+
+                <div class="category-form category-form-3 pt-50">
                         <div class="form-title text-center">
                             <h3>Become a Guruboss Instructor</h3>
                         
@@ -400,7 +413,8 @@
                             @csrf
                                 <div class="singel-form">
                                     <input type="text" name="name" placeholder="Your name">
-                                    <input type="hidden" name="tournament" value="yes" placeholder="Your name">
+                                    <input type="hidden" name="tournament" value="yes" >
+                                    <input type="hidden" name="type" value="tutor" >
                                     @if ($errors->has('password'))
                                         <div>
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -427,6 +441,11 @@
 
                                 <div class="singel-form">
                                     <input type="password" name="password" placeholder="Password">
+                                    @if ($errors->has('password'))
+                                        <div>
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                        </div>
+                                    @endif
                                 </div>
 
                                 <div class="singel-form">
@@ -439,11 +458,14 @@
                                 </div>
 
                                 <div class="singel-form">
-                                    <button class="main-btn" type="button">Enter Tournament</button>
+                                    <button class="main-btn" type="submit">Enter Tournament</button>
                                 </div>
                             </form>
                         </div>
-                    </div> <!-- category form -->
+                    </div>
+
+                @endguest
+                     <!-- category form -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->

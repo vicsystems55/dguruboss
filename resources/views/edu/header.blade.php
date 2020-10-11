@@ -60,12 +60,24 @@
                                     <span>+234 706 975 1363</span>
                                 </div>
                             </div>
-                            <div class="button float-left p-1">
+                           @auth()
+
+                           <div class="button float-left p-1">
+                                <a href="/{{Auth::user()->role}}" class="main-btn">My Account</a>
+                            </div>
+
+                           @endauth
+
+
+                           @guest()
+
+                           <div class="button float-left p-1">
                                 <a href="{{ route('register')}}" class="main-btn">Apply Now</a>
                             </div>
                             <div class="button float-left p-1">
                                 <a href="{{ route('login')}}" class="main-btn btn-outline-primary">Login</a>
                             </div>
+                           @endguest
                         </div>
                     </div>
                 </div> <!-- row -->

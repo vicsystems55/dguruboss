@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role', 'reg_code', 'bio', 'address', 'avatar', 'phone'
+        'name', 'email', 'password', 'role', 'reg_code', 'bio', 'address', 'avatar', 'phone', 'tournament'
     ];
 
     /**
@@ -55,6 +55,11 @@ class User extends Authenticatable
     public function topics()
     {
         return $this->hasMany('App\Topic');
+    }
+
+    public function tour_videos()
+    {
+        return $this->hasMany('App\TourVideo');
     }
 
     

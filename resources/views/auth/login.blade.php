@@ -20,16 +20,23 @@
                         
                         </div>
                         <div class="main-form">
-                            <form action="#">
+                            <form method="post" action="{{ route('login')}}">
+                            @csrf
                                 <div class="singel-form">
-                                    <input type="email" placeholder="Email">
+                                    <input type="email" name="email" placeholder="Email">
                                 </div>
                                 <div class="singel-form">
-                                    <input type="password" placeholder="Password">
+                                    <input type="password" name="password" placeholder="Password">
+
+                                    @if ($errors->has('password'))
+                                        <div id="password-error" class="error text-danger pl-3" for="password" style="display: block;">
+                                        <strong>{{ $errors->first('password') }}lkl</strong>
+                                        </div>
+                                    @endif
                                 </div>
                                 
                                 <div class="singel-form">
-                                    <button class="main-btn shadow" type="button">Login</button>
+                                    <button class="main-btn shadow" type="submit">Login</button>
                                 </div>
                             </form>
                         </div>

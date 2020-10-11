@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTournamentsTable extends Migration
+class CreateTourReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,9 @@ class CreateTournamentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tournaments', function (Blueprint $table) {
+        Schema::create('tour_reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->integer('fee')->unsigned(); 
-            $table->date('start_date');
-            $table->date('end_date');    
-            $table->string('status')->default('pending');
             $table->timestamps();
-   
         });
     }
 
@@ -33,6 +26,6 @@ class CreateTournamentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tournaments');
+        Schema::dropIfExists('tour_reviews');
     }
 }

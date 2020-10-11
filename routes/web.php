@@ -35,6 +35,8 @@ Route::get('/sample', function () {
 
 Route::get('/choose', 'ChooseRoleController@index');
 
+Route::get('/where', 'ChooseRoleController@where');
+
 Route::get('/home', 'ChooseRoleController@index')->name('home');
 
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
@@ -43,7 +45,7 @@ Route::get('/justpaid', 'PaymentController@handleGatewayCallback')->name('justpa
 
 Auth::routes();
 
-Route::resource('video', 'VideoController');
+Route::resource('/video', 'VideoController');
 
 
 // Route::group(['middleware' => 'auth'], function () {
@@ -92,7 +94,7 @@ Route::group( [], function () {
 	Route::get('/course_single/{id}', 'FrontPageController@course_single')->name('course_single');
 	Route::get('/blog_details', 'FrontPageController@blog_details')->name('blog_details');
 	Route::get('/about', 'FrontPageController@about')->name('about');
-	Route::get('/tournament', 'FrontPageController@tour')->name('tournament');
+	Route::get('/tournament', 'FrontPageController@tour')->name('tournament')->middleware('auth');
 	Route::post('/upload_tour', 'TournamentController@create_tournament')->name('upload_tour');
 	
 	
@@ -171,6 +173,8 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/edit_topic/{id},{course}', 'CreateTopicController@edit_topic')->name('tutor.edit_topic');
 
 	Route::get('/class-enrich/{id}', 'TutorPageController@class_enrich')->name('tutor.class-enrich');
+
+	
 	
 });
 

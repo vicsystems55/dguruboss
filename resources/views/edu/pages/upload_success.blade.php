@@ -11,46 +11,17 @@
 
                 <div class="contact-from mt-30">
                        <div class="section-title">
-                           <h5>Enter Tournament</h5>
-                           <h2>Upload Video</h2>
+                           
+                           <h2>Upload Successfull</h2>
                        </div> <!-- section title -->
 
                        
-                        <div class="main-form">
-
-                        <form  action="{{ url('video') }}" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="user_id" value ="{{Auth::user()->id}}"  />
-
-                                <div class="singel-form form-group">
-                                <input type="text" name="title" placeholder="Enter Video Title" />
-                                </div>
-
-                                <div class="singel-form form-group">
-                                <input name="description" placeholder="Video description">
-                            
-                                </div>
-
-                                <div class="singel-form form-group">
-                                <input type="file" name="video" />
-                                </div>
-
-                                <div class="singel-form form-group">
-                                <button type="submit" class="main-btn">Submit</button>
-                                </div>
-                                {{ csrf_field() }}
-                         </form>
-
-                        </div>
-                       
                        <div class="main-form pt-4">
 
-                           
+                            <img src="/alert/success.gif" alt="">
 
-                           <!-- <video width="320" height="240" controls>
-                                        <source src="movie.mp4" type="video/mp4">
-                                        <source src="movie.ogg" type="video/ogg">
-                                        Your browser does not support the video tag.
-                                        </video> -->
+                          
+
                        </div> <!-- main form -->
                    </div>
 
