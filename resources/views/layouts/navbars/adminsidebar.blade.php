@@ -55,6 +55,16 @@
           <p>{{ __('Tournament') }}</p>
         </a>
       </li>
+
+      <li class="nav-item {{ (request()->is('admin/tournament_video')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.tournament_video')}}">
+          <i class="material-icons"></i>
+          <p>{{ __('Tournament Videos') }}</p>
+        </a>
+      </li>
+
+      
+      
       <li class="nav-item {{ (request()->is('admin/resources')) ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.resources')}}">
           <i class="material-icons"></i>

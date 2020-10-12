@@ -30,42 +30,26 @@
     <section id="teachers-singel" class="pt-70 pb-120 gray-bg">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-8">
-                    <div class="teachers-left mt-50">
-                        <div class="hero">
-                            <img src="/edu/images/teachers/t-1.jpg" alt="Teachers">
-                        </div>
-                        <div class="name">
-                            <h6>Mark alen</h6>
-                            <span>Vice chencelor</span>
-                        </div>
-                        <div class="social">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="description">
-                            <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate..</p>
-                        </div>
-                    </div> <!-- teachers left -->
-                </div>
-                <div class="col-lg-8">
-                    <div class="teachers-right mt-50">
-                        <ul class="nav nav-justified" id="myTab" role="tablist">
+               
+                <div class="col-lg-12">
+                    <div class="teachers-right mt-40">
+
+                    <div class="row">
+                    
+                    <div class="col-md-3 s">
+                        <ul class="nav flex-column nav-pills" id="myTab" role="tablist" aria-orientation="vertical">
                             <li class="nav-item">
-                                <a class="active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
+                                <a class="active nav-link" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a id="courses-tab" data-toggle="tab" href="#courses" role="tab" aria-controls="courses" aria-selected="false">Courses</a>
+                                <a class="pl-2" id="courses-tab" data-toggle="tab" href="#courses" role="tab" aria-controls="courses" aria-selected="false">Courses</a>
                             </li>
                             <li class="nav-item">
-                                <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
+                                <a class="pl-2" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Tournament</a>
                             </li>
                         </ul> <!-- nav -->
-                        <div class="tab-content" id="myTabContent">
+                        </div>
+                        <div class="col-md-8 tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                                 <div class="dashboard-cont">
                                     <div class="singel-dashboard pt-40">
@@ -292,7 +276,9 @@
                                     </div>
                                 </div> <!-- reviews cont -->
                             </div>
-                        </div> <!-- tab content -->
+                        </div>
+                    </div>
+                         <!-- tab content -->
                     </div> <!-- teachers right -->
                 </div>
             </div> <!-- row -->

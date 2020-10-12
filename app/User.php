@@ -62,5 +62,10 @@ class User extends Authenticatable
         return $this->hasMany('App\TourVideo');
     }
 
+    public function reviews()
+    {
+        return $this->hasMany('App\TourReview');
+    }
+
     
 }

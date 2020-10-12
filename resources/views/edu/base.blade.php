@@ -80,43 +80,43 @@
     
     
     <!--====== jquery js ======-->
-    <script src="{{('edu')}}/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="{{('edu')}}/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="{{asset('edu')}}/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="{{asset('edu')}}/js/vendor/jquery-1.12.4.min.js"></script>
 
     <!--====== Bootstrap js ======-->
-    <script src="{{('edu')}}/js/bootstrap.min.js"></script>
+    <script src="{{asset('edu')}}/js/bootstrap.min.js"></script>
     
     <!--====== Slick js ======-->
-    <script src="{{('edu')}}/js/slick.min.js"></script>
+    <script src="{{asset('edu')}}/js/slick.min.js"></script>
     
     <!--====== Magnific Popup js ======-->
-    <script src="{{('edu')}}/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{asset('edu')}}/js/jquery.magnific-popup.min.js"></script>
     
     <!--====== Counter Up js ======-->
-    <script src="{{('edu')}}/js/waypoints.min.js"></script>
-    <script src="{{('edu')}}/js/jquery.counterup.min.js"></script>
+    <script src="{{asset('edu')}}/js/waypoints.min.js"></script>
+    <script src="{{asset('edu')}}/js/jquery.counterup.min.js"></script>
     
     <!--====== Nice Select js ======-->
-    <script src="{{('edu')}}/js/jquery.nice-select.min.js"></script>
+    <script src="{{asset('edu')}}/js/jquery.nice-select.min.js"></script>
     
     <!--====== Nice Number js ======-->
-    <script src="{{('edu')}}/js/jquery.nice-number.min.js"></script>
+    <script src="{{asset('edu')}}/js/jquery.nice-number.min.js"></script>
     
     <!--====== Count Down js ======-->
-    <script src="{{('edu')}}/js/jquery.countdown.min.js"></script>
+    <script src="{{asset('edu')}}/js/jquery.countdown.min.js"></script>
     
     <!--====== Validator js ======-->
-    <script src="{{('edu')}}/js/validator.min.js"></script>
+    <script src="{{asset('edu')}}/js/validator.min.js"></script>
     
     <!--====== Ajax Contact js ======-->
-    <script src="{{('edu')}}/js/ajax-contact.js"></script>
+    <script src="{{asset('edu')}}/js/ajax-contact.js"></script>
     
     <!--====== Main js ======-->
-    <script src="{{('edu')}}/js/main.js"></script>
+    <script src="{{asset('edu')}}/js/main.js"></script>
     
     <!--====== Map js ======-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
-    <script src="{{('edu')}}/js/map-script.js"></script>
+    <script src="{{asset('edu')}}/js/map-script.js"></script>
 
     <script src="{{ asset('img-upload') }}/js/bootstrap-imageupload.js"></script>
     <script src="{{ asset('upload-preview') }}/js/uploadPreview.min.js"></script>

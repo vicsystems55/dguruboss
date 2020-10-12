@@ -47,6 +47,8 @@ Auth::routes();
 
 Route::resource('/video', 'VideoController');
 
+Route::view('/my_account','edu.pages.my_account');
+
 
 // Route::group(['middleware' => 'auth'], function () {
 // 	Route::get('table-list', function () {
@@ -116,6 +118,8 @@ Route::group(['middleware' => ['auth','admin', 'verified'], 'prefix' => 'admin']
 	Route::get('/notifications', 'AdminPageController@notifications')->name('admin.notifications');
 	Route::get('/wallet', 'AdminPageController@wallet')->name('admin.wallet');
 	Route::get('/accounts_details/{id}', 'AdminPageController@account_details')->name('admin.accounts_details');
+
+	Route::view('/tournament_video', 'admin.tournament_vid')->name('admin.tournament_video');
 	
 	
 });
@@ -133,6 +137,8 @@ Route::group(['middleware' => ['auth','tutor', 'unpaidmember', 'verified'], 'pre
 	Route::get('/', 'TutorPageController@home')->name('tutor');
 	
 	Route::get('/allclasses', 'TutorPageController@allclasses')->name('tutor.allclasses');
+
+	
 
 	Route::get('/addclasses', 'TutorPageController@addclasses')->name('tutor.addclasses');
 

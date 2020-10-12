@@ -16,19 +16,26 @@ class VideoController extends Controller
     public function store(Request $request)
     {
 
-        try {
-            //code...
-            $video = Youtube::upload($request->file('video')->getPathName(), [
-                'title'       => $request->input('title'),
-                'description' => $request->input('description')
-            ]);
+        // try {
+        //     //code...
+        //     $video = Youtube::upload($request->file('video')->getPathName(), [
+        //         'title'       => $request->input('title'),
+        //         'description' => $request->input('description')
+        //     ]);
 
-            $video_url = $video->getVideoId();
-        } catch (\Throwable $th) {
-            //throw $th;
+        //     $video_url = $video->getVideoId();
+        // } catch (\Throwable $th) {
+        //     //throw $th;
 
-            $video_url = 'null';
-        }
+        //     $video_url = 'null';
+        // }
+
+        $video = Youtube::upload($request->file('video')->getPathName(), [
+            'title'       => $request->input('title'),
+            'description' => $request->input('description')
+        ]);
+
+        $video_url = $video->getVideoId();
        
 
         $tour_video = new TourVideo;

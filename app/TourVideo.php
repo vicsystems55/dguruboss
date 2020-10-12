@@ -15,4 +15,9 @@ class TourVideo extends Model
     {
         return $this->belongsTo('App\Tournament');
     }
+
+    public function tour_reviews()
+    {
+        return $this->hasMany('App\TourReview');
+    }
 }
